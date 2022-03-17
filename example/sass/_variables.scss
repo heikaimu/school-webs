@@ -20,28 +20,25 @@ $font-size-m: 16px;
 $font-size-l: 18px;
 
 // 媒体查询相关
-$grid-medium: 750px;
-$grid-large: 990px;
-$grid-widescreen: 1400px;
+$grid-sm: 576px;
+$grid-md: 768px;
+$grid-lg: 992px;
+$grid-xl: 1200px;
+$grid-sm-content: 540px;
+$grid-md-content: 720px;
+$grid-lg-content: 960px;
+$grid-xl-content: 1140px;
 $grid-gutter: 30px;
 $grid-gutter-mobile: 22px;
 
-$small: 'small';
-$medium: 'medium';
-$medium-down: 'medium-down';
-$medium-up: 'medium-up';
-$large: 'large';
-$large-down: 'large-down';
-$large-up: 'large-up';
-$widescreen: 'widescreen';
+$sm: 'sm';
+$md: 'md';
+$lg: 'lg';
+$xl: 'xl';
 
 $grid-breakpoints: (
-  $small '(max-width: #{$grid-medium - 1})',
-  $medium '(min-width: #{$grid-medium}) and (max-width: #{$grid-large - 1})',
-  $medium-down '(max-width: #{$grid-large - 1})',
-  $medium-up '(min-width: #{$grid-medium})',
-  $large '(min-width: #{$grid-large}) and (max-width: #{$grid-widescreen - 1})',
-  $large-down '(max-width: #{$grid-widescreen - 1})',
-  $large-up '(min-width: #{$grid-large})',
-  $widescreen '(min-width: #{$grid-widescreen})'
+  $sm '(max-width: #{$grid-md - 1})',
+  $md '(min-width: #{$grid-md}) and (max-width: #{$grid-lg - 1})',
+  $lg '(min-width: #{$grid-lg}) and (max-width: #{$grid-xl - 1})',
+  $xl '(min-width: #{$grid-xl})'
 );

@@ -1,0 +1,37 @@
+{
+  "id": "2328096",
+  "name": "达治网站",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "1185485",
+      "name": "微信",
+      "font_class": "weixin",
+      "unicode": "e63f",
+      "unicode_decimal": 58943
+    },
+    {
+      "icon_id": "2076426",
+      "name": "搜索小",
+      "font_class": "sousuoxiao",
+      "unicode": "e8d6",
+      "unicode_decimal": 59606
+    },
+    {
+      "icon_id": "13646837",
+      "name": "邮箱",
+      "font_class": "youxiang",
+      "unicode": "e608",
+      "unicode_decimal": 58888
+    },
+    {
+      "icon_id": "14681933",
+      "name": "地址",
+      "font_class": "dizhi",
+      "unicode": "e6ba",
+      "unicode_decimal": 59066
+    }
+  ]
+}

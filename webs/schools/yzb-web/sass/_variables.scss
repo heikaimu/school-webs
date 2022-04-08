@@ -1,0 +1,44 @@
+// 色彩
+$color-theme: #36a2ea;
+$color-sub-theme: #F73194;
+$color-title: #333333;
+$color-sub-title: #666666;
+$color-content: #666666;
+$color-sub-content: #777777;
+$color-border: #e7e7e7;
+
+$color-danger: #ed158e;
+$color-success: #26a149;
+$color-warning: #f7b217;
+$color-white: #ffffff;
+$color-black: #000000;
+
+// 尺寸
+$font-size-s: 12px;
+$font-size-b: 14px;
+$font-size-m: 16px;
+$font-size-l: 18px;
+
+// 媒体查询相关
+$grid-sm: 576px;
+$grid-md: 768px;
+$grid-lg: 992px;
+$grid-xl: 1200px;
+$grid-sm-content: 540px;
+$grid-md-content: 720px;
+$grid-lg-content: 960px;
+$grid-xl-content: 1140px;
+$grid-gutter: 30px;
+$grid-gutter-mobile: 22px;
+
+$sm: 'sm';
+$md: 'md';
+$lg: 'lg';
+$xl: 'xl';
+
+$grid-breakpoints: (
+  $sm '(max-width: #{$grid-md - 1})',
+  $md '(min-width: #{$grid-md}) and (max-width: #{$grid-lg - 1})',
+  $lg '(min-width: #{$grid-lg}) and (max-width: #{$grid-xl - 1})',
+  $xl '(min-width: #{$grid-xl})'
+);

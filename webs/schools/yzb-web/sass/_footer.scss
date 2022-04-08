@@ -1,0 +1,44 @@
+.case-show {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  z-index: 1;
+
+  .case-show__container {
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+
+    .footer-content {
+      @include flex-row-center;
+      position: relative;
+      z-index: 9999;
+      height: 100%;
+      opacity: .1;
+      .footer-title {
+        font-size: 40px;
+        font-weight: 900;
+        top: 33.333px;
+        color: $color-white;
+      }
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+
+  }
+
+  canvas {
+    @include pos-absolute;
+  }
+}

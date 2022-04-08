@@ -1,0 +1,73 @@
+<!--
+ * @Author: Yaowen Liu
+ * @Date: 2022-03-07 09:45:10
+ * @LastEditors: Yaowen Liu
+ * @LastEditTime: 2022-04-08 17:56:58
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>首页</title>
+  <meta name="description" content="这是一个描述" />
+  <meta name="keywords" content="这是一些关键字" />
+  <meta name="author" content="LYW" />
+  <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="./style/bootstrap.css">
+  <link rel="stylesheet" href="./style/swiper.min.css" />
+  <link rel="stylesheet" href="./style/scroll-animation.css" />
+  <link rel="stylesheet" href="./fonts/iconfont.css">
+  <link rel="stylesheet" href="./style/app.css" />
+  <!--[if lt IE 9]>
+      <script src="./js/html5shiv.js"></script>
+      <script src="./js/respond.src.js"></script>
+    <![endif]-->
+</head>
+
+<body id="app">
+
+  <div style="height: 1000px; background: red; position: relative; z-index: 9"></div>
+
+  <section class="case-show">
+    <div class="case-show__container" id="bg">
+      <div class="footer-content">
+        <h2 class="footer-title">关注川网在线试听 尽享“可乐影视”热门内容 </h2>
+      </div>
+    </div>
+  </section>
+
+  <script src="./js/jquery.min.js"></script>
+  <script src="./js/three.min.js"></script>
+  <script src="./js/swiper-bundle.min.js"></script>
+  <script src="./js/scroll-animate.js"></script>
+  <script src="./js/footer.js"></script>
+  <script src="./js/theme.js"></script>
+  <script>
+    scrollAnimateInit();
+
+    var mySwiper = new Swiper('.swiper', {
+      loop: true, // 循环模式选项
+
+      // 如果需要分页器
+      pagination: {
+        el: '.swiper-pagination',
+      },
+
+      // 如果需要前进后退按钮
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+
+      // 如果需要滚动条
+      scrollbar: {
+        el: '.swiper-scrollbar',
+      },
+    });
+  </script>
+</body>
+
+</html>

@@ -25,6 +25,9 @@
         text-align: center;
         line-height: 1.6;
         letter-spacing: 5px;
+        @include media-query($sm) {
+          font-size: $font-size-l;
+        }
         strong {
           color: $color-theme;
         }
@@ -49,17 +52,24 @@
 }
 
 .inner-page-footer {
-  background-color: #111111;
+  background-color: #131313;
 }
 
 .footer-info {
   .partner {
     @include flex-row-center;
     padding: 20px;
+    @include media-query($sm) {
+      padding: 20px 0;
+    }
     p {
-      font-size: 16px;
+      font-size: $font-size-m;
       color: $color-white;
       margin: 0 20px 0 0;
+      @include media-query($sm) {
+        margin: 0 10px 0 0;
+        font-size: $font-size-s;
+      }
     }
     span {
       display: block;
@@ -67,11 +77,17 @@
       height: 14px;
       border-left: 1px solid #bebebe;
       margin: 0 10px;
+      @include media-query($sm) {
+        margin: 0 5px;
+      }
     }
     a {
-      font-size: 14px;
+      font-size: $font-size-b;
       color: #bebebe;
       transition: 0.3s;
+      @include media-query($sm) {
+        font-size: $font-size-s;
+      }
       &:hover {
         color: $color-theme;
       }
@@ -83,8 +99,11 @@
     .text {
       text-align: center;
       margin: 0;
-      font-size: 14px;
+      font-size: $font-size-b;
       color: #bebebe;
+      @include media-query($sm) {
+        font-size: $font-size-s;
+      }
     }
   }
 }

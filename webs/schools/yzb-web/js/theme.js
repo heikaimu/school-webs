@@ -1,57 +1,30 @@
 /*
  * @Date: 2022-04-08 17:12:42
  * @LastEditors: Yaowen Liu
- * @LastEditTime: 2022-04-08 17:22:52
- * @FilePath: /school-webs/webs/schools/yzb-web/js/theme.js
+ * @LastEditTime: 2022-04-11 14:09:48
+ * @FilePath: /yzb-web/js/theme.js
  */
-(function (doc, win) {
-  'use strict';
-  var docEl = doc.documentElement,
-    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
-    recalc = function () {
-      var clientWidth = window.innerWidth || docEl.clientWidth;
-      $('html').css({ 'font-size': 16 * (clientWidth / 1920) >= 6 ? 16 * (clientWidth / 1920) : 6 + 'px' });
-    };
-  recalc();
-  win.addEventListener(resizeEvt, recalc, false);
-  doc.addEventListener('DOMContentLoaded', recalc, false);
-})(document, window);
 
+// footer滚动效果
 function footerScroll() {
   if ($(document).height() - $(document).scrollTop() <= window.innerHeight + window.innerHeight / 2) {
-    let scroll_bottom = $(document).height() - $(document).scrollTop() - window.innerHeight;
-    let half_height = window.innerHeight / 2;
+    let scrollBottom = $(document).height() - $(document).scrollTop() - window.innerHeight;
+    let halfHeight = window.innerHeight / 2;
     $('.footer-content').css({
-      opacity: Math.floor(((half_height - scroll_bottom) / half_height) * 100) / 100,
-      transform: `translateY(${scroll_bottom / 10}px)`,
+      opacity: Math.floor(((halfHeight - scrollBottom) / halfHeight) * 100) / 100,
+      transform: `translateY(${scrollBottom / 10}px)`,
     });
   }
 }
 
-// 导航
-!(function () {
+// 移动端导航
+function headerToggle() {
   $('.web-header').each(function () {
-    var header = $(this);
-    var search = $(this).find('.search-bar');
-    var searchOpenSwitch = $(this).find('.search-bar-show');
-    var searchCloseSwitch = $(this).find('.search-bar-close');
     var navSwitch = $(this).find('.web-nav-switch');
     var nav = $(this).find('.web-nav');
     var mobileBlank = $(this).find('.mobile-blank');
 
     nav.lavaLamp({ fx: 'swing', speed: 500 });
-
-    searchOpenSwitch.click(function () {
-      search.slideDown();
-    });
-
-    searchCloseSwitch.click(function () {
-      search.slideUp();
-    });
-
-    header.mouseleave(function () {
-      search.slideUp();
-    });
 
     navSwitch.click(function () {
       if (navSwitch.hasClass('active')) {
@@ -73,4 +46,39 @@ function footerScroll() {
       $('html').css({ 'overflow-y': 'auto' });
     });
   });
-})();
+}
+
+// 导航固定
+function headerFixed() {
+  const scrollTop = $(document).scrollTop();
+  const tipHeight = $(".tip-img").height();
+  const headerHeight = $(".web-header").height();
+  if (scrollTop >= tipHeight) {
+    $(".web-header").css({ position: 'fixed', zIndex: 99997, top: -tipHeight - 1 + 'px' });
+    $('body').css({ paddingTop: `${headerHeight}px` })
+  } else {
+    $(".web-header").css({ position: 'relative', top: 0 });
+    $('body').css({ paddingTop: `${0}px` })
+  }
+}
+
+// 回到顶部
+function backTop() {
+  $('body,html').animate({
+    scrollTop: 0,
+  }, 300);
+}
+
+// 导航
+$(function () {
+  headerToggle();
+  backTop();
+  footerScroll();
+})
+
+
+// 窗口滚动
+window.addEventListener('scroll', function () {
+  footerScroll();
+  headerFixed();
+});

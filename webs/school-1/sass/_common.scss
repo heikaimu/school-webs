@@ -1,0 +1,63 @@
+@import './variables';
+@import './mixin';
+
+.container {
+  max-width: 1400px;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+.section {
+  padding: 50px 0;
+}
+
+div.plate-top {
+  @include flex-row-sb;
+  div.plate-title {
+    flex-grow: 1;
+    position: relative;
+    padding: 15px 0;
+    font-size: 26px;
+    color: $color-title;
+    background-repeat: no-repeat;
+    background-position: left top;
+    &.bg0 {
+      background-image: url(../images/title_bg0.png);
+    }
+    &.bg1 {
+      background-image: url(../images/title_bg1.png);
+    }
+    &.bg2 {
+      background-image: url(../images/title_bg2.png);
+    }
+    &.bg3 {
+      background-image: url(../images/title_bg3.png);
+    }
+    &.bg4 {
+      background-image: url(../images/title_bg4.png);
+    }
+    span.iconfont {
+      font-size: 26px;
+      color: $color-theme;
+    }
+
+    strong {
+      font-weight: 900;
+      color: $color-theme;
+    }
+  }
+
+  a.more-link {
+    padding: 5px 10px;
+    border-radius: 2px;
+    font-size: $font-size-m;
+    color: $color-theme;
+    transition: .3s ease-in-out;
+    &:hover {
+      background-color: $color-theme;
+      color: $color-white;
+    }
+  }
+}

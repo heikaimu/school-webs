@@ -1,37 +1,114 @@
 {
-  "id": "2328096",
-  "name": "达治网站",
+  "id": "1994230",
+  "name": "杨志波",
   "font_family": "iconfont",
   "css_prefix_text": "icon-",
   "description": "",
   "glyphs": [
     {
-      "icon_id": "1185485",
-      "name": "微信",
-      "font_class": "weixin",
-      "unicode": "e63f",
-      "unicode_decimal": 58943
+      "icon_id": "7594051",
+      "name": "24gl-playCircle",
+      "font_class": "24gl-playCircle",
+      "unicode": "ea6e",
+      "unicode_decimal": 60014
     },
     {
-      "icon_id": "2076426",
-      "name": "搜索小",
-      "font_class": "sousuoxiao",
-      "unicode": "e8d6",
-      "unicode_decimal": 59606
+      "icon_id": "7685032",
+      "name": "close",
+      "font_class": "close",
+      "unicode": "e6e5",
+      "unicode_decimal": 59109
     },
     {
-      "icon_id": "13646837",
-      "name": "邮箱",
-      "font_class": "youxiang",
-      "unicode": "e608",
-      "unicode_decimal": 58888
+      "icon_id": "10747022",
+      "name": "search",
+      "font_class": "search",
+      "unicode": "e600",
+      "unicode_decimal": 58880
     },
     {
-      "icon_id": "14681933",
+      "icon_id": "584105",
+      "name": "电话",
+      "font_class": "iconfontdianhua1",
+      "unicode": "e60f",
+      "unicode_decimal": 58895
+    },
+    {
+      "icon_id": "2035056",
       "name": "地址",
       "font_class": "dizhi",
-      "unicode": "e6ba",
-      "unicode_decimal": 59066
+      "unicode": "e63e",
+      "unicode_decimal": 58942
+    },
+    {
+      "icon_id": "4198413",
+      "name": "邮件",
+      "font_class": "youjian",
+      "unicode": "e604",
+      "unicode_decimal": 58884
+    },
+    {
+      "icon_id": "4437603",
+      "name": "下箭头",
+      "font_class": "xiajiantou",
+      "unicode": "e615",
+      "unicode_decimal": 58901
+    },
+    {
+      "icon_id": "5387928",
+      "name": "箭头_向左_o",
+      "font_class": "jiantou_xiangzuo_o",
+      "unicode": "eb92",
+      "unicode_decimal": 60306
+    },
+    {
+      "icon_id": "6966909",
+      "name": "加",
+      "font_class": "jia",
+      "unicode": "e624",
+      "unicode_decimal": 58916
+    },
+    {
+      "icon_id": "7962704",
+      "name": "设置-右箭头",
+      "font_class": "shezhi-youjiantou",
+      "unicode": "e6aa",
+      "unicode_decimal": 59050
+    },
+    {
+      "icon_id": "11776581",
+      "name": "微信",
+      "font_class": "weixin",
+      "unicode": "e611",
+      "unicode_decimal": 58897
+    },
+    {
+      "icon_id": "11776582",
+      "name": "微博",
+      "font_class": "weibo",
+      "unicode": "e612",
+      "unicode_decimal": 58898
+    },
+    {
+      "icon_id": "11776588",
+      "name": "qq",
+      "font_class": "qq",
+      "unicode": "e614",
+      "unicode_decimal": 58900
+    },
+    {
+      "icon_id": "12550616",
+      "name": "箭头",
+      "font_class": "jiantou",
+      "unicode": "e637",
+      "unicode_decimal": 58935
+    },
+    {
+      "icon_id": "12872648",
+      "name": "公共-右箭头1",
+      "font_class": "gonggong-youjiantou",
+      "unicode": "e64f",
+      "unicode_decimal": 58959
     }
   ]
 }

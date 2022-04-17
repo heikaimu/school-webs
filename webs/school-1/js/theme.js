@@ -51,22 +51,61 @@ function headerToggle() {
 // 导航固定
 function headerFixed() {
   const scrollTop = $(document).scrollTop();
-  const tipHeight = $(".tip-img").height();
-  const headerHeight = $(".web-header").height();
+  const tipHeight = $('.tip-img').height();
+  const headerHeight = $('.web-header').height();
   if (scrollTop >= tipHeight) {
-    $(".web-header").css({ position: 'fixed', zIndex: 99997, top: -tipHeight - 1 + 'px' });
-    $('body').css({ paddingTop: `${headerHeight}px` })
+    $('.web-header').css({ position: 'fixed', zIndex: 99997, top: -tipHeight - 1 + 'px' });
+    $('body').css({ paddingTop: `${headerHeight}px` });
   } else {
-    $(".web-header").css({ position: 'relative', top: 0 });
-    $('body').css({ paddingTop: `${0}px` })
+    $('.web-header').css({ position: 'relative', top: 0 });
+    $('body').css({ paddingTop: `${0}px` });
   }
 }
 
 // 回到顶部
 function backTop() {
-  $('body,html').animate({
-    scrollTop: 0,
-  }, 300);
+  $('body,html').animate(
+    {
+      scrollTop: 0,
+    },
+    300,
+  );
+}
+
+// select
+function customSelector() {
+  $('.custom-selector').each(function () {
+    const selector = $(this);
+    const placeholder = $(this).find('.placeholder');
+    const options = $(this).find('.options');
+    placeholder.click(function () {
+      $('.custom-selector .options').hide();
+      options.show();
+    });
+  });
+
+  $('body').bind('click', function (e) {
+    if (['placeholder'].includes(e.target.className)) {
+      return;
+    }
+
+    $('.custom-selector .options').hide();
+  });
+}
+
+function mobileNav() {
+  $('#mobileOpen').click(function () {
+    $('#mobileNav').fadeIn();
+  });
+  $('#mobileClose').click(function () {
+    $('#mobileNav').fadeOut();
+  });
+  $('#mobileWxMenu').click(function () {
+    $('#mobileWxImage').addClass('active');
+  });
+  $('#mobileWxImage').click(function () {
+    $(this).removeClass('active');
+  });
 }
 
 // 导航
@@ -74,8 +113,9 @@ $(function () {
   headerToggle();
   backTop();
   footerScroll();
-})
-
+  customSelector();
+  mobileNav();
+});
 
 // 窗口滚动
 window.addEventListener('scroll', function () {

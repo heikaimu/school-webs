@@ -1,106 +1,113 @@
-.case-show {
-  position: relative;
-  height: 100vh;
-  overflow: hidden;
-  z-index: 1;
+footer.footer {
+  background-image: url(../images/footer_bg.png);
+  background-position: center center;
+  background-size: cover;
 
-  .case-show__container {
-    position: fixed;
-    top: 0;
-    height: 100vh;
-    left: 0;
-    width: 100%;
-    z-index: 2;
-
-    .footer-content {
-      @include flex-row-center;
-      position: relative;
-      z-index: 9999;
-      height: 100%;
-      opacity: 1;
-      .footer-title {
-        font-size: 60px;
-        top: 33.333px;
-        color: $color-white;
-        text-align: center;
-        line-height: 1.6;
-        letter-spacing: 5px;
-        @include media-query($sm) {
-          font-size: $font-size-l;
-        }
-        strong {
-          color: $color-theme;
-        }
-      }
-      .footer-info {
-        @include pos-absolute(auto, 0, 0, 0);
-      }
-    }
-
-    &::after {
-      @include pos-absolute;
-      // @include glass(#000000, 0.1);
-      display: block;
-      content: '';
-      background-color: rgba(0, 0, 0, 0.6);
-    }
-  }
-
-  canvas {
-    @include pos-absolute;
-  }
-}
-
-.inner-page-footer {
-  background-color: #131313;
-}
-
-.footer-info {
-  .partner {
-    @include flex-row-center;
-    padding: 20px;
+  div.footer-top.container {
+    @include flex-row-sb;
+    column-gap: 20px;
+    padding-top: 30px;
+    padding-bottom: 30px;
     @include media-query($sm) {
-      padding: 20px 0;
-    }
-    p {
-      font-size: $font-size-m;
-      color: $color-white;
-      margin: 0 20px 0 0;
-      @include media-query($sm) {
-        margin: 0 10px 0 0;
-        font-size: $font-size-s;
-      }
-    }
-    span {
       display: block;
-      width: 1px;
-      height: 14px;
-      border-left: 1px solid #bebebe;
-      margin: 0 10px;
+    }
+
+    a.fotter-logo {
+      @include flex-row-center;
+      flex: 2;
+      column-gap: 10px;
+
       @include media-query($sm) {
-        margin: 0 5px;
+        img {
+          &:nth-child(1) {
+            width: 45px;
+          }
+          &:nth-child(2) {
+            width: 184px;
+          }
+        }
       }
     }
-    a {
-      font-size: $font-size-b;
-      color: #bebebe;
-      transition: 0.3s;
+
+    ul.footer-selector {
+      flex: 2;
+      padding-left: 30px;
+      border-left: 1px solid rgba($color: $color-white, $alpha: 0.2);
       @include media-query($sm) {
-        font-size: $font-size-s;
+        padding-top: 20px;
+        padding-left: 0;
+        border: none;
+        @include flex-col-center;
       }
-      &:hover {
-        color: $color-theme;
+
+      li.item {
+        &:nth-child(1) {
+          padding-bottom: 20px;
+        }
+      }
+    }
+
+    div.footer-info {
+      display: flex;
+      flex-wrap: wrap;
+      column-gap: 15px;
+      flex: 2;
+
+      @include media-query($sm) {
+        padding-top: 30px;
+        display: block;
+      }
+
+      p.text {
+        font-size: $font-size-b;
+        color: $color-white;
+        padding-bottom: 10px;
+
+        @include media-query($sm) {
+          text-align: center;
+        }
+      }
+    }
+
+    div.qr-code {
+      @include flex-row-center;
+      column-gap: 10px;
+      flex: 1;
+      @include media-query($sm) {
+        @include flex-col-center;
+        padding-top: 20px;
+      }
+
+      p.text {
+        writing-mode: vertical-lr;
+        font-size: $font-size-b;
+        color: $color-white;
+        @include media-query($sm) {
+          writing-mode: inherit;
+          padding-bottom: 10px;
+        }
+      }
+
+      img {
+        display: block;
+        width: 70px;
+        height: 70px;
+        @include media-query($sm) {
+          width: 120px;
+          height: 120px;
+        }
       }
     }
   }
-  .copyright {
-    padding: 20px;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    .text {
+
+  div.footer-bottom {
+    padding: 14px;
+    background-color: rgba($color: #000000, $alpha: 0.2);
+
+    p.copyright {
       text-align: center;
-      margin: 0;
       font-size: $font-size-b;
-      color: #bebebe;
+      color: $color-white;
       @include media-query($sm) {
         font-size: $font-size-s;
       }

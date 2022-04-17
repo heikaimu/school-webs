@@ -1,158 +1,343 @@
-.web-header {
-  position: relative;
-  z-index: 9;
-  background-color: rgba($color: #131313, $alpha: 1);
-  color: $color-title;
+header {
+  section.top-bar {
+    background-color: $color-theme;
 
-  .tip-img {
-    display: block;
-    width: 100%;
-    line-height: 1;
-  }
-
-  .header-container {
-    @include flex-row-sb;
-    height: 100px;
-    width: 83%;
-    margin: 0 auto;
-    position: relative;
-    transition: 0.3s;
-
-    @include media-query($sm) {
-      @include flex-row-center;
-      width: 100%;
-      height: 50px;
-    }
-
-    .web-logo {
-      @include flex-col-center;
-      height: 100%;
-
-      img {
-        height: 40px;
-        transition: 0.3s;
-
-        @include media-query($sm) {
-          height: 20px;
-        }
-      }
-    }
-
-    .mobile-blank {
-      display: none;
-
+    div.top-wrapper.container {
+      @include flex-row-sb;
+      height: 125px;
       @include media-query($sm) {
-        @include pos-fixed(0, 0, auto, auto, 99998);
-        display: none;
-        width: 100vw;
-        height: 100vh;
-        background-color: rgba($color: #111111, $alpha: .8)
+        height: 60px;
+        padding: 0 10px;
       }
-    }
-
-    .web-nav {
-      height: 50px;
-      position: relative;
-      padding-right: 120px;
-
-      @include media-query($sm) {
-        @include pos-fixed(0, 0, auto, auto, 99999);
-        height: 100vh;
-        background-color: #333333;
-        padding-right: 0;
-        transition: .3s ease-in-out;
-        transform: translate3d(100%, 0, 0);
-
-        &.active {
-          transform: translate3d(0, 0, 0);
-          opacity: 1;
-        }
-      }
-
-      .nav-list {
-        @include flex-row-sb;
-        height: 100%;
-        margin: 0;
-
+      a.logo {
+        @include flex-row-center;
+        column-gap: 10px;
         @include media-query($sm) {
-          display: block;
-        }
-
-        .nav-item {
-          height: 100%;
-          margin: 0 20px;
-          display: flex;
-          align-content: center;
-
-          @include media-query($sm) {
-            height: auto;
-          }
-
-          &.active {
-            a {
-              color: $color-theme;
-            }
-          }
-
-          a {
-            font-size: $font-size-m;
-            color: $color-white;
-            text-decoration: none;
-            line-height: 50px;
-            transition: .3s;
-
-            &:hover {
-              color: $color-theme;
-            }
-          }
-        }
-      }
-
-      .line {
-        height: 4px;
-        background-color: $color-theme;
-        position: absolute;
-        bottom: 0;
-        z-index: 9;
-
-        @include media-query($sm) {
-          display: none;
-        }
-      }
-    }
-
-    .web-nav-switch {
-      display: none;
-
-      @include media-query($sm) {
-        @include pos-absolute(14px, 4px, auto, auto, 999);
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-
-        span {
-          display: block;
-          width: 22px;
-          height: 3px;
-          background-color: currentColor;
-          margin: 2px 15px;
-          transition: 0.3s;
-        }
-
-        &.active {
-          span {
+          img {
             &:nth-child(1) {
-              width: 26px;
-              transform: translate3d(0, 8px, 0) rotate(45deg);
+              width: 45px;
             }
-
             &:nth-child(2) {
               display: none;
             }
+          }
+        }
+      }
 
-            &:nth-child(3) {
-              width: 26px;
-              transform: translate3d(0, 1px, 0) rotate(-45deg);
+      div.top-right-wrapper {
+        div.sm-buttons {
+          display: flex;
+          align-items: center;
+          justify-content: end;
+          padding-bottom: 20px;
+          column-gap: 20px;
+          @include media-query($sm) {
+            display: none;
+          }
+          p.icon {
+            @include flex-row-center;
+            cursor: pointer;
+            transition: 0.3s ease-in-out;
+            position: relative;
+            &:hover {
+              span.iconfont {
+                opacity: 1;
+              }
+              span.text {
+                color: $color-white;
+                opacity: 1;
+              }
+              span.wx-image {
+                display: block;
+              }
+            }
+            span.iconfont {
+              color: $color-white;
+              font-size: $font-size-l;
+              margin-right: 5px;
+              opacity: 0.5;
+            }
+            span.text {
+              color: $color-white;
+              opacity: 0.5;
+            }
+            span.wx-image {
+              display: none;
+              @include pos-absolute(40px, auto, auto, 0, 999);
+              padding: 10px;
+              background-color: $color-white;
+              transition: 0.3s ease-in-out;
+              img {
+                display: block;
+                width: 140px;
+                height: 140px;
+              }
+            }
+          }
+
+          span.divider {
+            height: 16px;
+            width: 1px;
+            border-right: 1px solid #809ec3;
+          }
+        }
+
+        div.search-input-wrapper {
+          div.search-input {
+            @include flex-row-sb;
+            width: 320px;
+            height: 41px;
+            background: #1a5093;
+            border: 1px solid #2a6bbc;
+            border-radius: 20px;
+            @include media-query($sm) {
+              width: 220px;
+              height: 38px;
+            }
+            input {
+              width: 250px;
+              height: 40px;
+              outline: none;
+              border: none;
+              text-indent: 20px;
+              background-color: transparent;
+              font-size: $font-size-m;
+              color: $color-white;
+              @include media-query($sm) {
+                width: 180px;
+                height: 38px;
+              }
+              &::-webkit-input-placeholder {
+                /* WebKit browsers */
+                color: $color-white;
+                opacity: 0.5;
+              }
+            }
+
+            button {
+              width: 40px;
+              height: 40px;
+              border-radius: 50%;
+              background-color: transparent;
+              border: none;
+              cursor: pointer;
+              &:active {
+                span.iconfont.icon-sousuoxiao {
+                  opacity: 1;
+                  color: $color-sub-theme;
+                }
+              }
+              &:hover {
+                span.iconfont.icon-sousuoxiao {
+                  opacity: 1;
+                }
+              }
+              span.iconfont.icon-sousuoxiao {
+                color: $color-white;
+                font-size: 24px;
+                opacity: 0.5;
+                transition: 0.3s ease-in-out;
+              }
+            }
+          }
+        }
+      }
+
+      .media-nav-menu {
+        display: none;
+        @include media-query($sm) {
+          @include flex-row-center;
+          width: 40px;
+          height: 40px;
+          .iconfont {
+            font-size: 30px;
+            color: $color-white;
+          }
+        }
+      }
+    }
+  }
+
+  .mobile-wx-image {
+    display: none;
+    @include media-query($sm) {
+      @include flex-row-center;
+      @include pos-fixed(0, 0, 0, 0, 88889);
+      background-color: rgba($color: #000000, $alpha: 0.6);
+      transform: translate3d(0, -100%, 0);
+      &.active {
+        transform: translate3d(0, 0, 0);
+      }
+      img {
+        width: 160px;
+        height: 160px;
+      }
+    }
+  }
+
+  section.main-nav {
+    background-color: $color-sub-theme;
+    @include media-query($sm) {
+      @include pos-fixed(0, 0, 0, 0, 8888);
+      display: none;
+      width: 100vw;
+      height: 100vh;
+      background-color: rgba($color: #000000, $alpha: 0.6);
+    }
+    .moblie-nav-top {
+      display: none;
+      @include media-query($sm) {
+        @include pos-absolute(0, 0, 0, auto);
+        @include flex-row-center;
+        width: 100vw;
+        height: 61px;
+        background-color: $color-sub-theme;
+        div.sm-buttons {
+          height: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: end;
+          column-gap: 20px;
+          p.icon {
+            @include flex-row-center;
+            cursor: pointer;
+            transition: 0.3s ease-in-out;
+            position: relative;
+            span.iconfont {
+              color: $color-title;
+              font-size: $font-size-l;
+              margin-right: 5px;
+              opacity: 0.8;
+            }
+            span.text {
+              color: $color-title;
+              opacity: 0.8;
+            }
+          }
+
+          span.divider {
+            height: 16px;
+            width: 1px;
+            border-right: 1px solid $color-title-light;
+          }
+        }
+        .close {
+          @include flex-row-center;
+          @include pos-absolute(0, 0, auto, auto);
+          width: 60px;
+          height: 60px;
+          font-size: 30px;
+          font-weight: 900;
+        }
+      }
+    }
+    nav {
+      @include flex-row-sb;
+      background-color: $color-sub-theme;
+      @include media-query($sm) {
+        @include pos-absolute(60px, 0, 0, 0);
+        display: block;
+        overflow-y: auto;
+        overflow-x: hidden;
+        padding: 0;
+      }
+
+      a.link-main {
+        flex: 1;
+        // width: 120px;
+        font-size: $font-size-m;
+        color: $color-title-light;
+        font-weight: 600;
+        line-height: 45px;
+        text-align: center;
+        position: relative;
+        @include media-query($sm) {
+          display: block;
+          text-indent: 20px;
+          text-align: left;
+        }
+        &.active,
+        &:hover {
+          background-color: $color-gray-deep;
+          @include media-query($sm) {
+            background-color: transparent;
+          }
+        }
+      }
+
+      .second-nav-wrapper {
+        position: relative;
+        flex: 1;
+        cursor: pointer;
+        &:hover {
+          .main-title {
+            background-color: $color-gray-deep;
+          }
+          div.nav-wrapper-sub {
+            display: block;
+          }
+        }
+        .main-title {
+          width: 100%;
+          font-size: $font-size-m;
+          color: $color-title-light;
+          font-weight: 600;
+          line-height: 45px;
+          text-align: center;
+          position: relative;
+          @include media-query($sm) {
+            display: block;
+            text-indent: 20px;
+            text-align: left;
+          }
+          &::after {
+            // @include pos-absolute(20px, 10px, auto, auto);
+            position: relative;
+            top: -2px;
+            right: -5px;
+            content: '';
+            display: inline-block;
+            width: 0;
+            height: 0;
+            border-top: 6px solid $color-title-light;
+            border-left: 6px solid transparent;
+            border-right: 6px solid transparent;
+            @include media-query($sm) {
+              display: none;
+            }
+          }
+        }
+        div.nav-wrapper-sub {
+          @include pos-absolute(45px, 0, auto, 0, 99);
+          display: none;
+          padding-bottom: 10px;
+          background-color: $color-gray-deep;
+          @include media-query($sm) {
+            display: flex;
+            flex-wrap: wrap;
+            column-gap: 20px;
+            position: relative;
+            left: 50px;
+            top: 0;
+            flex-wrap: wrap;
+            background-color: transparent;
+          }
+
+          a.link-sub {
+            display: block;
+            line-height: 45px;
+            text-align: center;
+            font-size: $font-size-m;
+            color: $color-title-light;
+            @include media-query($sm) {
+              text-align: left;
+            }
+            &:hover,
+            &.active {
+              background-color: $color-sub-theme;
+              @include media-query($sm) {
+                background-color: transparent;
+              }
             }
           }
         }

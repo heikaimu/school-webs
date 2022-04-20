@@ -5,20 +5,40 @@ header {
     div.top-wrapper.container {
       @include flex-row-sb;
       height: 125px;
-      @include media-query($sm) {
+
+      @include media-query($large) {
+        height: 90px;
+      }
+
+      @include media-query($medium-down) {
         @include pos-fixed(0, 0, auto, 0, 999);
         height: 60px;
         padding: 0 10px;
         background-color: $color-theme;
       }
+
       a.logo {
         @include flex-row-center;
         column-gap: 10px;
-        @include media-query($sm) {
+
+        @include media-query($large) {
           img {
             &:nth-child(1) {
               width: 45px;
             }
+
+            &:nth-child(2) {
+              width: 332px;
+            }
+          }
+        }
+
+        @include media-query($medium-down) {
+          img {
+            &:nth-child(1) {
+              width: 45px;
+            }
+
             &:nth-child(2) {
               display: none;
             }
@@ -33,42 +53,60 @@ header {
           justify-content: end;
           padding-bottom: 20px;
           column-gap: 20px;
-          @include media-query($sm) {
+
+          @include media-query($large) {
+            padding-bottom: 10px;
+          }
+
+          @include media-query($medium-down) {
             display: none;
           }
+
           p.icon {
             @include flex-row-center;
             cursor: pointer;
             transition: 0.3s ease-in-out;
             position: relative;
+
             &:hover {
               span.iconfont {
                 opacity: 1;
               }
+
               span.text {
                 color: $color-white;
                 opacity: 1;
               }
+
               span.wx-image {
                 display: block;
               }
             }
+
             span.iconfont {
               color: $color-white;
               font-size: $font-size-l;
               margin-right: 5px;
               opacity: 0.5;
             }
+
             span.text {
+              font-size: $font-size-l;
               color: $color-white;
               opacity: 0.5;
+
+              @include media-query($large) {
+                font-size: $font-size-b;
+              }
             }
+
             span.wx-image {
               display: none;
               @include pos-absolute(40px, auto, auto, 0, 999);
               padding: 10px;
               background-color: $color-white;
               transition: 0.3s ease-in-out;
+
               img {
                 display: block;
                 width: 140px;
@@ -92,10 +130,17 @@ header {
             background: #1a5093;
             border: 1px solid #2a6bbc;
             border-radius: 20px;
-            @include media-query($sm) {
+
+            @include media-query($large) {
+              width: 260px;
+              height: 30px;
+            }
+
+            @include media-query($medium-down) {
               width: 220px;
               height: 38px;
             }
+
             input {
               width: 250px;
               height: 40px;
@@ -105,10 +150,17 @@ header {
               background-color: transparent;
               font-size: $font-size-m;
               color: $color-white;
-              @include media-query($sm) {
+
+              @include media-query($large) {
+                width: 260px;
+                height: 30px;
+              }
+
+              @include media-query($medium-down) {
                 width: 180px;
                 height: 38px;
               }
+
               &::-webkit-input-placeholder {
                 /* WebKit browsers */
                 color: $color-white;
@@ -123,22 +175,33 @@ header {
               background-color: transparent;
               border: none;
               cursor: pointer;
+
+              @include media-query($large) {
+                width: 40px;
+                height: 30px;
+              }
+
               &:active {
                 span.iconfont.icon-sousuoxiao {
                   opacity: 1;
                   color: $color-sub-theme;
                 }
               }
+
               &:hover {
                 span.iconfont.icon-sousuoxiao {
                   opacity: 1;
                 }
               }
+
               span.iconfont.icon-sousuoxiao {
                 color: $color-white;
                 font-size: 24px;
                 opacity: 0.5;
                 transition: 0.3s ease-in-out;
+                @include media-query($large) {
+                  font-size: 20px;
+                }
               }
             }
           }
@@ -147,10 +210,12 @@ header {
 
       .media-nav-menu {
         display: none;
-        @include media-query($sm) {
+
+        @include media-query($medium-down) {
           @include flex-row-center;
           width: 40px;
           height: 40px;
+
           .iconfont {
             font-size: 30px;
             color: $color-white;
@@ -162,14 +227,17 @@ header {
 
   .mobile-wx-image {
     display: none;
-    @include media-query($sm) {
+
+    @include media-query($medium-down) {
       @include flex-row-center;
       @include pos-fixed(0, 0, 0, 0, 88889);
       background-color: rgba($color: #000000, $alpha: 0.6);
       transform: translate3d(0, -100%, 0);
+
       &.active {
         transform: translate3d(0, 0, 0);
       }
+
       img {
         width: 160px;
         height: 160px;
@@ -179,38 +247,45 @@ header {
 
   section.main-nav {
     background-color: $color-sub-theme;
-    @include media-query($sm) {
+
+    @include media-query($medium-down) {
       @include pos-fixed(0, 0, 0, 0, 8888);
       display: none;
       width: 100vw;
       height: 100vh;
       background-color: rgba($color: #000000, $alpha: 0.6);
     }
+
     .moblie-nav-top {
       display: none;
-      @include media-query($sm) {
+
+      @include media-query($medium-down) {
         @include pos-absolute(0, 0, 0, auto);
         @include flex-row-center;
         width: 100vw;
         height: 61px;
         background-color: $color-theme;
+
         div.sm-buttons {
           height: 100%;
           display: flex;
           align-items: center;
           justify-content: end;
           column-gap: 20px;
+
           p.icon {
             @include flex-row-center;
             cursor: pointer;
             transition: 0.3s ease-in-out;
             position: relative;
+
             span.iconfont {
               color: $color-white;
               font-size: $font-size-l;
               margin-right: 5px;
               opacity: 0.8;
             }
+
             span.text {
               color: $color-white;
               opacity: 0.8;
@@ -223,6 +298,7 @@ header {
             border-right: 1px solid $color-white;
           }
         }
+
         .close {
           @include flex-row-center;
           @include pos-absolute(0, 0, auto, auto);
@@ -234,10 +310,12 @@ header {
         }
       }
     }
+
     nav {
       @include flex-row-sb;
       background-color: $color-sub-theme;
-      @include media-query($sm) {
+
+      @include media-query($medium-down) {
         @include pos-absolute(60px, 0, 0, 0);
         display: block;
         overflow-y: auto;
@@ -255,16 +333,23 @@ header {
         line-height: 45px;
         text-align: center;
         position: relative;
-        @include media-query($sm) {
+
+        @include media-query($large) {
+          font-size: $font-size-b;
+        }
+
+        @include media-query($medium-down) {
           display: block;
           text-indent: 20px;
           text-align: left;
           color: $color-white;
         }
+
         &.active,
         &:hover {
           background-color: $color-gray-deep;
-          @include media-query($sm) {
+
+          @include media-query($medium-down) {
             background-color: $color-sub-theme;
             color: $color-title-light;
           }
@@ -275,14 +360,17 @@ header {
         position: relative;
         flex: 1;
         cursor: pointer;
+
         &:hover {
           .main-title {
             background-color: $color-gray-deep;
           }
+
           div.nav-wrapper-sub {
             display: block;
           }
         }
+
         .main-title {
           width: 100%;
           font-size: $font-size-l;
@@ -291,12 +379,18 @@ header {
           line-height: 45px;
           text-align: center;
           position: relative;
-          @include media-query($sm) {
+
+          @include media-query($large) {
+            font-size: $font-size-b;
+          }
+
+          @include media-query($medium-down) {
             display: block;
             text-indent: 20px;
             text-align: left;
             color: $color-white;
           }
+
           &::after {
             // @include pos-absolute(20px, 10px, auto, auto);
             position: relative;
@@ -309,17 +403,20 @@ header {
             border-top: 6px solid $color-title-light;
             border-left: 6px solid transparent;
             border-right: 6px solid transparent;
-            @include media-query($sm) {
+
+            @include media-query($medium-down) {
               display: none;
             }
           }
         }
+
         div.nav-wrapper-sub {
           @include pos-absolute(45px, 0, auto, 0, 99);
           display: none;
           padding-bottom: 10px;
           background-color: $color-gray-deep;
-          @include media-query($sm) {
+
+          @include media-query($medium-down) {
             display: flex;
             flex-wrap: wrap;
             column-gap: 20px;
@@ -336,14 +433,21 @@ header {
             text-align: center;
             font-size: $font-size-m;
             color: $color-title-light;
-            @include media-query($sm) {
+
+            @include media-query($large) {
+              font-size: $font-size-b;
+            }
+
+            @include media-query($medium-down) {
               text-align: left;
               color: $color-white;
             }
+
             &:hover,
             &.active {
               background-color: $color-sub-theme;
-              @include media-query($sm) {
+
+              @include media-query($medium-down) {
                 background-color: $color-sub-theme;
                 color: $color-title-light;
               }

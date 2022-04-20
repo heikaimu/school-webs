@@ -3,8 +3,10 @@
 
 section.banner {
   padding-top: 27px;
-  @include media-query($sm) {
+
+  @include media-query($medium-down) {
     padding: 0;
+
     .container {
       padding: 0;
     }
@@ -14,13 +16,16 @@ section.banner {
     height: 365px;
     position: relative;
     overflow: hidden;
-    @include media-query($sm) {
+
+    @include media-query($medium-down) {
       height: 265px;
     }
+
     div.swiper-wrapper {
       div.swiper-slide {
         height: 100%;
         background-color: #666666;
+
         img {
           width: 100%;
           height: 100%;
@@ -36,11 +41,13 @@ section.banner {
         margin: 0 10px;
         background-color: $color-white;
         opacity: 0.8;
-        @include media-query($sm) {
+
+        @include media-query($medium-down) {
           width: 10px;
           height: 10px;
           margin: 0 5px;
         }
+
         &.swiper-pagination-bullet-active {
           background-color: $color-sub-theme;
         }
@@ -51,64 +58,129 @@ section.banner {
 
 section.fast-nav {
   padding-top: 27px;
+
   div.container {
     ul.nav-list {
       @include flex-row-sb;
       padding: 27px;
       background-color: $color-gray;
       flex-wrap: wrap;
-      @include media-query($sm) {
+
+      @include media-query($medium-down) {
         padding: 30px 10px 10px 10px;
       }
+
       li.item {
         width: 100px;
-        @include media-query($sm) {
+
+        @include media-query($medium-down) {
           width: 25%;
           @include flex-row-center;
           margin-bottom: 20px;
         }
+
         div.card {
+          @include flex-col-center;
           position: relative;
+
           &:hover {
             div.icon {
               background-color: $color-theme;
-              transform: scaleX(-1);
+
               span.iconfont {
+                animation: run .5s;
                 color: $color-white;
               }
             }
+
             p.text {
               color: $color-theme;
               font-weight: 900;
             }
           }
+
           div.icon {
             @include flex-row-center;
             width: 100px;
             height: 100px;
             border-radius: 50%;
             background-color: $color-white;
-            transform: scaleX(1);
             transition: 0.3s ease-in-out;
-            @include media-query($sm) {
+            overflow: hidden;
+
+            @include media-query($large) {
+              width: 80px;
+              height: 80px;
+            }
+
+            @include media-query($medium-down) {
               width: 60px;
               height: 60px;
             }
+
             span.iconfont {
               font-size: 50px;
               color: $color-sub-theme;
-              @include media-query($sm) {
+
+              @include media-query($large) {
+                font-size: 40px;
+              }
+
+              @include media-query($medium-down) {
                 font-size: 30px;
+              }
+
+              @keyframes run {
+                0% {
+                  transform: translate3d(0, 0, 0);
+                  opacity: 1;
+                }
+
+                45% {
+                  transform: translate3d(100px, 0, 0);
+                  opacity: 0.5;
+                }
+
+                47% {
+                  transform: translate3d(100px, 100px, 0);
+                  opacity: 0;
+                }
+
+                50% {
+                  transform: translate3d(0, 0, 0);
+                  opacity: 0;
+                }
+
+                52% {
+                  transform: translate3d(-100px, 100px, 0);
+                  opacity: 0;
+                }
+
+                55% {
+                  transform: translate3d(-100px, 0, 0);
+                  opacity: 0;
+                }
+
+                100% {
+                  transform: translate3d(0, 0, 0);
+                  opacity: 1;
+                }
               }
             }
           }
 
           p.text {
+            width: 100%;
             padding-top: 15px;
             text-align: center;
             font-size: $font-size-l;
             color: $color-title-light;
-            @include media-query($sm) {
+
+            @include media-query($large) {
+              font-size: $font-size-b;
+            }
+
+            @include media-query($medium-down) {
               font-size: $font-size-s;
             }
           }
@@ -129,27 +201,34 @@ section.school-news {
       display: flex;
       justify-content: space-between;
       column-gap: 40px;
-      @include media-query($sm) {
+
+      @include media-query($small) {
         display: block;
       }
+
       div.news-left {
         flex: 1;
         overflow: hidden;
-        @include media-query($sm) {
+
+        @include media-query($small) {
           padding-bottom: 20px;
         }
+
         div#news.swiper {
           div.swiper-wrapper {
             div.swiper-slide {
               div.image-news-card {
                 width: 100%;
                 height: 380px;
-                @include media-query($sm) {
+
+                @include media-query($small) {
                   height: 280px;
                 }
+
                 div.cover {
                   width: 100%;
                   height: 100%;
+
                   img {
                     width: 100%;
                     height: 100%;
@@ -160,6 +239,7 @@ section.school-news {
                 div.info {
                   @include pos-absolute(auto, 0, 0, 0);
                   background-color: $color-theme;
+
                   p.title {
                     @include omit;
                     padding: 0 30px;
@@ -167,7 +247,8 @@ section.school-news {
                     line-height: 64px;
                     font-size: $font-size-l;
                     color: $color-sub-theme;
-                    @include media-query($sm) {
+
+                    @include media-query($small) {
                       padding: 0 20px;
                       padding-right: 100px;
                       line-height: 40px;
@@ -183,6 +264,7 @@ section.school-news {
                   background-color: $color-theme;
                   color: $color-white;
                   font-family: '思源宋体';
+
                   p.days {
                     font-size: 36px;
                   }
@@ -204,21 +286,25 @@ section.school-news {
             left: auto;
             right: 10px;
             bottom: 22px;
-            @include media-query($sm) {
+
+            @include media-query($small) {
               right: 10px;
               bottom: 12px;
             }
+
             .swiper-pagination-bullet {
               width: 12px;
               height: 12px;
               margin: 0 5px;
               background-color: $color-white;
               opacity: 0.8;
-              @include media-query($sm) {
+
+              @include media-query($small) {
                 width: 8px;
                 height: 8px;
                 margin: 0 2px;
               }
+
               &.swiper-pagination-bullet-active {
                 background-color: $color-sub-theme;
                 opacity: 1;
@@ -231,18 +317,22 @@ section.school-news {
       div.news-right {
         flex: 1;
         overflow: hidden;
+
         ul.news-list {
           li.item {
             margin-bottom: 20px;
-            @include media-query($sm) {
+
+            @include media-query($small) {
               margin-bottom: 15px;
             }
+
             div.text-news-card {
               @include flex-row-sb;
               column-gap: 20px;
               transition: 0.3s ease-in-out;
               position: relative;
               cursor: pointer;
+
               &::before {
                 @include pos-absolute(4px, auto, auto, 0);
                 content: '';
@@ -256,25 +346,31 @@ section.school-news {
                 transform: translate3d(-20px, 0, 0);
                 transition: 0.3s ease-in-out;
               }
+
               &:hover {
                 padding-left: 20px;
+
                 &::before {
                   opacity: 1;
                   transform: translate3d(0, 0, 0);
                 }
+
                 a.text {
                   color: $color-theme;
                 }
+
                 span.date {
                   color: $color-theme;
                 }
               }
+
               a.text {
                 display: block;
                 @include omit;
                 font-size: $font-size-m;
                 color: $color-title-light;
                 transition: 0.3s ease-in-out;
+
                 &.top::before {
                   content: '【置顶】';
                   color: $color-red;
@@ -305,11 +401,14 @@ section.message-notice {
     div#messageNotice.swiper {
       overflow: hidden;
       position: relative;
+
       div.swiper-wrapper {
         padding: 25px 0 70px 0;
-        @include media-query($sm) {
+
+        @include media-query($medium-down) {
           padding: 25px 0 40px 0;
         }
+
         div.swiper-slide {
           div.message-card {
             padding: 23px;
@@ -320,12 +419,15 @@ section.message-notice {
             transition: 0.3s ease-in-out;
             position: relative;
             top: 0;
+
             &:hover {
               background-color: $color-theme;
               box-shadow: 0px 8px 14px 4px rgba(0, 61, 135, 0.14);
               top: -11px;
+
               div.date {
                 border-right: 1px solid rgba($color: $color-white, $alpha: 0.16);
+
                 p.days {
                   color: $color-sub-theme;
                 }
@@ -345,17 +447,20 @@ section.message-notice {
                 @include pos-absolute(auto, 20px, 15px, auto);
                 transform: rotate(45deg);
                 background-color: $color-sub-theme;
+
                 span.iconfont.icon-youjiantou {
                   color: $color-theme;
                 }
               }
             }
+
             div.date {
               flex: none;
               height: 79px;
               padding-right: 14px;
               border-right: 1px solid rgba($color: $color-content, $alpha: 0.16);
               font-family: '思源宋体';
+
               p.days {
                 font-size: 24px;
                 color: $color-content;
@@ -372,6 +477,7 @@ section.message-notice {
 
             div.info {
               padding-left: 17px;
+
               p.title {
                 @include omits(2);
                 font-size: $font-size-m;
@@ -388,6 +494,7 @@ section.message-notice {
               height: 28px;
               border-radius: 50%;
               transition: 0.3s ease-in-out;
+
               span.iconfont.icon-youjiantou {
                 font-weight: 900;
                 font-size: $font-size-m;
@@ -410,6 +517,7 @@ section.message-notice {
           margin: 0 9px;
           background-color: $color-content;
           opacity: 0.8;
+
           &.swiper-pagination-bullet-active {
             background-color: $color-theme;
           }
@@ -424,11 +532,14 @@ section.study-activity {
     div#studyActivity.swiper {
       overflow: hidden;
       position: relative;
+
       div.swiper-wrapper {
         padding: 25px 0 70px 0;
-        @include media-query($sm) {
+
+        @include media-query($medium-down) {
           padding: 25px 0 40px 0;
         }
+
         div.swiper-slide {
           div.activity-card {
             padding: 25px;
@@ -438,6 +549,7 @@ section.study-activity {
             position: relative;
             overflow: hidden;
             top: 0;
+
             &::after {
               @include pos-absolute(auto, -30px, -40px, auto);
               content: '';
@@ -449,20 +561,25 @@ section.study-activity {
               opacity: 0;
               transform: translate3d(200px, 0, 0) rotate(180deg);
             }
+
             &:hover {
               background-color: $color-white;
               border: 1px solid $color-theme;
               box-shadow: 0px 8px 14px 4px rgba(0, 61, 135, 0.14);
               top: -11px;
+
               &::after {
                 opacity: 1;
                 transform: translate3d(0, 0, 0) rotate(0);
               }
+
               h2.title {
                 color: $color-theme;
               }
+
               ul.info {
                 border-top: 1px dashed $color-theme;
+
                 li.item {
                   div.i-title {
                     background-color: $color-theme;
@@ -470,6 +587,7 @@ section.study-activity {
                 }
               }
             }
+
             h2.title {
               @include omit;
               font-size: $font-size-m;
@@ -482,12 +600,15 @@ section.study-activity {
               margin-top: 20px;
               padding-top: 20px;
               transition: 0.3s ease-in-out;
+
               li.item {
                 display: flex;
                 align-items: flex-start;
-                & + .item {
+
+                &+.item {
                   padding-top: 10px;
                 }
+
                 div.i-title {
                   @include flex-row-center;
                   width: 22px;
@@ -495,6 +616,7 @@ section.study-activity {
                   border-radius: 50%;
                   background-color: $color-sub-theme-deep;
                   transition: 0.3s ease-in-out;
+
                   span.iconfont {
                     color: $color-white;
                     font-size: $font-size-b;
@@ -509,6 +631,7 @@ section.study-activity {
                 }
               }
             }
+
             .link {
               @include pos-absolute;
             }
@@ -523,6 +646,7 @@ section.study-activity {
           margin: 0 9px;
           background-color: $color-content;
           opacity: 0.8;
+
           &.swiper-pagination-bullet-active {
             background-color: $color-theme;
           }
@@ -542,7 +666,8 @@ section.research-condition {
 
       li.item {
         width: calc(50% - 25px);
-        @include media-query($sm) {
+
+        @include media-query($medium-down) {
           width: 100%;
         }
 
@@ -562,7 +687,8 @@ section.research-condition {
           @include flex-row-sb;
           padding: 40px 0;
           position: relative;
-          @include media-query($sm) {
+
+          @include media-query($medium-down) {
             border-bottom: 1px solid rgba($color: $color-content, $alpha: 0.2);
             padding: 20px 0;
           }
@@ -570,10 +696,12 @@ section.research-condition {
           &:hover {
             div.cover {
               border: 3px solid $color-theme;
+
               img {
                 transform: scale(1.1);
               }
             }
+
             div.info {
               p.title {
                 color: $color-theme;
@@ -599,7 +727,7 @@ section.research-condition {
             flex: none;
             transition: .1s;
 
-            @include media-query($sm) {
+            @include media-query($medium-down) {
               width: 100px;
               height: 100px;
             }
@@ -618,7 +746,8 @@ section.research-condition {
             box-sizing: border-box;
             padding-left: 35px;
             overflow: hidden;
-            @include media-query($sm) {
+
+            @include media-query($medium-down) {
               padding-left: 15px;
             }
 
@@ -629,7 +758,8 @@ section.research-condition {
               color: $color-title;
               font-weight: 900;
               transition: 0.3s ease-in-out;
-              @include media-query($sm) {
+
+              @include media-query($medium-down) {
                 padding-bottom: 10px;
               }
             }
@@ -639,7 +769,8 @@ section.research-condition {
               font-size: $font-size-b;
               color: $color-content;
               transition: 0.3s ease-in-out;
-              @include media-query($sm) {
+
+              @include media-query($medium-down) {
                 padding-bottom: 10px;
               }
             }
@@ -650,7 +781,8 @@ section.research-condition {
               line-height: 1.6;
               transition: 0.3s ease-in-out;
               @include omits(3);
-              @include media-query($sm) {
+
+              @include media-query($medium-down) {
                 font-size: $font-size-s;
               }
             }
@@ -674,7 +806,8 @@ section.theme-program {
 
       li.item {
         width: 25%;
-        @include media-query($sm) {
+
+        @include media-query($medium-down) {
           width: 50%;
         }
 
@@ -728,8 +861,10 @@ section.theme-program {
 
             transition: 0.3s ease-in-out;
             opacity: 0;
-            @include media-query($sm) {
+
+            @include media-query($medium-down) {
               opacity: 1;
+
               p.title {
                 font-size: 14px;
                 transform: translate3d(0, 0, 0);

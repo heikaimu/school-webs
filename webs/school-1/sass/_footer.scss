@@ -8,7 +8,7 @@ footer.footer {
     column-gap: 20px;
     padding-top: 30px;
     padding-bottom: 30px;
-    @include media-query($sm) {
+    @include media-query($medium-down) {
       display: block;
     }
 
@@ -17,13 +17,24 @@ footer.footer {
       flex: 2;
       column-gap: 10px;
 
-      @include media-query($sm) {
+      @include media-query($large) {
         img {
           &:nth-child(1) {
             width: 45px;
           }
           &:nth-child(2) {
-            width: 184px;
+            width: 173px;
+          }
+        }
+      }
+
+      @include media-query($medium-down) {
+        img {
+          &:nth-child(1) {
+            width: 45px;
+          }
+          &:nth-child(2) {
+            width: 173px;
           }
         }
       }
@@ -33,7 +44,7 @@ footer.footer {
       flex: 2;
       padding-left: 30px;
       border-left: 1px solid rgba($color: $color-white, $alpha: 0.2);
-      @include media-query($sm) {
+      @include media-query($medium-down) {
         padding-top: 20px;
         padding-left: 0;
         border: none;
@@ -53,7 +64,7 @@ footer.footer {
       column-gap: 15px;
       flex: 2;
 
-      @include media-query($sm) {
+      @include media-query($medium-down) {
         padding-top: 30px;
         display: block;
       }
@@ -63,7 +74,7 @@ footer.footer {
         color: $color-white;
         padding-bottom: 10px;
 
-        @include media-query($sm) {
+        @include media-query($medium-down) {
           text-align: center;
         }
       }
@@ -73,7 +84,7 @@ footer.footer {
       @include flex-row-center;
       column-gap: 10px;
       flex: 1;
-      @include media-query($sm) {
+      @include media-query($medium-down) {
         @include flex-col-center;
         padding-top: 20px;
       }
@@ -82,7 +93,7 @@ footer.footer {
         writing-mode: vertical-lr;
         font-size: $font-size-b;
         color: $color-white;
-        @include media-query($sm) {
+        @include media-query($medium-down) {
           writing-mode: inherit;
           padding-bottom: 10px;
         }
@@ -92,7 +103,7 @@ footer.footer {
         display: block;
         width: 70px;
         height: 70px;
-        @include media-query($sm) {
+        @include media-query($medium-down) {
           width: 120px;
           height: 120px;
         }
@@ -108,7 +119,7 @@ footer.footer {
       text-align: center;
       font-size: $font-size-b;
       color: $color-white;
-      @include media-query($sm) {
+      @include media-query($medium-down) {
         font-size: $font-size-s;
       }
     }

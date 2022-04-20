@@ -2,7 +2,7 @@
 @import './mixin';
 
 body {
-  @include media-query($sm) {
+  @include media-query($medium-down) {
     padding-top: 60px;
   }
 }
@@ -13,7 +13,7 @@ body {
   box-sizing: border-box;
   padding: 0 5%;
   margin: 0 auto;
-  @include media-query($sm) {
+  @include media-query($medium-down) {
     padding: 0 20px;
   }
 }
@@ -32,7 +32,7 @@ div.plate-top {
     color: $color-title;
     background-repeat: no-repeat;
     background-position: left top;
-    @include media-query($sm) {
+    @include media-query($medium-down) {
       padding: 5px 0;
       background-size: auto 20px;
       font-size: 20px;
@@ -55,7 +55,7 @@ div.plate-top {
     span.iconfont {
       font-size: 26px;
       color: $color-theme;
-      @include media-query($sm) {
+      @include media-query($medium-down) {
         font-size: 20px;
       }
     }
@@ -72,7 +72,7 @@ div.plate-top {
     font-size: $font-size-m;
     color: $color-theme;
     transition: 0.3s ease-in-out;
-    @include media-query($sm) {
+    @include media-query($medium-down) {
       font-size: $font-size-b;
     }
     &:hover {

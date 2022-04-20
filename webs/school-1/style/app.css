@@ -197,12 +197,23 @@ img:not([src]) {
   background-color: #ccc;
 }
 
+@media only screen and (max-width: 767px) {
+  body {
+    padding-top: 60px;
+  }
+}
+
 .container {
   max-width: 1600px;
   width: 100%;
   box-sizing: border-box;
-  padding: 0 20px;
+  padding: 0 5%;
   margin: 0 auto;
+}
+@media only screen and (max-width: 767px) {
+  .container {
+    padding: 0 20px;
+  }
 }
 
 .section {
@@ -351,8 +362,15 @@ header section.top-bar div.top-wrapper.container {
 }
 @media only screen and (max-width: 767px) {
   header section.top-bar div.top-wrapper.container {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: auto;
+    left: 0;
+    z-index: 999;
     height: 60px;
     padding: 0 10px;
+    background-color: #003d87;
   }
 }
 header section.top-bar div.top-wrapper.container a.logo {
@@ -563,7 +581,7 @@ header section.main-nav .moblie-nav-top {
     align-items: center;
     width: 100vw;
     height: 61px;
-    background-color: #eec88e;
+    background-color: #003d87;
   }
   header section.main-nav .moblie-nav-top div.sm-buttons {
     height: 100%;
@@ -581,19 +599,19 @@ header section.main-nav .moblie-nav-top {
     position: relative;
   }
   header section.main-nav .moblie-nav-top div.sm-buttons p.icon span.iconfont {
-    color: #111111;
+    color: #ffffff;
     font-size: 18px;
     margin-right: 5px;
     opacity: 0.8;
   }
   header section.main-nav .moblie-nav-top div.sm-buttons p.icon span.text {
-    color: #111111;
+    color: #ffffff;
     opacity: 0.8;
   }
   header section.main-nav .moblie-nav-top div.sm-buttons span.divider {
     height: 16px;
     width: 1px;
-    border-right: 1px solid #333333;
+    border-right: 1px solid #ffffff;
   }
   header section.main-nav .moblie-nav-top .close {
     display: flex;
@@ -609,6 +627,7 @@ header section.main-nav .moblie-nav-top {
     height: 60px;
     font-size: 30px;
     font-weight: 900;
+    color: #ffffff;
   }
 }
 header section.main-nav nav {
@@ -629,11 +648,12 @@ header section.main-nav nav {
     overflow-y: auto;
     overflow-x: hidden;
     padding: 0;
+    background-color: #003d87;
   }
 }
 header section.main-nav nav a.link-main {
   flex: 1;
-  font-size: 16px;
+  font-size: 18px;
   color: #333333;
   font-weight: 600;
   line-height: 45px;
@@ -645,6 +665,7 @@ header section.main-nav nav a.link-main {
     display: block;
     text-indent: 20px;
     text-align: left;
+    color: #ffffff;
   }
 }
 header section.main-nav nav a.link-main.active, header section.main-nav nav a.link-main:hover {
@@ -652,7 +673,8 @@ header section.main-nav nav a.link-main.active, header section.main-nav nav a.li
 }
 @media only screen and (max-width: 767px) {
   header section.main-nav nav a.link-main.active, header section.main-nav nav a.link-main:hover {
-    background-color: transparent;
+    background-color: #eec88e;
+    color: #333333;
   }
 }
 header section.main-nav nav .second-nav-wrapper {
@@ -668,7 +690,7 @@ header section.main-nav nav .second-nav-wrapper:hover div.nav-wrapper-sub {
 }
 header section.main-nav nav .second-nav-wrapper .main-title {
   width: 100%;
-  font-size: 16px;
+  font-size: 18px;
   color: #333333;
   font-weight: 600;
   line-height: 45px;
@@ -680,6 +702,7 @@ header section.main-nav nav .second-nav-wrapper .main-title {
     display: block;
     text-indent: 20px;
     text-align: left;
+    color: #ffffff;
   }
 }
 header section.main-nav nav .second-nav-wrapper .main-title::after {
@@ -716,7 +739,7 @@ header section.main-nav nav .second-nav-wrapper div.nav-wrapper-sub {
     flex-wrap: wrap;
     column-gap: 20px;
     position: relative;
-    left: 50px;
+    left: 30px;
     top: 0;
     flex-wrap: wrap;
     background-color: transparent;
@@ -732,6 +755,7 @@ header section.main-nav nav .second-nav-wrapper div.nav-wrapper-sub a.link-sub {
 @media only screen and (max-width: 767px) {
   header section.main-nav nav .second-nav-wrapper div.nav-wrapper-sub a.link-sub {
     text-align: left;
+    color: #ffffff;
   }
 }
 header section.main-nav nav .second-nav-wrapper div.nav-wrapper-sub a.link-sub:hover, header section.main-nav nav .second-nav-wrapper div.nav-wrapper-sub a.link-sub.active {
@@ -739,7 +763,8 @@ header section.main-nav nav .second-nav-wrapper div.nav-wrapper-sub a.link-sub:h
 }
 @media only screen and (max-width: 767px) {
   header section.main-nav nav .second-nav-wrapper div.nav-wrapper-sub a.link-sub:hover, header section.main-nav nav .second-nav-wrapper div.nav-wrapper-sub a.link-sub.active {
-    background-color: transparent;
+    background-color: #eec88e;
+    color: #333333;
   }
 }
 
@@ -958,6 +983,7 @@ section.fast-nav div.container ul.nav-list li.item div.card:hover div.icon span.
 }
 section.fast-nav div.container ul.nav-list li.item div.card:hover p.text {
   color: #003d87;
+  font-weight: 900;
 }
 section.fast-nav div.container ul.nav-list li.item div.card div.icon {
   display: flex;
@@ -1084,6 +1110,7 @@ section.school-news div.container div.news-container div.news-left div#news.swip
   padding: 10px 15px;
   background-color: #003d87;
   color: #ffffff;
+  font-family: '思源宋体';
 }
 section.school-news div.container div.news-container div.news-left div#news.swiper div.swiper-wrapper div.swiper-slide div.image-news-card div.date p.days {
   font-size: 36px;
@@ -1199,6 +1226,7 @@ section.school-news div.container div.news-container div.news-right ul.news-list
   font-size: 14px;
   color: #666666;
   transition: 0.3s ease-in-out;
+  font-family: '思源宋体';
 }
 
 section.message-notice {
@@ -1263,6 +1291,7 @@ section.message-notice div.container div#messageNotice.swiper div.swiper-wrapper
   height: 79px;
   padding-right: 14px;
   border-right: 1px solid rgba(102, 102, 102, 0.16);
+  font-family: '思源宋体';
 }
 section.message-notice div.container div#messageNotice.swiper div.swiper-wrapper div.swiper-slide div.message-card div.date p.days {
   font-size: 24px;
@@ -1482,6 +1511,9 @@ section.research-condition div.container ul.condition-list li.item div.condition
     padding: 20px 0;
   }
 }
+section.research-condition div.container ul.condition-list li.item div.condition-card:hover div.cover {
+  border: 3px solid #003d87;
+}
 section.research-condition div.container ul.condition-list li.item div.condition-card:hover div.cover img {
   transform: scale(1.1);
 }
@@ -1497,9 +1529,12 @@ section.research-condition div.container ul.condition-list li.item div.condition
 section.research-condition div.container ul.condition-list li.item div.condition-card div.cover {
   width: 168px;
   height: 168px;
+  border: 3px solid #f0efed;
+  box-sizing: border-box;
   border-radius: 50%;
   overflow: hidden;
   flex: none;
+  transition: .1s;
 }
 @media only screen and (max-width: 767px) {
   section.research-condition div.container ul.condition-list li.item div.condition-card div.cover {
@@ -1511,6 +1546,7 @@ section.research-condition div.container ul.condition-list li.item div.condition
   display: block;
   width: 100%;
   height: 100%;
+  border-radius: 50%;
   object-fit: cover;
   transition: 0.3s ease-in-out;
 }
@@ -1528,7 +1564,7 @@ section.research-condition div.container ul.condition-list li.item div.condition
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  padding-bottom: 20px;
+  padding-bottom: 15px;
   font-size: 16px;
   color: #111111;
   font-weight: 900;
@@ -1540,7 +1576,7 @@ section.research-condition div.container ul.condition-list li.item div.condition
   }
 }
 section.research-condition div.container ul.condition-list li.item div.condition-card div.info p.author {
-  padding-bottom: 20px;
+  padding-bottom: 15px;
   font-size: 14px;
   color: #666666;
   transition: 0.3s ease-in-out;

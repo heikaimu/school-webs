@@ -1,8 +1,8 @@
 @font-face {
   font-family: "iconfont"; /* Project id 2328096 */
-  src: url('iconfont.woff2?t=1650192282040') format('woff2'),
-       url('iconfont.woff?t=1650192282040') format('woff'),
-       url('iconfont.ttf?t=1650192282040') format('truetype');
+  src: url('iconfont.woff2?t=1650419234845') format('woff2'),
+       url('iconfont.woff?t=1650419234845') format('woff'),
+       url('iconfont.ttf?t=1650419234845') format('truetype');
 }
 
 .iconfont {
@@ -11,6 +11,46 @@
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-jiaoshiguanli:before {
+  content: "\e606";
+}
+
+.icon-a-zaixianxuexikaoshipeixunkecheng-62:before {
+  content: "\e8d4";
+}
+
+.icon-tushu:before {
+  content: "\e603";
+}
+
+.icon-beizhu:before {
+  content: "\e615";
+}
+
+.icon-boshimao:before {
+  content: "\e604";
+}
+
+.icon-yanjiuchuangxinnengli:before {
+  content: "\e611";
+}
+
+.icon-hetongdengji:before {
+  content: "\e667";
+}
+
+.icon-huojiangdengji:before {
+  content: "\e671";
+}
+
+.icon-jurassic_book:before {
+  content: "\e697";
+}
+
+.icon-gongwenbao:before {
+  content: "\e66b";
 }
 
 .icon-shanchu:before {

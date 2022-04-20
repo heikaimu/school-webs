@@ -1,12 +1,21 @@
 @import './variables';
 @import './mixin';
 
+body {
+  @include media-query($sm) {
+    padding-top: 60px;
+  }
+}
+
 .container {
   max-width: 1600px;
   width: 100%;
   box-sizing: border-box;
-  padding: 0 20px;
+  padding: 0 5%;
   margin: 0 auto;
+  @include media-query($sm) {
+    padding: 0 20px;
+  }
 }
 
 .section {

@@ -6,6 +6,76 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "6729602",
+      "name": "教室管理",
+      "font_class": "jiaoshiguanli",
+      "unicode": "e606",
+      "unicode_decimal": 58886
+    },
+    {
+      "icon_id": "26001384",
+      "name": "在线学习、考试、培训、课程-62",
+      "font_class": "a-zaixianxuexikaoshipeixunkecheng-62",
+      "unicode": "e8d4",
+      "unicode_decimal": 59604
+    },
+    {
+      "icon_id": "1090",
+      "name": "图书",
+      "font_class": "tushu",
+      "unicode": "e603",
+      "unicode_decimal": 58883
+    },
+    {
+      "icon_id": "1167131",
+      "name": "备注",
+      "font_class": "beizhu",
+      "unicode": "e615",
+      "unicode_decimal": 58901
+    },
+    {
+      "icon_id": "1249035",
+      "name": "博士帽",
+      "font_class": "boshimao",
+      "unicode": "e604",
+      "unicode_decimal": 58884
+    },
+    {
+      "icon_id": "3640201",
+      "name": "研究创新能力",
+      "font_class": "yanjiuchuangxinnengli",
+      "unicode": "e611",
+      "unicode_decimal": 58897
+    },
+    {
+      "icon_id": "4967559",
+      "name": "合同登记",
+      "font_class": "hetongdengji",
+      "unicode": "e667",
+      "unicode_decimal": 58983
+    },
+    {
+      "icon_id": "4973266",
+      "name": "获奖登记",
+      "font_class": "huojiangdengji",
+      "unicode": "e671",
+      "unicode_decimal": 58993
+    },
+    {
+      "icon_id": "10593755",
+      "name": "书籍,书本,资源_jurassic",
+      "font_class": "jurassic_book",
+      "unicode": "e697",
+      "unicode_decimal": 59031
+    },
+    {
+      "icon_id": "25965310",
+      "name": "公文包",
+      "font_class": "gongwenbao",
+      "unicode": "e66b",
+      "unicode_decimal": 58987
+    },
+    {
       "icon_id": "833290",
       "name": "删除",
       "font_class": "shanchu",

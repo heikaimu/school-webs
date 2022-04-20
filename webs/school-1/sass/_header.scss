@@ -6,8 +6,10 @@ header {
       @include flex-row-sb;
       height: 125px;
       @include media-query($sm) {
+        @include pos-fixed(0, 0, auto, 0, 999);
         height: 60px;
         padding: 0 10px;
+        background-color: $color-theme;
       }
       a.logo {
         @include flex-row-center;
@@ -191,7 +193,7 @@ header {
         @include flex-row-center;
         width: 100vw;
         height: 61px;
-        background-color: $color-sub-theme;
+        background-color: $color-theme;
         div.sm-buttons {
           height: 100%;
           display: flex;
@@ -204,13 +206,13 @@ header {
             transition: 0.3s ease-in-out;
             position: relative;
             span.iconfont {
-              color: $color-title;
+              color: $color-white;
               font-size: $font-size-l;
               margin-right: 5px;
               opacity: 0.8;
             }
             span.text {
-              color: $color-title;
+              color: $color-white;
               opacity: 0.8;
             }
           }
@@ -218,7 +220,7 @@ header {
           span.divider {
             height: 16px;
             width: 1px;
-            border-right: 1px solid $color-title-light;
+            border-right: 1px solid $color-white;
           }
         }
         .close {
@@ -228,6 +230,7 @@ header {
           height: 60px;
           font-size: 30px;
           font-weight: 900;
+          color: $color-white;
         }
       }
     }
@@ -240,12 +243,13 @@ header {
         overflow-y: auto;
         overflow-x: hidden;
         padding: 0;
+        background-color: $color-theme;
       }
 
       a.link-main {
         flex: 1;
         // width: 120px;
-        font-size: $font-size-m;
+        font-size: $font-size-l;
         color: $color-title-light;
         font-weight: 600;
         line-height: 45px;
@@ -255,12 +259,14 @@ header {
           display: block;
           text-indent: 20px;
           text-align: left;
+          color: $color-white;
         }
         &.active,
         &:hover {
           background-color: $color-gray-deep;
           @include media-query($sm) {
-            background-color: transparent;
+            background-color: $color-sub-theme;
+            color: $color-title-light;
           }
         }
       }
@@ -279,7 +285,7 @@ header {
         }
         .main-title {
           width: 100%;
-          font-size: $font-size-m;
+          font-size: $font-size-l;
           color: $color-title-light;
           font-weight: 600;
           line-height: 45px;
@@ -289,6 +295,7 @@ header {
             display: block;
             text-indent: 20px;
             text-align: left;
+            color: $color-white;
           }
           &::after {
             // @include pos-absolute(20px, 10px, auto, auto);
@@ -317,7 +324,7 @@ header {
             flex-wrap: wrap;
             column-gap: 20px;
             position: relative;
-            left: 50px;
+            left: 30px;
             top: 0;
             flex-wrap: wrap;
             background-color: transparent;
@@ -331,12 +338,14 @@ header {
             color: $color-title-light;
             @include media-query($sm) {
               text-align: left;
+              color: $color-white;
             }
             &:hover,
             &.active {
               background-color: $color-sub-theme;
               @include media-query($sm) {
-                background-color: transparent;
+                background-color: $color-sub-theme;
+                color: $color-title-light;
               }
             }
           }

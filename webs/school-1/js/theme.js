@@ -1,8 +1,8 @@
 /*
  * @Date: 2022-04-08 17:12:42
  * @LastEditors: Yaowen Liu
- * @LastEditTime: 2022-04-11 14:09:48
- * @FilePath: /yzb-web/js/theme.js
+ * @LastEditTime: 2022-04-19 16:09:11
+ * @FilePath: /school-webs/webs/school-1/js/theme.js
  */
 
 // footer滚动效果
@@ -120,5 +120,5 @@ $(function () {
 // 窗口滚动
 window.addEventListener('scroll', function () {
   footerScroll();
-  headerFixed();
+  // headerFixed();
 });

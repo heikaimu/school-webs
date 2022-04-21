@@ -1052,8 +1052,13 @@ section.fast-nav div.container ul.nav-list li.item div.card:hover div.icon {
   background-color: #003d87;
 }
 section.fast-nav div.container ul.nav-list li.item div.card:hover div.icon span.iconfont {
-  animation: run .5s;
-  color: #ffffff;
+  animation: .5s 0s run ease-in-out forwards normal;
+}
+section.fast-nav div.container ul.nav-list li.item div.card:hover div.icon.national-emblem {
+  background-color: #ed2c25;
+}
+section.fast-nav div.container ul.nav-list li.item div.card:hover div.icon.national-emblem span.iconfont {
+  animation: .5s 0s runRed ease-in-out forwards normal;
 }
 section.fast-nav div.container ul.nav-list li.item div.card:hover p.text {
   color: #003d87;
@@ -1070,6 +1075,9 @@ section.fast-nav div.container ul.nav-list li.item div.card div.icon {
   transition: 0.3s ease-in-out;
   overflow: hidden;
 }
+section.fast-nav div.container ul.nav-list li.item div.card div.icon.national-emblem span.iconfont {
+  animation: .5s 0s runRedBack ease-in-out forwards normal;
+}
 @media only screen and (min-width: 990px) and (max-width: 1299px) {
   section.fast-nav div.container ul.nav-list li.item div.card div.icon {
     width: 80px;
@@ -1084,7 +1092,7 @@ section.fast-nav div.container ul.nav-list li.item div.card div.icon {
 }
 section.fast-nav div.container ul.nav-list li.item div.card div.icon span.iconfont {
   font-size: 50px;
-  color: #eec88e;
+  animation: .5s 0s runBack ease-in-out forwards normal;
 }
 @media only screen and (min-width: 990px) and (max-width: 1299px) {
   section.fast-nav div.container ul.nav-list li.item div.card div.icon span.iconfont {
@@ -1100,30 +1108,80 @@ section.fast-nav div.container ul.nav-list li.item div.card div.icon span.iconfo
   0% {
     transform: translate3d(0, 0, 0);
     opacity: 1;
+    color: #eec88e;
   }
-  45% {
+  49% {
     transform: translate3d(100px, 0, 0);
-    opacity: 0.5;
-  }
-  47% {
-    transform: translate3d(100px, 100px, 0);
     opacity: 0;
   }
-  50% {
-    transform: translate3d(0, 0, 0);
-    opacity: 0;
-  }
-  52% {
-    transform: translate3d(-100px, 100px, 0);
-    opacity: 0;
-  }
-  55% {
+  51% {
     transform: translate3d(-100px, 0, 0);
     opacity: 0;
   }
   100% {
     transform: translate3d(0, 0, 0);
     opacity: 1;
+    color: #ffffff;
+  }
+}
+@keyframes runBack {
+  0% {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+    color: #ffffff;
+  }
+  49% {
+    transform: translate3d(-100px, 0, 0);
+    opacity: 0;
+  }
+  51% {
+    transform: translate3d(100px, 0, 0);
+    opacity: 0;
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+    color: #eec88e;
+  }
+}
+@keyframes runRed {
+  0% {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+    color: #ed2c25;
+  }
+  49% {
+    transform: translate3d(100px, 0, 0);
+    opacity: 0;
+  }
+  51% {
+    transform: translate3d(-100px, 0, 0);
+    opacity: 0;
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+    color: #fdcf30;
+  }
+}
+@keyframes runRedBack {
+  0% {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+    color: #fdcf30;
+  }
+  49% {
+    transform: translate3d(-100px, 0, 0);
+    opacity: 0;
+  }
+  51% {
+    transform: translate3d(100px, 0, 0);
+    opacity: 0;
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+    color: #ed2c25;
   }
 }
 section.fast-nav div.container ul.nav-list li.item div.card p.text {
@@ -1340,7 +1398,7 @@ section.school-news div.container div.news-container div.news-right ul.news-list
 }
 section.school-news div.container div.news-container div.news-right ul.news-list li.item div.text-news-card a.text.top::before {
   content: '【置顶】';
-  color: #d50000;
+  color: #ed2c25;
 }
 section.school-news div.container div.news-container div.news-right ul.news-list li.item div.text-news-card span.date {
   flex: none;

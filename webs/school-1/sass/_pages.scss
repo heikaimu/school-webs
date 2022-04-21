@@ -88,8 +88,14 @@ section.fast-nav {
               background-color: $color-theme;
 
               span.iconfont {
-                animation: run .5s;
-                color: $color-white;
+                animation: .5s 0s run ease-in-out forwards normal;
+              }
+
+              &.national-emblem {
+                background-color: $color-red;
+                span.iconfont {
+                  animation: .5s 0s runRed ease-in-out forwards normal;
+                }
               }
             }
 
@@ -108,6 +114,12 @@ section.fast-nav {
             transition: 0.3s ease-in-out;
             overflow: hidden;
 
+            &.national-emblem {
+              span.iconfont {
+                animation: .5s 0s runRedBack ease-in-out forwards normal;
+              }
+            }
+
             @include media-query($large) {
               width: 80px;
               height: 80px;
@@ -120,7 +132,7 @@ section.fast-nav {
 
             span.iconfont {
               font-size: 50px;
-              color: $color-sub-theme;
+              animation: .5s 0s runBack ease-in-out forwards normal;
 
               @include media-query($large) {
                 font-size: 40px;
@@ -134,29 +146,15 @@ section.fast-nav {
                 0% {
                   transform: translate3d(0, 0, 0);
                   opacity: 1;
+                  color: $color-sub-theme;
                 }
 
-                45% {
+                49% {
                   transform: translate3d(100px, 0, 0);
-                  opacity: 0.5;
-                }
-
-                47% {
-                  transform: translate3d(100px, 100px, 0);
                   opacity: 0;
                 }
 
-                50% {
-                  transform: translate3d(0, 0, 0);
-                  opacity: 0;
-                }
-
-                52% {
-                  transform: translate3d(-100px, 100px, 0);
-                  opacity: 0;
-                }
-
-                55% {
+                51% {
                   transform: translate3d(-100px, 0, 0);
                   opacity: 0;
                 }
@@ -164,6 +162,79 @@ section.fast-nav {
                 100% {
                   transform: translate3d(0, 0, 0);
                   opacity: 1;
+                  color: $color-white;
+                }
+              }
+
+              @keyframes runBack {
+                0% {
+                  transform: translate3d(0, 0, 0);
+                  opacity: 1;
+                  color: $color-white;
+                }
+
+                49% {
+                  transform: translate3d(-100px, 0, 0);
+                  opacity: 0;
+                }
+
+                51% {
+                  transform: translate3d(100px, 0, 0);
+                  opacity: 0;
+                }
+
+                100% {
+                  transform: translate3d(0, 0, 0);
+                  opacity: 1;
+                  color: $color-sub-theme;
+                }
+              }
+
+              @keyframes runRed {
+                0% {
+                  transform: translate3d(0, 0, 0);
+                  opacity: 1;
+                  color: $color-red;
+                }
+
+                49% {
+                  transform: translate3d(100px, 0, 0);
+                  opacity: 0;
+                }
+
+                51% {
+                  transform: translate3d(-100px, 0, 0);
+                  opacity: 0;
+                }
+
+                100% {
+                  transform: translate3d(0, 0, 0);
+                  opacity: 1;
+                  color: $color-yellow;
+                }
+              }
+
+              @keyframes runRedBack {
+                0% {
+                  transform: translate3d(0, 0, 0);
+                  opacity: 1;
+                  color: $color-yellow;
+                }
+
+                49% {
+                  transform: translate3d(-100px, 0, 0);
+                  opacity: 0;
+                }
+
+                51% {
+                  transform: translate3d(100px, 0, 0);
+                  opacity: 0;
+                }
+
+                100% {
+                  transform: translate3d(0, 0, 0);
+                  opacity: 1;
+                  color: $color-red;
                 }
               }
             }

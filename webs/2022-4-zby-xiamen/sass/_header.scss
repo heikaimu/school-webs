@@ -389,6 +389,7 @@ section.main-nav {
         border-radius: 4px;
         position: absolute;
         left: 0;
+        z-index: 9999;
         background-color: #f3f3f3;
         top: calc(100%);
         display: none;

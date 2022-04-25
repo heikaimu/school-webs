@@ -339,13 +339,15 @@ section.main-nav {
       display: none;
 
       @include media-query($medium-down) {
-        @include pos-absolute(5px, 5px, auto, auto);
+        @include pos-absolute(0, 0, auto, auto);
         display: block;
-        width: 30px;
-        height: 30px;
-        border-radius: 4px;
+        width: 50px;
+        height: 40px;
+        box-sizing: border-box;
+        border: 4px solid $color-theme;
+        border-radius: 10px;
         background-color: $color-theme-deep;
-        line-height: 30px;
+        line-height: 32px;
         text-align: center;
         font-size: 16px;
         color: $color-white;
@@ -359,17 +361,8 @@ section.main-nav {
 
       a.nav-one-text {
         @include nav-text;
-        height: 40px;
-        line-height: 40px;
-
-        @include media-query($large-down) {
-          height: 30px;
-          line-height: 30px;
-        }
 
         @include media-query($medium-down) {
-          height: 40px;
-          line-height: 40px;
 
           &.arrow {
             &::after {
@@ -396,7 +389,7 @@ section.main-nav {
         border-radius: 4px;
         position: absolute;
         left: 0;
-        background-color: $color-sub-theme;
+        background-color: #f3f3f3;
         top: calc(100%);
         display: none;
         border-top: 1px solid #ffffff;
@@ -417,11 +410,9 @@ section.main-nav {
           }
 
           a.nav-two-text {
-            @include nav-text;
+            @include nav-text($color-sub-theme);
 
             @include media-query($medium-down) {
-              line-height: 40px;
-              height: 40px;
 
               &.arrow {
                 &::after {
@@ -448,7 +439,7 @@ section.main-nav {
             top: 0;
             left: calc(100%);
             border-left: 1px solid #ffffff;
-            background-color: $color-sub-theme;
+            background-color: #f3f3f3;
             display: none;
 
             @include media-query($medium-down) {
@@ -462,12 +453,7 @@ section.main-nav {
             }
 
             a.nav-three-text {
-              @include nav-text;
-
-              @include media-query($medium-down) {
-                line-height: 40px;
-                height: 40px;
-              }
+              @include nav-text($color-sub-theme);
             }
           }
         }

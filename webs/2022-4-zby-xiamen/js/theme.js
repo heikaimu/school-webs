@@ -95,10 +95,12 @@ function customSelector() {
 
 function mobileNav() {
   $('#mobileOpen').click(function () {
-    $('#mobileNav').fadeIn();
+    $('#mobileNav').addClass("active");
+    $('html').css({ 'overflow-y': 'hidden' });
   });
   $('#mobileClose').click(function () {
-    $('#mobileNav').fadeOut();
+    $('#mobileNav').removeClass("active");
+    $('html').css({ 'overflow-y': 'auto' });
   });
   $('#mobileWxMenu').click(function () {
     $('#mobileWxImage').addClass('active');

@@ -984,13 +984,13 @@ header section.top-bar div.top-wrapper.container div.top-right-wrapper div.searc
 }
 @media only screen and (min-width: 990px) and (max-width: 1299px) {
   header section.top-bar div.top-wrapper.container div.top-right-wrapper div.search-input-wrapper div.search-input input {
-    width: 260px;
+    width: 200px;
     height: 30px;
   }
 }
 @media only screen and (max-width: 989px) {
   header section.top-bar div.top-wrapper.container div.top-right-wrapper div.search-input-wrapper div.search-input input {
-    width: 180px;
+    width: 170px;
     height: 38px;
   }
 }
@@ -1002,6 +1002,7 @@ header section.top-bar div.top-wrapper.container div.top-right-wrapper div.searc
 header section.top-bar div.top-wrapper.container div.top-right-wrapper div.search-input-wrapper div.search-input button {
   width: 40px;
   height: 40px;
+  flex: none;
   border-radius: 50%;
   background-color: transparent;
   border: none;
@@ -1091,6 +1092,7 @@ section.main-nav {
     width: 100vw;
     height: 100vh;
     background-color: #003d87;
+    display: none;
   }
 }
 section.main-nav .moblie-nav-top {

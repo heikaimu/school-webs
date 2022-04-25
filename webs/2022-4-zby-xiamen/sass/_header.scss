@@ -152,12 +152,12 @@ header {
               color: $color-white;
 
               @include media-query($large) {
-                width: 260px;
+                width: 200px;
                 height: 30px;
               }
 
               @include media-query($medium-down) {
-                width: 180px;
+                width: 170px;
                 height: 38px;
               }
 
@@ -171,6 +171,7 @@ header {
             button {
               width: 40px;
               height: 40px;
+              flex: none;
               border-radius: 50%;
               background-color: transparent;
               border: none;
@@ -260,6 +261,7 @@ section.main-nav {
     width: 100vw;
     height: 100vh;
     background-color: $color-theme;
+    display: none;
   }
 
   .moblie-nav-top {

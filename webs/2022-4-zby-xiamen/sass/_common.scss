@@ -13,6 +13,7 @@ body {
   box-sizing: border-box;
   padding: 0 5%;
   margin: 0 auto;
+
   @include media-query($medium-down) {
     padding: 0 20px;
   }
@@ -24,6 +25,7 @@ body {
 
 div.plate-top {
   @include flex-row-sb;
+
   div.plate-title {
     flex-grow: 1;
     position: relative;
@@ -32,29 +34,37 @@ div.plate-top {
     color: $color-title;
     background-repeat: no-repeat;
     background-position: left top;
+
     @include media-query($medium-down) {
       padding: 5px 0;
       background-size: auto 20px;
       font-size: 20px;
     }
+
     &.bg0 {
       background-image: url(../images/title_bg0.png);
     }
+
     &.bg1 {
       background-image: url(../images/title_bg1.png);
     }
+
     &.bg2 {
       background-image: url(../images/title_bg2.png);
     }
+
     &.bg3 {
       background-image: url(../images/title_bg3.png);
     }
+
     &.bg4 {
       background-image: url(../images/title_bg4.png);
     }
+
     span.iconfont {
       font-size: 26px;
       color: $color-theme;
+
       @include media-query($medium-down) {
         font-size: 20px;
       }
@@ -72,9 +82,11 @@ div.plate-top {
     font-size: $font-size-m;
     color: $color-theme;
     transition: 0.3s ease-in-out;
+
     @include media-query($medium-down) {
       font-size: $font-size-b;
     }
+
     &:hover {
       background-color: $color-theme;
       color: $color-white;
@@ -91,6 +103,7 @@ div.custom-selector {
   border-radius: 20px;
   position: relative;
   color: $color-theme;
+
   &::after {
     @include pos-absolute(18px, 12px, auto, auto);
     content: '';
@@ -103,6 +116,7 @@ div.custom-selector {
     border-left: 6px solid transparent;
     border-right: 6px solid transparent;
   }
+
   .placeholder {
     width: 100%;
     height: 40px;
@@ -115,6 +129,7 @@ div.custom-selector {
     position: relative;
     z-index: 3;
   }
+
   .options {
     @include pos-absolute(auto, 0, 50px, 0, 999);
     display: none;
@@ -122,6 +137,7 @@ div.custom-selector {
     border-radius: 4px;
     background-color: $color-white;
     border: 1px solid $color-theme;
+
     a {
       display: block;
       font-size: $font-size-b;
@@ -129,10 +145,358 @@ div.custom-selector {
       line-height: 2;
       text-indent: 10px;
       transition: 0.1s ease-in-out;
+
       &:hover {
         background-color: $color-theme;
         color: $color-white;
       }
+    }
+  }
+}
+
+.inner-side-page {
+  display: flex;
+  column-gap: 38px;
+  overflow: hidden;
+  padding-bottom: 50px;
+
+  @include media-query($small) {
+    padding-bottom: 20px;
+  }
+
+  .inner-nav {
+    flex: none;
+
+    @include media-query($medium-down) {
+      display: none;
+    }
+  }
+
+  .inner-content-wrapper {
+    flex: 1;
+    overflow: hidden;
+  }
+}
+
+
+div.side-bar {
+  flex: none;
+  width: 300px;
+  background-color: $color-theme;
+  position: relative;
+  overflow: hidden;
+
+  @include media-query($large) {
+    width: 240px;
+  }
+
+  &::after {
+    @include pos-absolute(-10px, 5px, auto, auto);
+    content: "";
+    display: block;
+    width: 90px;
+    height: 90px;
+    background: url(../images/nav_logo.png);
+  }
+
+  img {
+    display: block;
+    width: 100%;
+  }
+
+  h2.side-bar-title {
+    display: flex;
+    align-items: center;
+    height: 66px;
+    padding: 0 23px;
+    font-size: 24px;
+    line-height: 1;
+    color: $color-sub-theme;
+    position: relative;
+    text-indent: 20px;
+
+    @include media-query($large) {
+      font-size: 20px;
+    }
+
+    &::before {
+      @include pos-absolute(23px, auto, auto, auto);
+      display: block;
+      content: "";
+      width: 4px;
+      height: 24px;
+      background-image: linear-gradient($color-sub-theme 50%, $color-white 50%);
+    }
+  }
+
+  ul.second-nav {
+    padding: 34px 18px 10px 18px;
+    border-top: 4px solid $color-sub-theme;
+    background-color: #225088;
+
+    li.second-nav-item {
+      &+.second-nav-item {
+        margin-top: 10px;
+      }
+
+      &.active {
+        p.second-nav-item-text {
+          background-color: rgba($color: $color-sub-theme, $alpha: 1);
+          color: $color-white;
+
+          &::before {
+            background-image: url(../images/nav_icon_blue.png);
+          }
+
+          &::after {
+            opacity: 1;
+          }
+        }
+
+        nav.third-nav {
+          display: block;
+        }
+      }
+
+      p.second-nav-item-text {
+        height: 54px;
+        background-color: rgba($color: $color-white, $alpha: 0.1);
+        line-height: 54px;
+        font-size: 18px;
+        color: $color-white;
+        text-indent: 48px;
+        position: relative;
+        cursor: pointer;
+
+        @include media-query($large) {
+          font-size: 16px;
+        }
+
+        // &:hover,
+        &::before {
+          @include pos-absolute(50%, auto, auto, 17px);
+          transform: translate3d(0, -50%, 0);
+          content: "";
+          display: block;
+          width: 17px;
+          height: 12px;
+          background-image: url(../images/nav_icon_yellow.png);
+        }
+
+        &::after {
+          @include pos-absolute(50%, 20px, auto, auto);
+          transform: translate3d(0, -50%, 0);
+          font-family: "iconfont";
+          content: "\e624";
+          font-size: 16px;
+          color: $color-theme;
+          opacity: 0;
+
+          @include media-query($large) {
+            font-size: 14px;
+          }
+        }
+      }
+
+      nav.third-nav {
+        background-color: $color-white;
+        padding: 10px 0 10px 47px;
+        margin-top: 1px;
+        display: none;
+
+        a.third-nav-text {
+          padding: 6px 0;
+          display: block;
+          font-size: 16px;
+          color: #333333;
+
+          @include media-query($large) {
+            font-size: 14px;
+          }
+
+          &:hover,
+          &.active {
+            color: $color-theme;
+
+            &::before {
+              color: $color-theme;
+            }
+          }
+
+          &::before {
+            font-family: "iconfont";
+            content: "\e63d";
+            font-size: 14px;
+            color: $color-content;
+            margin-right: 8px;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+div.breadcrumb {
+  @include flex-row-sb;
+  padding: 20px 0;
+  border-bottom: 1px solid $color-theme;
+
+  @include media-query($small) {
+    padding: 10px 0;
+  }
+
+  h2.title {
+    font-size: 24px;
+    color: $color-theme;
+    @include media-query($small) {
+      display: none;
+    }
+  }
+
+  div.breadcrumb-navs {
+    display: flex;
+    align-items: center;
+
+    p.pos {
+      font-size: $font-size-b;
+      color: #888888;
+      margin-right: 10px;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      column-gap: 5px;
+
+      a {
+        font-size: $font-size-b;
+        color: #888888;
+        transition: .3s;
+
+        &::before {
+          font-family: "iconfont";
+          content: "\e63d";
+          margin-right: 8px;
+          @include media-query($small) {
+            margin-right: 5px;
+            font-size: 14px;
+          }
+        }
+
+        &:first-child {
+          &::before {
+            display: none;
+          }
+        }
+
+        &:hover {
+          color: $color-theme;
+
+          &::before {
+            color: #888888;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+// 分页器
+div.pb_sys_common.pb_sys_normal.pb_sys_style1 {
+  @include flex-row-center;
+  padding: 40px 0;
+
+  span.p_pages {
+    @include flex-row-center;
+    column-gap: 5px;
+    span.p_first_d.p_fun_d {
+      @include pagination;
+    }
+
+    span.p_prev_d.p_fun_d {
+      @include pagination;
+    }
+
+    span.p_no_d {
+      @include paginationActive;
+      @include media-query($small) {
+        display: none;
+      }
+    }
+
+    span.p_no {
+      @include media-query($small) {
+        display: none;
+      }
+      a {
+        @include pagination;
+      }
+    }
+
+    span.p_dot {
+      @include pagination;
+      @include media-query($small) {
+        display: none;
+      }
+    }
+
+    span.p_next.p_fun {
+      a {
+        @include pagination;
+      }
+    }
+
+    span.p_last.p_fun {
+      a {
+        @include pagination;
+      }
+    }
+  }
+
+  span.p_t {
+    font-size: 12px;
+    color: $color-content;
+    line-height: 26px;
+    padding: 0 10px;
+    @include media-query($small) {
+      display: none;
+    }
+  }
+
+  span.p_goto {
+    @include media-query($small) {
+      display: none;
+    }
+    input#u6_goto.p_goto_input {
+      width: 40px;
+      height: 30px;
+      box-sizing: border-box;
+      border-radius: 4px;
+      border: 1px solid #dcdfe6;
+      text-align: center;
+      font-size: 12px;
+      color: $color-content;
+    }
+    a {
+      @include paginationActive;
+    }
+  }
+}
+
+.inner-static-banner {
+  margin: 25px 0;
+  @include media-query($small) {
+    margin: 0 0 20px 0;
+  }
+  .container {
+    @include media-query($small) {
+      padding: 0;
+    }
+    img {
+      display: block;
+      width: 100%;
     }
   }
 }

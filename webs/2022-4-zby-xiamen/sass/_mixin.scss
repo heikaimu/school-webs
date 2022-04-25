@@ -125,6 +125,64 @@
   }
 }
 
+@mixin pagination() {
+  display: block;
+  height: 30px;
+  padding: 0 10px;
+  line-height: 30px;
+  border-radius: 4px;
+  font-size: 12px;
+  background-color: #f4f4f5;
+  color: #606266;
+  transition: .3s;
+  cursor: pointer;
+  &:hover {
+    color: $color-theme;
+  }
+  @include media-query($small) {
+    height: 40px;
+    padding: 0 20px;
+    line-height: 40px;
+    font-size: 14px;
+  }
+}
+
+@mixin paginationActive() {
+  display: block;
+  height: 30px;
+  padding: 0 10px;
+  line-height: 30px;
+  border-radius: 4px;
+  font-size: 12px;
+  color: $color-title;
+  transition: .3s;
+  background-color: $color-theme;
+  color: $color-white;
+}
+
+@mixin nav-text() {
+  display: block;
+  padding: 0 20px;
+  white-space:nowrap;
+  font-size: 16px;
+  line-height: 1.8;
+  color: $color-title;
+  position: relative;
+  &:hover {
+    background-color: $color-theme;
+    color: $color-white;
+  }
+  @include media-query($large-down) {
+    font-size: 14px;
+    padding: 0 10px;
+  }
+  @include media-query($medium-down) {
+    font-size: 16px;
+    color: $color-white;
+    border-bottom: 1px solid rgba($color: #ffffff, $alpha: .1);
+  }
+}
+
 // 媒体查询
 @mixin media-query($media-query) {
   $breakpoint-found: false;

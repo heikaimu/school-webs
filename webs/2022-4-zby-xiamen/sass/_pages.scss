@@ -24,7 +24,7 @@ section.banner {
     div.swiper-wrapper {
       div.swiper-slide {
         height: 100%;
-        background-color: #666666;
+        background-color: $color-content;
 
         img {
           width: 100%;
@@ -93,6 +93,7 @@ section.fast-nav {
 
               &.national-emblem {
                 background-color: $color-red;
+
                 span.iconfont {
                   animation: .5s 0s runRed ease-in-out forwards normal;
                 }
@@ -947,6 +948,554 @@ section.theme-program {
             @include pos-absolute(0, 0, 0, 0, 3);
           }
         }
+      }
+    }
+  }
+}
+
+
+ul.inner-news-list {
+  li.news-item {
+    div.inner-news-card {
+      padding: 15px;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      border-bottom: 1px solid #D3D4D7;
+      transition: .3s;
+
+      @include media-query($small) {
+        padding: 10px 0 10px 10px;
+      }
+
+      &:hover {
+        background-color: rgba($color: #B5D7F5, $alpha: .2);
+
+        .title {
+          color: $color-theme;
+          font-weight: 900;
+        }
+
+        &::after {
+          color: $color-theme;
+          font-weight: 900;
+        }
+      }
+
+      &::after {
+        font-family: "iconfont";
+        content: "\e624";
+        display: block;
+
+        @include media-query($small) {
+          display: none;
+        }
+      }
+
+      div.date {
+        padding-right: 15px;
+        color: $color-theme;
+        font-family: '思源宋体';
+        text-align: right;
+        border-right: 1px solid rgba($color: #000000, $alpha: .1);
+
+        @include media-query($small) {
+          padding-right: 10px;
+        }
+
+        p.days {
+          font-size: 24px;
+
+          @include media-query($small) {
+            font-size: 14px;
+          }
+        }
+
+        p.year {
+          font-size: $font-size-s;
+        }
+      }
+
+      p.title {
+        @include omit;
+        flex: 1;
+        overflow: hidden;
+        padding-left: 15px;
+        padding-right: 40px;
+        transition: .3s;
+
+        @include media-query($small) {
+          padding-left: 10px;
+          padding-right: 10px;
+          font-size: 13px;
+        }
+      }
+
+      a.link {
+        @include pos-absolute;
+      }
+    }
+  }
+}
+
+ul.teacher-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -20px;
+  margin-right: -20px;
+  padding-top: 20px;
+
+  @include media-query($large) {
+    margin-left: -15px;
+    margin-right: -15px;
+    padding-top: 15px;
+  }
+
+
+
+  li.news-item {
+    width: 50%;
+    box-sizing: border-box;
+    padding: 20px;
+
+    @include media-query($large) {
+      padding: 15px;
+    }
+
+    @include media-query($small) {
+      width: 100%;
+    }
+
+    div.teacher-card {
+      padding: 15px;
+      display: flex;
+      background-color: $color-border-light;
+      border-bottom: 2px solid $color-theme;
+      transition: .3s;
+      position: relative;
+
+      &:hover {
+        background-color: $color-theme;
+        border-bottom: 2px solid $color-sub-theme;
+
+        div.info {
+          div.top {
+            color: $color-white;
+          }
+
+          p.desc {
+            color: $color-white;
+          }
+        }
+      }
+
+      div.cover {
+        width: 127px;
+        height: 170px;
+        border: 2px solid $color-white;
+        flex: none;
+
+        @include media-query($large-down) {
+          width: 100px;
+          height: 140px;
+        }
+
+        img {
+          display: block;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+
+      div.info {
+        padding-left: 25px;
+        flex: 1;
+        overflow: hidden;
+
+        @include media-query($large-down) {
+          padding-left: 20px;
+        }
+
+        div.top {
+          display: flex;
+          align-items: center;
+          color: $color-theme;
+          padding-top: 10px;
+          padding-bottom: 30px;
+
+          @include media-query($large-down) {
+            padding-bottom: 20px;
+          }
+
+          p.name {
+            font-size: 24px;
+            font-weight: 900;
+            font-family: 'MicrosoftYaHei-Bold';
+            flex: none;
+
+            @include media-query($large-down) {
+              font-size: 20px;
+            }
+          }
+
+          p.tag {
+            @include omit;
+            padding-left: 10px;
+            font-size: $font-size-m;
+
+            @include media-query($large-down) {
+              font-size: $font-size-b;
+            }
+          }
+        }
+
+        p.desc {
+          @include omits(3);
+          font-size: $font-size-m;
+          color: $color-content;
+          line-height: 1.6;
+
+          @include media-query($large-down) {
+            font-size: $font-size-b;
+          }
+        }
+      }
+
+      a.link {
+        @include pos-absolute;
+      }
+    }
+  }
+}
+
+
+div.teacher-details {
+  padding-top: 50px;
+
+  div.base-info {
+    display: flex;
+    background: url(../images/teacher_bg.png) no-repeat center center / cover;
+    margin-bottom: 30px;
+    @include media-query($small) {
+      display: block;
+    }
+
+    div.cover {
+      width: 263px;
+      height: 351px;
+      flex: none;
+      position: relative;
+      top: -25px;
+      left: 25px;
+
+      @include media-query($large) {
+        width: 200px;
+        height: 271px;
+      }
+
+      @include media-query($small) {
+        width: calc(100% - 50px);
+        height: auto;
+      }
+
+      img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+
+        @include media-query($small) {
+          height: auto;
+        }
+      }
+    }
+
+    div.info {
+      padding: 30px 30px 0 50px;
+      color: $color-white;
+
+      @include media-query($small) {
+        padding: 0 20px 20px 20px;
+      }
+
+
+      @include media-query($large) {
+        padding: 20px 20px 0 50px;
+      }
+
+      div.top {
+        display: flex;
+        align-items: flex-end;
+        padding-bottom: 20px;
+        border-bottom: 1px solid rgba($color: $color-white, $alpha: .2);
+
+        p.name {
+          font-size: 30px;
+          font-family: 'MicrosoftYaHei-Bold';
+          padding-right: 10px;
+
+          @include media-query($large-down) {
+            font-size: 24px;
+          }
+        }
+
+        p.tag {
+          font-size: 20px;
+          line-height: 1.6;
+
+          @include media-query($large-down) {
+            font-size: 16px;
+          }
+        }
+      }
+
+      div.labels {
+        @include flex-wrap;
+        padding-top: 20px;
+        border-bottom: 1px solid rgba($color: $color-white, $alpha: .2);
+
+        @include media-query($large-down) {
+          padding-top: 20px;
+        }
+
+        p.text {
+          width: 50%;
+          font-size: 16px;
+          box-sizing: border-box;
+          padding-right: 20px;
+          padding-bottom: 20px;
+
+          @include media-query($large-down) {
+            font-size: 12px;
+            padding-bottom: 10px;
+          }
+
+          a {
+            color: $color-white;
+          }
+        }
+      }
+
+      p.desc {
+        padding-top: 20px;
+        font-size: 16px;
+        color: $color-white;
+        line-height: 1.6;
+
+        @include media-query($large-down) {
+          font-size: 12px;
+          padding-top: 20px;
+        }
+      }
+    }
+  }
+
+  ul.details-info {
+    li.details-item {
+      margin-bottom: 27px;
+
+      @include media-query($large-down) {
+        margin-bottom: 20px;
+      }
+
+      div.top {
+        display: flex;
+        height: 50px;
+        background-color: $color-sub-theme;
+        position: relative;
+
+        @include media-query($large-down) {
+          height: 40px;
+        }
+
+        p.title {
+          display: flex;
+          align-items: center;
+          flex: none;
+          padding: 0 20px;
+          background-color: $color-theme;
+          color: $color-white;
+
+
+          @include media-query($large-down) {
+            padding: 0 15px;
+          }
+
+          span.iconfont {
+            font-size: 24px;
+            margin-right: 5px;
+
+            @include media-query($large-down) {
+              font-size: 18px;
+            }
+          }
+
+          span.text {
+            font-size: 20px;
+
+            @include media-query($large-down) {
+              font-size: 16px;
+            }
+          }
+        }
+
+        img.title-bg {
+          @include pos-absolute(auto, 0, 0, auto);
+          display: block;
+          height: 32px;
+
+          @include media-query($large-down) {
+            height: 24px;
+          }
+
+          @include media-query($small) {
+            height: 16px;
+          }
+        }
+      }
+
+      div.bottom {
+        padding: 30px;
+        background-color: $color-gray-deep;
+        border: 1px solid $color-border-deep;
+
+        @include media-query($large-down) {
+          padding: 20px;
+        }
+
+        p.text {
+          font-size: $font-size-m;
+          color: $color-title;
+
+
+          @include media-query($large-down) {
+            font-size: $font-size-s;
+          }
+
+          &+.text {
+            padding-top: 20px;
+
+            @include media-query($large-down) {
+              padding-top: 15px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+// 文章内容页
+.article-details {
+  padding: 40px 0;
+
+  @include media-query($small) {
+    padding: 20px 0;
+  }
+
+  .article-title {
+    font-size: 24px;
+    font-family: "MicrosoftYaHei-Bold";
+    color: $color-theme;
+    text-align: center;
+    margin-bottom: 30px;
+    line-height: 1.4;
+
+    @include media-query($medium-down) {
+      font-size: 20px;
+    }
+
+    @include media-query($small) {
+      font-size: $font-size-l;
+      margin-bottom: 20px;
+    }
+  }
+
+  .article-basic-info {
+    @include flex-row-center;
+    column-gap: 20px;
+    padding: 10px;
+    background-color: rgba($color: #CFCFCF, $alpha: .3);
+    margin-bottom: 30px;
+
+    @include media-query($small) {
+      padding: 5px;
+      margin-bottom: 20px;
+    }
+
+    .text {
+      font-size: $font-size-b;
+      color: $color-content;
+
+      @include media-query($small) {
+        font-size: $font-size-s;
+      }
+
+      &.views {
+        @include media-query($small) {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .context {
+    p {
+      font-size: $font-size-m;
+      line-height: 1.6;
+      color: $color-content;
+      letter-spacing: 1px;
+
+      @include media-query($large) {
+        font-size: $font-size-b;
+      }
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+      margin: 20px 0;
+    }
+  }
+}
+
+.article-prev-next {
+  @include flex-row-sb;
+  padding: 30px 0 60px 0;
+
+  @include media-query($small) {
+    padding: 20px 0 40px 0;
+  }
+
+  .button {
+    font-size: $font-size-b;
+    color: $color-content;
+    padding: 10px 30px;
+    background-color: $color-border;
+    transition: .3s;
+
+    @include media-query($small) {
+      font-size: $font-size-s;
+      padding: 8px 25px;
+    }
+
+    &:hover {
+      background-color: $color-theme;
+      color: $color-white;
+    }
+
+    &.prev {
+      &::before {
+        content: "<<";
+      }
+    }
+
+    &.next {
+      &::after {
+        content: ">>";
       }
     }
   }

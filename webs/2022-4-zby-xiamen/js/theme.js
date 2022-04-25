@@ -1,8 +1,8 @@
 /*
  * @Date: 2022-04-08 17:12:42
  * @LastEditors: Yaowen Liu
- * @LastEditTime: 2022-04-19 16:09:11
- * @FilePath: /school-webs/webs/school-1/js/theme.js
+ * @LastEditTime: 2022-04-25 17:05:09
+ * @FilePath: /school-webs/webs/2022-4-zby-xiamen/js/theme.js
  */
 
 // footer滚动效果
@@ -108,6 +108,84 @@ function mobileNav() {
   });
 }
 
+function sideBarNav() {
+  $("#sideBarNav").find("li").each(function () {
+    $(this).on('click', function () {
+      $(this).toggleClass('active');
+    })
+  })
+}
+
+function mainNavToggle() {
+
+  // 判断当前分辨率
+  const wWidth = $('body').width();
+  // PC效果
+  if (wWidth > 990) {
+    $("#mainNav").find(".nav-one-item").each(function () {
+      const navOne = $(this);
+      const navTwoBox = $(this).find('.nav-two');
+      if (navTwoBox.length) {
+        navOne.hover(function () {
+          navTwoBox.show();
+        }, function () {
+          navTwoBox.hide();
+        })
+
+        navTwoBox.find('.nav-two-item').each(function () {
+          const navTwo = $(this);
+          const navThree = $(this).find('.nav-three')
+
+          if (navThree.length) {
+            navTwo.hover(function () {
+              navThree.show();
+            }, function () {
+              navThree.hide();
+            })
+          }
+        })
+
+      }
+    })
+  } else {
+    // 移动端效果
+    $("#mainNav").find(".nav-one-item").each(function () {
+      const navTwoOpenButton = $(this).find('.nav-two-open');
+      const navTwoBox = $(this).find('.nav-two');
+      if (navTwoBox.length) {
+        navTwoOpenButton.click(function () {
+          if (navTwoBox.css('display') === 'none') {
+            navTwoBox.slideDown();
+            navTwoOpenButton.removeClass('icon-plus').addClass('icon-reduce1');
+          } else {
+            navTwoBox.slideUp();
+            navTwoOpenButton.addClass('icon-plus').removeClass('icon-reduce1');
+          }
+        })
+
+
+        navTwoBox.find('.nav-two-item').each(function () {
+          const navTwoOpenButton = $(this).find('.nav-three-open');
+          const navThree = $(this).find('.nav-three')
+
+          if (navThree.length) {
+            navTwoOpenButton.click(function () {
+              if (navThree.css('display') === 'none') {
+                navThree.slideDown();
+                navTwoOpenButton.removeClass('icon-plus').addClass('icon-reduce1');
+              } else {
+                navThree.slideUp();
+                navTwoOpenButton.addClass('icon-plus').removeClass('icon-reduce1');
+              }
+            })
+          }
+        })
+
+      }
+    })
+  }
+}
+
 // 导航
 $(function () {
   headerToggle();
@@ -115,6 +193,8 @@ $(function () {
   footerScroll();
   customSelector();
   mobileNav();
+  sideBarNav();
+  mainNavToggle();
 });
 
 // 窗口滚动

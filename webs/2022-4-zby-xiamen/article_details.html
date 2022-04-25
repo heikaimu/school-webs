@@ -2,7 +2,7 @@
  * @Author: Yaowen Liu
  * @Date: 2022-03-07 09:45:10
  * @LastEditors: Yaowen Liu
- * @LastEditTime: 2022-04-25 09:49:05
+ * @LastEditTime: 2022-04-25 17:37:39
 -->
 <!DOCTYPE html>
 <html lang="en">
@@ -68,11 +68,16 @@
         </div>
       </div>
     </section>
+
     <!-- nav -->
+    
     <span class="mobile-wx-image" id="mobileWxImage">
+      <!-- 移动端微信二维码 -->
       <img src="./images/qr_code.png" alt="" />
     </span>
+    
     <section class="main-nav" id="mobileNav">
+      <!-- 移动端i18,微信按钮 -->
       <div class="moblie-nav-top">
         <div class="sm-buttons">
           <p class="icon wx" id="mobileWxMenu">
@@ -87,29 +92,72 @@
         </div>
         <span class="close iconfont icon-shanchu" id="mobileClose"></span>
       </div>
-      <nav class="nav-wrapper-main container">
-        <a href="" class="link-main active"> 首页 </a>
-        <div class="second-nav-wrapper">
-          <p class="main-title">学院概括</p>
-          <div class="nav-wrapper-sub">
-            <a href="" class="link-sub">学院介绍</a>
-            <a href="" class="link-sub">院系领导</a>
-            <a href="" class="link-sub">教授委员会</a>
-            <a href="" class="link-sub">系所设置</a>
-            <a href="" class="link-sub">科研机构</a>
-            <a href="" class="link-sub">党政办公</a>
-          </div>
-        </div>
-        <a href="" class="link-main"> 师资力量 </a>
-        <a href="" class="link-main"> 党的建设 </a>
-        <a href="" class="link-main"> 教学管理 </a>
-        <a href="" class="link-main"> 学生工作 </a>
-        <a href="" class="link-main"> 合作交流 </a>
-        <a href="" class="link-main"> 院友工作 </a>
-        <a href="" class="link-main"> 社会服务 </a>
-        <a href="" class="link-main"> 下载中心 </a>
-        <a href="" class="link-main"> 学术科研 </a>
-      </nav>
+      <!-- 导航主体 -->
+      <div class="nav-wrapper">
+        <ul class="nav-one container" id="mainNav">
+          <li class="nav-one-item">
+            <a href="./" class="nav-one-text">首页</a>
+          </li>
+          <li class="nav-one-item">
+            <a href="./single_page.html" class="nav-one-text arrow">学院概括</a>
+            <span class="nav-two-open nav-open-icon iconfont icon-plus"></span>
+            <ul class="nav-two">
+              <li class="nav-two-item">
+                <a href="./article_list.html" class="nav-two-text arrow">学院介绍</a>
+                <span class="nav-three-open nav-open-icon iconfont icon-plus"></span>
+                <nav class="nav-three">
+                  <a href="/" class="nav-three-text">三级菜单</a>
+                  <a href="/" class="nav-three-text">三级菜单</a>
+                  <a href="/" class="nav-three-text">三级菜单</a>
+                  <a href="/" class="nav-three-text">三级菜单</a>
+                </nav>
+              </li>
+              <li class="nav-two-item">
+                <a href="./teacher_list.html" class="nav-two-text">院系领导</a>
+              </li>
+              <li class="nav-two-item">
+                <a href="./teacher_list.html" class="nav-two-text">教授委员会</a>
+              </li>
+              <li class="nav-two-item">
+                <a href="./article_list.html" class="nav-two-text">系所设置</a>
+              </li>
+              <li class="nav-two-item">
+                <a href="./article_list.html" class="nav-two-text">科研机构</a>
+              </li>
+              <li class="nav-two-item">
+                <a href="./article_list.html" class="nav-two-text">党政办公</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-one-item">
+            <a href="./teacher_list.html" class="nav-one-text">师资力量</a>
+          </li>
+          <li class="nav-one-item">
+            <a href="./article_list.html" class="nav-one-text">党的建设</a>
+          </li>
+          <li class="nav-one-item">
+            <a href="./article_list.html" class="nav-one-text">教学管理</a>
+          </li>
+          <li class="nav-one-item">
+            <a href="./article_list.html" class="nav-one-text">学生工作</a>
+          </li>
+          <li class="nav-one-item">
+            <a href="./article_list.html" class="nav-one-text">合作交流</a>
+          </li>
+          <li class="nav-one-item">
+            <a href="./article_list.html" class="nav-one-text">院友工作</a>
+          </li>
+          <li class="nav-one-item">
+            <a href="./article_list.html" class="nav-one-text">社会服务</a>
+          </li>
+          <li class="nav-one-item">
+            <a href="./article_list.html" class="nav-one-text">下载中心</a>
+          </li>
+          <li class="nav-one-item">
+            <a href="./article_list.html" class="nav-one-text">学术科研</a>
+          </li>
+        </ul>
+      </div>
     </section>
   </header>
 

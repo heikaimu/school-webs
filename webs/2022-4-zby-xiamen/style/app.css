@@ -856,7 +856,6 @@ header section.top-bar div.top-wrapper.container a.logo {
   display: flex;
   justify-content: center;
   align-items: center;
-  column-gap: 10px;
 }
 @media only screen and (min-width: 990px) and (max-width: 1299px) {
   header section.top-bar div.top-wrapper.container a.logo img:nth-child(1) {
@@ -874,12 +873,14 @@ header section.top-bar div.top-wrapper.container a.logo {
     display: none;
   }
 }
+header section.top-bar div.top-wrapper.container a.logo img {
+  margin-right: 10px;
+}
 header section.top-bar div.top-wrapper.container div.top-right-wrapper div.sm-buttons {
   display: flex;
   align-items: center;
   justify-content: end;
   padding-bottom: 20px;
-  column-gap: 20px;
 }
 @media only screen and (min-width: 990px) and (max-width: 1299px) {
   header section.top-bar div.top-wrapper.container div.top-right-wrapper div.sm-buttons {
@@ -898,6 +899,7 @@ header section.top-bar div.top-wrapper.container div.top-right-wrapper div.sm-bu
   cursor: pointer;
   transition: 0.3s ease-in-out;
   position: relative;
+  padding: 0 20px;
 }
 header section.top-bar div.top-wrapper.container div.top-right-wrapper div.sm-buttons p.icon:hover span.iconfont {
   opacity: 1;
@@ -1114,7 +1116,6 @@ section.main-nav .moblie-nav-top {
     padding: 0 20px;
     display: flex;
     align-items: center;
-    column-gap: 20px;
   }
   section.main-nav .moblie-nav-top div.sm-buttons p.icon {
     display: flex;
@@ -1123,6 +1124,7 @@ section.main-nav .moblie-nav-top {
     cursor: pointer;
     transition: 0.3s ease-in-out;
     position: relative;
+    padding: 0 20px;
   }
   section.main-nav .moblie-nav-top div.sm-buttons p.icon span.iconfont {
     color: #ffffff;
@@ -1374,7 +1376,6 @@ footer.footer div.footer-top.container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  column-gap: 20px;
   padding-top: 30px;
   padding-bottom: 30px;
 }
@@ -1388,7 +1389,7 @@ footer.footer div.footer-top.container a.fotter-logo {
   justify-content: center;
   align-items: center;
   flex: 2;
-  column-gap: 10px;
+  padding-right: 10px;
 }
 @media only screen and (min-width: 990px) and (max-width: 1299px) {
   footer.footer div.footer-top.container a.fotter-logo img:nth-child(1) {
@@ -1405,6 +1406,9 @@ footer.footer div.footer-top.container a.fotter-logo {
   footer.footer div.footer-top.container a.fotter-logo img:nth-child(2) {
     width: 173px;
   }
+}
+footer.footer div.footer-top.container a.fotter-logo img {
+  margin-right: 10px;
 }
 footer.footer div.footer-top.container ul.footer-selector {
   flex: 2;
@@ -1428,7 +1432,6 @@ footer.footer div.footer-top.container ul.footer-selector li.item:nth-child(1) {
 footer.footer div.footer-top.container div.footer-info {
   display: flex;
   flex-wrap: wrap;
-  column-gap: 15px;
   flex: 2;
 }
 @media only screen and (max-width: 989px) {
@@ -1441,6 +1444,7 @@ footer.footer div.footer-top.container div.footer-info p.text {
   font-size: 14px;
   color: #ffffff;
   padding-bottom: 10px;
+  margin-right: 15px;
 }
 @media only screen and (max-width: 989px) {
   footer.footer div.footer-top.container div.footer-info p.text {
@@ -1451,7 +1455,6 @@ footer.footer div.footer-top.container div.qr-code {
   display: flex;
   justify-content: center;
   align-items: center;
-  column-gap: 10px;
   flex: 1;
 }
 @media only screen and (max-width: 989px) {
@@ -1467,6 +1470,7 @@ footer.footer div.footer-top.container div.qr-code p.text {
   writing-mode: vertical-lr;
   font-size: 14px;
   color: #ffffff;
+  margin-right: 10px;
 }
 @media only screen and (max-width: 989px) {
   footer.footer div.footer-top.container div.qr-code p.text {
@@ -1749,7 +1753,6 @@ section.school-news div.container div.news-container {
   padding-top: 30px;
   display: flex;
   justify-content: space-between;
-  column-gap: 40px;
 }
 @media only screen and (max-width: 749px) {
   section.school-news div.container div.news-container {
@@ -1759,10 +1762,12 @@ section.school-news div.container div.news-container {
 section.school-news div.container div.news-container div.news-left {
   flex: 1;
   overflow: hidden;
+  padding-right: 20px;
 }
 @media only screen and (max-width: 749px) {
   section.school-news div.container div.news-container div.news-left {
     padding-bottom: 20px;
+    padding-right: 0;
   }
 }
 section.school-news div.container div.news-container div.news-left div#news.swiper div.swiper-wrapper div.swiper-slide div.image-news-card {
@@ -1873,6 +1878,12 @@ section.school-news div.container div.news-container div.news-left div#news.swip
 section.school-news div.container div.news-container div.news-right {
   flex: 1;
   overflow: hidden;
+  padding-left: 20px;
+}
+@media only screen and (max-width: 749px) {
+  section.school-news div.container div.news-container div.news-right {
+    padding-left: 0;
+  }
 }
 section.school-news div.container div.news-container div.news-right ul.news-list li.item {
   margin-bottom: 20px;
@@ -1886,7 +1897,6 @@ section.school-news div.container div.news-container div.news-right ul.news-list
   display: flex;
   justify-content: space-between;
   align-items: center;
-  column-gap: 20px;
   transition: 0.3s ease-in-out;
   position: relative;
   cursor: pointer;
@@ -1941,6 +1951,7 @@ section.school-news div.container div.news-container div.news-right ul.news-list
   color: #666666;
   transition: 0.3s ease-in-out;
   font-family: '思源宋体';
+  padding-left: 20px;
 }
 
 section.message-notice {
@@ -2196,10 +2207,13 @@ section.research-condition {
 section.research-condition div.container ul.condition-list {
   display: flex;
   flex-wrap: wrap;
-  column-gap: 50px;
+  margin-left: -25px;
+  margin-right: -25px;
 }
 section.research-condition div.container ul.condition-list li.item {
-  width: calc(50% - 25px);
+  box-sizing: border-box;
+  width: 50%;
+  padding: 0 25px;
 }
 @media only screen and (max-width: 989px) {
   section.research-condition div.container ul.condition-list li.item {
@@ -2881,7 +2895,6 @@ div.teacher-details ul.details-info li.details-item div.bottom p.text + .text {
   display: flex;
   justify-content: center;
   align-items: center;
-  column-gap: 20px;
   padding: 10px;
   background-color: rgba(207, 207, 207, 0.3);
   margin-bottom: 30px;
@@ -2895,6 +2908,7 @@ div.teacher-details ul.details-info li.details-item div.bottom p.text + .text {
 .article-details .article-basic-info .text {
   font-size: 14px;
   color: #666666;
+  padding: 0 10px;
 }
 @media only screen and (max-width: 749px) {
   .article-details .article-basic-info .text {

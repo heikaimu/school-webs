@@ -19,8 +19,6 @@ header {
 
       a.logo {
         @include flex-row-center;
-        column-gap: 10px;
-
         @include media-query($large) {
           img {
             &:nth-child(1) {
@@ -44,6 +42,10 @@ header {
             }
           }
         }
+
+        img {
+          margin-right: 10px;
+        }
       }
 
       div.top-right-wrapper {
@@ -52,7 +54,6 @@ header {
           align-items: center;
           justify-content: end;
           padding-bottom: 20px;
-          column-gap: 20px;
 
           @include media-query($large) {
             padding-bottom: 10px;
@@ -67,6 +68,8 @@ header {
             cursor: pointer;
             transition: 0.3s ease-in-out;
             position: relative;
+
+            padding: 0 20px;
 
             &:hover {
               span.iconfont {
@@ -285,13 +288,13 @@ section.main-nav {
         padding: 0 20px;
         display: flex;
         align-items: center;
-        column-gap: 20px;
 
         p.icon {
           @include flex-row-center;
           cursor: pointer;
           transition: 0.3s ease-in-out;
           position: relative;
+          padding: 0 20px;
 
           span.iconfont {
             color: $color-white;

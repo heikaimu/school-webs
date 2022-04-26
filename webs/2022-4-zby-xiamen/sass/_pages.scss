@@ -272,7 +272,6 @@ section.school-news {
       padding-top: 30px;
       display: flex;
       justify-content: space-between;
-      column-gap: 40px;
 
       @include media-query($small) {
         display: block;
@@ -281,9 +280,11 @@ section.school-news {
       div.news-left {
         flex: 1;
         overflow: hidden;
+        padding-right: 20px;
 
         @include media-query($small) {
           padding-bottom: 20px;
+          padding-right: 0;
         }
 
         div#news.swiper {
@@ -389,6 +390,11 @@ section.school-news {
       div.news-right {
         flex: 1;
         overflow: hidden;
+        padding-left: 20px;
+
+        @include media-query($small) {
+          padding-left: 0;
+        }
 
         ul.news-list {
           li.item {
@@ -400,7 +406,6 @@ section.school-news {
 
             div.text-news-card {
               @include flex-row-sb;
-              column-gap: 20px;
               transition: 0.3s ease-in-out;
               position: relative;
               cursor: pointer;
@@ -455,6 +460,7 @@ section.school-news {
                 color: $color-content;
                 transition: 0.3s ease-in-out;
                 font-family: '思源宋体';
+                padding-left: 20px;
               }
             }
           }
@@ -734,10 +740,13 @@ section.research-condition {
   div.container {
     ul.condition-list {
       @include flex-wrap;
-      column-gap: 50px;
+      margin-left: -25px;
+      margin-right: -25px;
 
       li.item {
-        width: calc(50% - 25px);
+        box-sizing: border-box;
+        width: 50%;
+        padding: 0 25px;
 
         @include media-query($medium-down) {
           width: 100%;
@@ -1416,7 +1425,6 @@ div.teacher-details {
 
   .article-basic-info {
     @include flex-row-center;
-    column-gap: 20px;
     padding: 10px;
     background-color: rgba($color: #CFCFCF, $alpha: .3);
     margin-bottom: 30px;
@@ -1429,6 +1437,7 @@ div.teacher-details {
     .text {
       font-size: $font-size-b;
       color: $color-content;
+      padding: 0 10px;
 
       @include media-query($small) {
         font-size: $font-size-s;

@@ -1,7 +1,7 @@
 /*
  * @Date: 2022-04-08 17:12:42
  * @LastEditors: Yaowen Liu
- * @LastEditTime: 2022-04-25 17:05:09
+ * @LastEditTime: 2022-04-26 16:30:42
  * @FilePath: /school-webs/webs/2022-4-zby-xiamen/js/theme.js
  */
 
@@ -110,13 +110,24 @@ function mobileNav() {
   });
 }
 
+// 侧边导航
 function sideBarNav() {
   $("#sideBarNav").find("li").each(function () {
+    if ($(this).hasClass('active')) {
+      $(this).find('.third-nav').show();
+    }
+
     $(this).on('click', function () {
-      $(this).toggleClass('active');
+      if ($(this).hasClass('active')) {
+        $(this).removeClass('active').find('.third-nav').slideUp();
+      } else {
+        $(this).addClass('active').find('.third-nav').slideDown();
+        $(this).siblings('li').removeClass('active').find('.third-nav').slideUp();
+      }
     })
   })
 }
+
 
 function mainNavToggle() {
 

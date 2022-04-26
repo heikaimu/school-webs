@@ -353,7 +353,6 @@ div.custom-selector .options a:hover {
 
 .inner-side-page {
   display: flex;
-  column-gap: 38px;
   overflow: hidden;
   padding-bottom: 50px;
 }
@@ -372,6 +371,8 @@ div.custom-selector .options a:hover {
 }
 .inner-side-page .inner-content-wrapper {
   flex: 1;
+  box-sizing: border-box;
+  padding-left: 38px;
   overflow: hidden;
 }
 
@@ -408,12 +409,11 @@ div.side-bar h2.side-bar-title {
   display: flex;
   align-items: center;
   height: 66px;
-  padding: 0 23px;
+  padding: 0 40px;
   font-size: 24px;
   line-height: 1;
   color: #eec88e;
   position: relative;
-  text-indent: 20px;
 }
 @media only screen and (min-width: 990px) and (max-width: 1299px) {
   div.side-bar h2.side-bar-title {
@@ -425,7 +425,7 @@ div.side-bar h2.side-bar-title::before {
   top: 23px;
   right: auto;
   bottom: auto;
-  left: auto;
+  left: 20px;
   z-index: 0;
   display: block;
   content: "";
@@ -450,9 +450,6 @@ div.side-bar ul.second-nav li.second-nav-item.active p.second-nav-item-text::bef
 }
 div.side-bar ul.second-nav li.second-nav-item.active p.second-nav-item-text::after {
   opacity: 1;
-}
-div.side-bar ul.second-nav li.second-nav-item.active nav.third-nav {
-  display: block;
 }
 div.side-bar ul.second-nav li.second-nav-item p.second-nav-item-text {
   height: 54px;
@@ -566,7 +563,6 @@ div.breadcrumb div.breadcrumb-navs p.pos {
 div.breadcrumb div.breadcrumb-navs nav {
   display: flex;
   align-items: center;
-  column-gap: 5px;
 }
 div.breadcrumb div.breadcrumb-navs nav a {
   font-size: 14px;
@@ -577,6 +573,7 @@ div.breadcrumb div.breadcrumb-navs nav a::before {
   font-family: "iconfont";
   content: "\e63d";
   margin-right: 8px;
+  margin-left: 5px;
 }
 @media only screen and (max-width: 749px) {
   div.breadcrumb div.breadcrumb-navs nav a::before {

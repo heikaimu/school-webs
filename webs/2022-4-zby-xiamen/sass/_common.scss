@@ -156,7 +156,6 @@ div.custom-selector {
 
 .inner-side-page {
   display: flex;
-  column-gap: 38px;
   overflow: hidden;
   padding-bottom: 50px;
 
@@ -174,6 +173,8 @@ div.custom-selector {
 
   .inner-content-wrapper {
     flex: 1;
+    box-sizing: border-box;
+    padding-left: 38px;
     overflow: hidden;
   }
 }
@@ -208,19 +209,18 @@ div.side-bar {
     display: flex;
     align-items: center;
     height: 66px;
-    padding: 0 23px;
+    padding: 0 40px;
     font-size: 24px;
     line-height: 1;
     color: $color-sub-theme;
     position: relative;
-    text-indent: 20px;
 
     @include media-query($large) {
       font-size: 20px;
     }
 
     &::before {
-      @include pos-absolute(23px, auto, auto, auto);
+      @include pos-absolute(23px, auto, auto, 20px);
       display: block;
       content: "";
       width: 4px;
@@ -251,10 +251,6 @@ div.side-bar {
           &::after {
             opacity: 1;
           }
-        }
-
-        nav.third-nav {
-          display: block;
         }
       }
 
@@ -367,7 +363,6 @@ div.breadcrumb {
     nav {
       display: flex;
       align-items: center;
-      column-gap: 5px;
 
       a {
         font-size: $font-size-b;
@@ -378,6 +373,7 @@ div.breadcrumb {
           font-family: "iconfont";
           content: "\e63d";
           margin-right: 8px;
+          margin-left: 5px;
           @include media-query($small) {
             margin-right: 5px;
             font-size: 14px;

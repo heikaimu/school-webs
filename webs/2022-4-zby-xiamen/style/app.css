@@ -220,68 +220,135 @@ img:not([src]) {
   padding: 50px 0;
 }
 
-div.plate-top {
+.inner-side-page {
+  display: flex;
+  overflow: hidden;
+  padding-bottom: 50px;
+}
+@media only screen and (max-width: 749px) {
+  .inner-side-page {
+    padding-bottom: 20px;
+  }
+}
+.inner-side-page .inner-nav {
+  flex: none;
+}
+@media only screen and (max-width: 989px) {
+  .inner-side-page .inner-nav {
+    display: none;
+  }
+}
+.inner-side-page .inner-content-wrapper {
+  flex: 1;
+  box-sizing: border-box;
+  padding-left: 38px;
+  overflow: hidden;
+}
+
+.back-top-menu {
+  position: fixed;
+  top: auto;
+  right: 30px;
+  bottom: 30px;
+  left: auto;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border: 3px solid #2a6bbc;
+  border-radius: 50%;
+  background-color: #003d87;
+  color: #ffffff;
+  transition: 0.3s cubic-bezier(0.53, -0.31, 0.56, 2.18);
+  transform: translate3d(50px, 0, 0);
+  opacity: 0;
+  cursor: pointer;
+}
+.back-top-menu .iconfont {
+  font-size: 20px;
+  color: #eec88e;
+}
+.back-top-menu.show {
+  transform: translate3d(0, 0, 0);
+  opacity: 1;
+}
+.back-top-menu:hover {
+  background-color: #2a6bbc;
+  border: 3px solid #003d87;
+}
+
+div.layer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 99990;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+div.layer div.layer__blank {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+div.layer div.layer__content {
+  width: 360px;
+  position: relative;
+  z-index: 2;
+}
+div.layer div.layer__content div.layer-top {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: #2a6bbc;
+  border-radius: 4px 4px 0 0;
 }
-div.plate-top div.plate-title {
-  flex-grow: 1;
-  position: relative;
-  padding: 15px 0;
-  font-size: 26px;
-  color: #111111;
-  background-repeat: no-repeat;
-  background-position: left top;
-}
-@media only screen and (max-width: 989px) {
-  div.plate-top div.plate-title {
-    padding: 5px 0;
-    background-size: auto 20px;
-    font-size: 20px;
-  }
-}
-div.plate-top div.plate-title.bg0 {
-  background-image: url(../images/title_bg0.png);
-}
-div.plate-top div.plate-title.bg1 {
-  background-image: url(../images/title_bg1.png);
-}
-div.plate-top div.plate-title.bg2 {
-  background-image: url(../images/title_bg2.png);
-}
-div.plate-top div.plate-title.bg3 {
-  background-image: url(../images/title_bg3.png);
-}
-div.plate-top div.plate-title.bg4 {
-  background-image: url(../images/title_bg4.png);
-}
-div.plate-top div.plate-title span.iconfont {
-  font-size: 26px;
-  color: #003d87;
-}
-@media only screen and (max-width: 989px) {
-  div.plate-top div.plate-title span.iconfont {
-    font-size: 20px;
-  }
-}
-div.plate-top div.plate-title strong {
-  font-weight: 900;
-  color: #003d87;
-}
-div.plate-top a.more-link {
-  padding: 5px 10px;
-  border-radius: 2px;
+div.layer div.layer__content div.layer-top p.text {
   font-size: 16px;
-  color: #003d87;
-  transition: 0.3s ease-in-out;
+  color: #ffffff;
+  padding: 10px 20px;
+  letter-spacing: 2px;
 }
-@media only screen and (max-width: 989px) {
-  div.plate-top a.more-link {
-    font-size: 14px;
-  }
+div.layer div.layer__content div.layer-top span.iconfont.icon-shanchu {
+  width: 40px;
+  height: 40px;
 }
-div.plate-top a.more-link:hover {
+div.layer div.layer__content div.layer-bottom {
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 0 0 4px 4px;
+}
+div.layer div.layer__content div.layer-bottom p.text {
+  line-height: 1.8;
+  font-size: 14px;
+  color: #666666;
+}
+div.layer div.layer__content div.layer-bottom .confirm {
+  display: flex;
+  justify-content: end;
+  padding-top: 20px;
+}
+div.layer div.layer__content div.layer-bottom .confirm .confirm-button {
+  width: 70px;
+  height: 36px;
+  border-radius: 3px;
+  background-color: #e6e6e6;
+  text-align: center;
+  line-height: 36px;
+  font-size: 14px;
+  color: #111111;
+  transition: .3s;
+  cursor: pointer;
+}
+div.layer div.layer__content div.layer-bottom .confirm .confirm-button:hover {
   background-color: #003d87;
   color: #ffffff;
 }
@@ -349,31 +416,6 @@ div.custom-selector .options a {
 div.custom-selector .options a:hover {
   background-color: #003d87;
   color: #ffffff;
-}
-
-.inner-side-page {
-  display: flex;
-  overflow: hidden;
-  padding-bottom: 50px;
-}
-@media only screen and (max-width: 749px) {
-  .inner-side-page {
-    padding-bottom: 20px;
-  }
-}
-.inner-side-page .inner-nav {
-  flex: none;
-}
-@media only screen and (max-width: 989px) {
-  .inner-side-page .inner-nav {
-    display: none;
-  }
-}
-.inner-side-page .inner-content-wrapper {
-  flex: 1;
-  box-sizing: border-box;
-  padding-left: 38px;
-  overflow: hidden;
 }
 
 div.side-bar {
@@ -1502,6 +1544,72 @@ footer.footer div.footer-bottom p.copyright {
   footer.footer div.footer-bottom p.copyright {
     font-size: 12px;
   }
+}
+
+div.plate-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+div.plate-top div.plate-title {
+  flex-grow: 1;
+  position: relative;
+  padding: 15px 0;
+  font-size: 26px;
+  color: #111111;
+  background-repeat: no-repeat;
+  background-position: left top;
+}
+@media only screen and (max-width: 989px) {
+  div.plate-top div.plate-title {
+    padding: 5px 0;
+    background-size: auto 20px;
+    font-size: 20px;
+  }
+}
+div.plate-top div.plate-title.bg0 {
+  background-image: url(../images/title_bg0.png);
+}
+div.plate-top div.plate-title.bg1 {
+  background-image: url(../images/title_bg1.png);
+}
+div.plate-top div.plate-title.bg2 {
+  background-image: url(../images/title_bg2.png);
+}
+div.plate-top div.plate-title.bg3 {
+  background-image: url(../images/title_bg3.png);
+}
+div.plate-top div.plate-title.bg4 {
+  background-image: url(../images/title_bg4.png);
+}
+div.plate-top div.plate-title span.iconfont {
+  font-size: 26px;
+  color: #003d87;
+}
+@media only screen and (max-width: 989px) {
+  div.plate-top div.plate-title span.iconfont {
+    font-size: 20px;
+  }
+}
+div.plate-top div.plate-title strong {
+  font-weight: 900;
+  color: #003d87;
+}
+div.plate-top a.more-link {
+  padding: 5px 10px;
+  border-radius: 2px;
+  font-size: 16px;
+  color: #003d87;
+  transition: 0.3s ease-in-out;
+}
+@media only screen and (max-width: 989px) {
+  div.plate-top a.more-link {
+    font-size: 14px;
+  }
+}
+div.plate-top a.more-link:hover {
+  background-color: #003d87;
+  color: #ffffff;
 }
 
 section.banner {

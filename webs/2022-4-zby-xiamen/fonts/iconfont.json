@@ -6,6 +6,41 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "9544668",
+      "name": "31、箭头(红)",
+      "font_class": "jiantouhong",
+      "unicode": "e60d",
+      "unicode_decimal": 58893
+    },
+    {
+      "icon_id": "1799666",
+      "name": "电子仪器",
+      "font_class": "dianziyiqi",
+      "unicode": "e65b",
+      "unicode_decimal": 58971
+    },
+    {
+      "icon_id": "5401579",
+      "name": "分组管理",
+      "font_class": "fenzuguanli",
+      "unicode": "ec23",
+      "unicode_decimal": 60451
+    },
+    {
+      "icon_id": "17605480",
+      "name": "安全",
+      "font_class": "anquan",
+      "unicode": "e817",
+      "unicode_decimal": 59415
+    },
+    {
+      "icon_id": "20438897",
+      "name": "待预约",
+      "font_class": "daiyuyue",
+      "unicode": "e609",
+      "unicode_decimal": 58889
+    },
+    {
       "icon_id": "13859505",
       "name": "reduce",
       "font_class": "reduce1",

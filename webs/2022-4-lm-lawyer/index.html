@@ -2,7 +2,7 @@
  * @Author: Yaowen Liu
  * @Date: 2022-03-07 09:45:10
  * @LastEditors: Yaowen Liu
- * @LastEditTime: 2022-04-21 09:33:50
+ * @LastEditTime: 2022-04-27 17:55:33
 -->
 <!DOCTYPE html>
 <html lang="en">
@@ -16,985 +16,289 @@
   <meta name="keywords" content="这是一些关键字" />
   <meta name="author" content="LYW" />
   <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
-  <link rel="stylesheet" href="./style/swiper.min.css" />
-  <link rel="stylesheet" href="./style/scroll-animation.css" />
+  <link rel="stylesheet" href="./style/bootstrap/bootstrap.css">
+  <link rel="stylesheet" href="./style/lib/swiper.min.css" />
+  <link rel="stylesheet" href="./style/lib/animation.css" />
   <link rel="stylesheet" href="./fonts/iconfont.css" />
-  <!-- <link rel="stylesheet" href="./style/bootstrap.css"> -->
   <link rel="stylesheet" href="./style/app.css" />
   <!--[if lt IE 9]>
-      <script src="./js/html5shiv.js"></script>
-      <script src="./js/respond.src.js"></script>
+      <script src="./js/lib/html5shiv.js"></script>
+      <script src="./js/lib/respond.src.js"></script>
     <![endif]-->
 </head>
 
 <body id="app">
+
+  <!-- 返回顶部按钮 -->
+  <div class="back-top-menu" id="backTopMenu">
+    <span class="iconfont icon-jiantouhong"></span>
+  </div>
+
   <!-- header -->
-  <header>
-    <!-- top-bar -->
-    <section class="top-bar">
-      <div class="top-wrapper container">
-        <a href="/" class="logo">
-          <img src="./images/logo.png" alt="" srcset="" />
-          <img src="./images/logo_text.png" alt="" srcset="" />
-        </a>
-
-        <div class="top-right-wrapper">
-          <div class="sm-buttons">
-            <p class="icon wx">
-              <span class="iconfont icon-weixin"></span>
-              <span class="text">微信</span>
-              <span class="wx-image">
-                <img src="./images/qr_code.png" alt="" />
-              </span>
-            </p>
-            <span class="divider"></span>
-            <p class="icon">
-              <span class="iconfont icon-yingwen"></span>
-              <span class="text">English</span>
-            </p>
-          </div>
-          <div class="search-input-wrapper">
-            <div class="search-input">
-              <input type="text" placeholder="输入您想搜索的内容" />
-              <button>
-                <span class="iconfont icon-sousuoxiao"></span>
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <div class="media-nav-menu" id="mobileOpen">
-          <span class="iconfont icon-daohang"></span>
+  <header class="web-header py-3">
+    <div class="container d-flex justify-content-between align-items-center">
+      <div class="header--left">
+        <p class="font-weight-bold">先咨询，再立案！专业的律师团队助您解决法律纠纷！</p>
+      </div>
+      <div class="header--right">
+        <div class="d-flex">
+          <button type="button" class="btn btn-primary ml-4">免费咨询：13352071690</button>
+          <button type="button" class="btn btn-primary ml-4">微信咨询</button>
+          <button type="button" class="btn btn-primary ml-4">立即咨询</button>
         </div>
       </div>
-    </section>
-    <!-- nav -->
-    <span class="mobile-wx-image" id="mobileWxImage">
-      <img src="./images/qr_code.png" alt="" />
-    </span>
-    <section class="main-nav" id="mobileNav">
-      <div class="moblie-nav-top">
-        <div class="sm-buttons">
-          <p class="icon wx" id="mobileWxMenu">
-            <span class="iconfont icon-weixin"></span>
-            <span class="text">微信</span>
-          </p>
-          <span class="divider"></span>
-          <p class="icon">
-            <span class="iconfont icon-yingwen"></span>
-            <span class="text">English</span>
-          </p>
-        </div>
-        <span class="close iconfont icon-shanchu" id="mobileClose"></span>
-      </div>
-      <nav class="nav-wrapper-main container">
-        <a href="" class="link-main active"> 首页 </a>
-        <div class="second-nav-wrapper">
-          <p class="main-title">学院概括</p>
-          <div class="nav-wrapper-sub">
-            <a href="" class="link-sub">学院介绍</a>
-            <a href="" class="link-sub">院系领导</a>
-            <a href="" class="link-sub">教授委员会</a>
-            <a href="" class="link-sub">系所设置</a>
-            <a href="" class="link-sub">科研机构</a>
-            <a href="" class="link-sub">党政办公</a>
-          </div>
-        </div>
-        <a href="" class="link-main"> 师资力量 </a>
-        <a href="" class="link-main"> 党的建设 </a>
-        <a href="" class="link-main"> 教学管理 </a>
-        <a href="" class="link-main"> 学生工作 </a>
-        <a href="" class="link-main"> 合作交流 </a>
-        <a href="" class="link-main"> 院友工作 </a>
-        <a href="" class="link-main"> 社会服务 </a>
-        <a href="" class="link-main"> 下载中心 </a>
-        <a href="" class="link-main"> 学术科研 </a>
-      </nav>
-    </section>
+    </div>
   </header>
 
+  <!-- nav -->
+  <div class="web-nav">
+    <div class="container d-flex justify-content-between align-items-center">
+      <div class="logo">
+        <a href="">
+          <img src="./images/logo.png" alt="" srcset="">
+        </a>
+        <a href="">
+          <img src="./images/logo.png" alt="" srcset="">
+        </a>
+      </div>
+
+      <!-- 导航主体 -->
+      <div class="nav-wrapper">
+        <ul class="nav-one container" id="mainNav">
+          <li class="nav-one-item">
+            <a href="./" class="nav-one-text">首页</a>
+          </li>
+          <li class="nav-one-item">
+            <a href="./single_page.html" class="nav-one-text arrow">学院概括</a>
+            <span class="nav-two-open nav-open-icon iconfont icon-plus"></span>
+            <ul class="nav-two">
+              <li class="nav-two-item">
+                <a href="./article_list.html" class="nav-two-text arrow">学院介绍</a>
+                <span class="nav-three-open nav-open-icon iconfont icon-plus"></span>
+                <nav class="nav-three">
+                  <a href="/" class="nav-three-text">三级菜单</a>
+                  <a href="/" class="nav-three-text">三级菜单</a>
+                  <a href="/" class="nav-three-text">三级菜单</a>
+                  <a href="/" class="nav-three-text">三级菜单</a>
+                </nav>
+              </li>
+              <li class="nav-two-item">
+                <a href="./teacher_list.html" class="nav-two-text">院系领导</a>
+              </li>
+              <li class="nav-two-item">
+                <a href="./teacher_list.html" class="nav-two-text">教授委员会</a>
+              </li>
+              <li class="nav-two-item">
+                <a href="./article_list.html" class="nav-two-text">系所设置</a>
+              </li>
+              <li class="nav-two-item">
+                <a href="./article_list.html" class="nav-two-text">科研机构</a>
+              </li>
+              <li class="nav-two-item">
+                <a href="./article_list.html" class="nav-two-text">党政办公</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-one-item">
+            <a href="./teacher_list.html" class="nav-one-text">师资力量</a>
+          </li>
+          <li class="nav-one-item">
+            <a href="./article_list.html" class="nav-one-text">党的建设</a>
+          </li>
+          <li class="nav-one-item">
+            <a href="./article_list.html" class="nav-one-text">教学管理</a>
+          </li>
+          <li class="nav-one-item">
+            <a href="./article_list.html" class="nav-one-text">学生工作</a>
+          </li>
+          <li class="nav-one-item">
+            <a href="./article_list.html" class="nav-one-text">合作交流</a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+
   <!-- banner -->
-  <section class="banner">
-    <div class="container">
-      <div class="swiper" id="banner">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <img src="./images/banner.png" alt="" />
-          </div>
-          <div class="swiper-slide">
-            <img src="./images/banner.png" alt="" />
-          </div>
-          <div class="swiper-slide">
-            <img src="./images/banner.png" alt="" />
-          </div>
+  <section class="container-full">
+    <div class="swiper" id="banner">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img class="img-fluid" src="./images/banner1.jpeg" alt="" />
         </div>
-        <div class="swiper-pagination" id="bannerPagination"></div>
+        <div class="swiper-slide">
+          <img class="img-fluid" src="./images/banner2.jpeg" alt="" />
+        </div>
       </div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-pagination" id="bannerPagination"></div>
     </div>
   </section>
 
-  <!-- fast-nav -->
-  <section class="fast-nav">
+  <!-- 公司介绍 -->
+  <section class="law-office py-5">
     <div class="container">
-      <ul class="nav-list">
-        <li class="item">
-          <div class="card">
-            <div class="icon wow zoomIn national-emblem">
-              <span class="iconfont icon-dangjian"></span>
-            </div>
-            <p class="text wow fadeInUp">党建园地</p>
-            <a href="http://" class="link"></a>
-          </div>
-        </li>
-        <li class="item">
-          <div class="card">
-            <div class="icon wow zoomIn">
-              <span class="iconfont icon-wenhuahuodong"></span>
-            </div>
-            <p class="text wow fadeInUp">学生活动</p>
-            <a href="http://" class="link"></a>
-          </div>
-        </li>
-        <li class="item">
-          <div class="card">
-            <div class="icon wow zoomIn">
-              <span class="iconfont icon-zhaopinshenqing"></span>
-            </div>
-            <p class="text wow fadeInUp">人才招聘</p>
-            <a href="http://" class="link"></a>
-          </div>
-        </li>
-        <li class="item">
-          <div class="card">
-            <div class="icon wow zoomIn">
-              <span class="iconfont icon-zhutihuodong"></span>
-            </div>
-            <p class="text wow fadeInUp">本科生招生</p>
-            <a href="http://" class="link"></a>
-          </div>
-        </li>
-        <li class="item">
-          <div class="card">
-            <div class="icon wow zoomIn">
-              <span class="iconfont icon-dictionary-fill"></span>
-            </div>
-            <p class="text wow fadeInUp">硕士生招生</p>
-            <a href="http://" class="link"></a>
-          </div>
-        </li>
-        <li class="item">
-          <div class="card">
-            <div class="icon wow zoomIn">
-              <span class="iconfont icon-a-zaixianxuexikaoshipeixunkecheng-62"></span>
-            </div>
-            <p class="text wow fadeInUp">MPA招生</p>
-            <a href="http://" class="link"></a>
-          </div>
-        </li>
-        <li class="item">
-          <div class="card">
-            <div class="icon wow zoomIn">
-              <span class="iconfont icon-yanjiusheng"></span>
-            </div>
-            <p class="text wow fadeInUp">博士生招生</p>
-            <a href="http://" class="link"></a>
-          </div>
-        </li>
-        <li class="item">
-          <div class="card">
-            <div class="icon wow zoomIn">
-              <span class="iconfont icon-jiaoshiguanli"></span>
-            </div>
-            <p class="text wow fadeInUp">教室管理</p>
-            <a href="http://" class="link"></a>
-          </div>
-        </li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- 学院新闻 -->
-  <section class="school-news section">
-    <div class="container">
-      <div class="plate-top">
-        <div class="plate-title bg0 wow fadeInLeft">
-          <span class="iconfont icon-xinwen"></span>
-          学院<strong>新闻</strong>
+      <div class="row">
+        <div class="col-sm">
+          <p class="describe">
+            天津法岱律师事务所，是一家秉承着“以事实维护权益，用真心化解纠纷”的文化核心理念，以“尊崇事实、扬善护正、法如泰山、依法正行”为法律服务宗旨的综合性法律服务机构。
+            业务范围涵盖民事、刑事、企业法律顾问三大领域，根据这些领域形成纵向的法律服务模式。根据不同案件类型，组建专业律师团队，由资深律师带队办案，团队专业知识完备。各团队根据自身办案领域定期开展专业知识学习，从而具备一流的办案技巧及团队协作能力。案源中心接受当事人委托后，统一由行政部门分配案件，每周各团队在资深律师的带领下，开展案件研讨会议，以不同角度分析案件案情，全方位、多层次的剖析案件。
+          </p>
         </div>
-        <a href="" class="more-link wow fadeInRight">查看更多+</a>
-      </div>
-      <div class="news-container">
-        <div class="news-left">
-          <div class="swiper" id="news">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <div class="image-news-card">
-                  <div class="cover">
-                    <img src="./images/banner.png" alt="" srcset="" />
-                  </div>
-                  <div class="info">
-                    <p class="title">
-                      漫步思源 绿植相伴”——公共事务学院“三八”妇女节活动圆满成功 会议征文 |
-                      公共治理的学科建构与专业发展学
-                    </p>
-                  </div>
-                  <div class="date">
-                    <p class="days">08</p>
-                    <p class="year">2014-03</p>
-                  </div>
-                  <a href="" class="link"></a>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="image-news-card">
-                  <div class="cover">
-                    <img src="./images/banner.png" alt="" srcset="" />
-                  </div>
-                  <div class="info">
-                    <p class="title">
-                      漫步思源 绿植相伴”——公共事务学院“三八”妇女节活动圆满成功 会议征文 |
-                      公共治理的学科建构与专业发展学
-                    </p>
-                  </div>
-                  <div class="date">
-                    <p class="days">08</p>
-                    <p class="year">2014-03</p>
-                  </div>
-                  <a href="" class="link"></a>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="image-news-card">
-                  <div class="cover">
-                    <img src="./images/banner.png" alt="" srcset="" />
-                  </div>
-                  <div class="info">
-                    <p class="title">
-                      漫步思源 绿植相伴”——公共事务学院“三八”妇女节活动圆满成功 会议征文 |
-                      公共治理的学科建构与专业发展学
-                    </p>
-                  </div>
-                  <div class="date">
-                    <p class="days">08</p>
-                    <p class="year">2014-03</p>
-                  </div>
-                  <a href="" class="link"></a>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="image-news-card">
-                  <div class="cover">
-                    <img src="./images/banner.png" alt="" srcset="" />
-                  </div>
-                  <div class="info">
-                    <p class="title">
-                      漫步思源 绿植相伴”——公共事务学院“三八”妇女节活动圆满成功 会议征文 |
-                      公共治理的学科建构与专业发展学
-                    </p>
-                  </div>
-                  <div class="date">
-                    <p class="days">08</p>
-                    <p class="year">2014-03</p>
-                  </div>
-                  <a href="" class="link"></a>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="image-news-card">
-                  <div class="cover">
-                    <img src="./images/banner.png" alt="" srcset="" />
-                  </div>
-                  <div class="info">
-                    <p class="title">
-                      漫步思源 绿植相伴”——公共事务学院“三八”妇女节活动圆满成功 会议征文 |
-                      公共治理的学科建构与专业发展学
-                    </p>
-                  </div>
-                  <div class="date">
-                    <p class="days">08</p>
-                    <p class="year">2014-03</p>
-                  </div>
-                  <a href="" class="link"></a>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-pagination" id="newsPagination"></div>
-          </div>
-        </div>
-        <div class="news-right">
-          <ul class="news-list">
-            <li class="item">
-              <div class="text-news-card">
-                <a href="" class="text top">漫步思源 绿植相伴”——公共事务学院“三八”妇女节活动圆满成功 会议征文 |
-                  公共治理的学科建构与专业发展学</a>
-                <span class="date">2022-03-08</span>
-              </div>
-            </li>
-            <li class="item">
-              <div class="text-news-card">
-                <a href="" class="text">漫步思源 绿植相伴”——公共事务学院“三八”妇女节活动圆满成功 会议征文 |
-                  公共治理的学科建构与专业发展学</a>
-                <span class="date">2022-03-08</span>
-              </div>
-            </li>
-            <li class="item">
-              <div class="text-news-card">
-                <a href="" class="text">漫步思源 绿植相伴”——公共事务学院“三八”妇女节活动圆满成功 会议征文 |
-                  公共治理的学科建构与专业发展学</a>
-                <span class="date">2022-03-08</span>
-              </div>
-            </li>
-            <li class="item">
-              <div class="text-news-card">
-                <a href="" class="text">漫步思源 绿植相伴”——公共事务学院“三八”妇女节活动圆满成功 会议征文 |
-                  公共治理的学科建构与专业发展学</a>
-                <span class="date">2022-03-08</span>
-              </div>
-            </li>
-            <li class="item">
-              <div class="text-news-card">
-                <a href="" class="text">漫步思源 绿植相伴”——公共事务学院“三八”妇女节活动圆满成功 会议征文 |
-                  公共治理的学科建构与专业发展学</a>
-                <span class="date">2022-03-08</span>
-              </div>
-            </li>
-            <li class="item">
-              <div class="text-news-card">
-                <a href="" class="text">漫步思源 绿植相伴”——公共事务学院“三八”妇女节活动圆满成功 会议征文 |
-                  公共治理的学科建构与专业发展学</a>
-                <span class="date">2022-03-08</span>
-              </div>
-            </li>
-            <li class="item">
-              <div class="text-news-card">
-                <a href="" class="text">漫步思源 绿植相伴”——公共事务学院“三八”妇女节活动圆满成功 会议征文 |
-                  公共治理的学科建构与专业发展学</a>
-                <span class="date">2022-03-08</span>
-              </div>
-            </li>
-            <li class="item">
-              <div class="text-news-card">
-                <a href="" class="text">漫步思源 绿植相伴”——公共事务学院“三八”妇女节活动圆满成功 会议征文 |
-                  公共治理的学科建构与专业发展学</a>
-                <span class="date">2022-03-08</span>
-              </div>
-            </li>
-            <li class="item">
-              <div class="text-news-card">
-                <a href="" class="text">漫步思源 绿植相伴”——公共事务学院“三八”妇女节活动圆满成功 会议征文 |
-                  公共治理的学科建构与专业发展学</a>
-                <span class="date">2022-03-08</span>
-              </div>
-            </li>
-            <li class="item">
-              <div class="text-news-card">
-                <a href="" class="text">漫步思源 绿植相伴”——公共事务学院“三八”妇女节活动圆满成功 会议征文 |
-                  公共治理的学科建构与专业发展学</a>
-                <span class="date">2022-03-08</span>
-              </div>
-            </li>
+        <div class="col-sm">
+          <ul class="law-honor">
+            <li>全国律师协会荣誉会员</li>
+            <li>2018年天津市法制宣传教育先进集体</li>
+            <li>2018年主任王雨律师荣获优秀律师</li>
+            <li>主任律师王雨担任天津多家大型企业法律顾问</li>
+            <li>2019年度滨海新区优秀律师事务所</li>
+            <li>2019年群众满意服务窗口示范点</li>
+            <li>2019年年度诚信为民示范所</li>
           </ul>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 通知公告 -->
-  <section class="message-notice section">
+  <!-- 业务范围 -->
+  <section class="business-range py-5">
     <div class="container">
-      <div class="plate-top">
-        <div class="plate-title bg1 wow fadeInLeft">
-          <span class="iconfont icon-daigonggao"></span>
-          通知<strong>公告</strong>
-        </div>
-        <a href="" class="more-link wow fadeInRight">查看更多+</a>
+      <div class="home-section-title">
+        <h4>业务范围</h4>
+        <p>办案效率快的律所！专业的团队，为当事人争取更大的权益！</p>
       </div>
-      <div class="swiper" id="messageNotice">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <div class="message-card">
-              <div class="date">
-                <p class="days">12-05</p>
-                <p class="year">2012</p>
-              </div>
-              <div class="info">
-                <p class="title">
-                  厦门大学公共事务学院2021年党员组织关系转入须知厦门大学公共事务学院2021年党员组织关系转入须知
-                </p>
-              </div>
-              <div class="icon">
-                <span class="iconfont icon-youjiantou"></span>
-              </div>
-              <a href="" class="link"></a>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="message-card">
-              <div class="date">
-                <p class="days">12-05</p>
-                <p class="year">2012</p>
-              </div>
-              <div class="info">
-                <p class="title">厦门大学公共事务学院2021年党员组织关系转入须知</p>
-              </div>
-              <div class="icon">
-                <span class="iconfont icon-youjiantou"></span>
-              </div>
-              <a href="" class="link"></a>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="message-card">
-              <div class="date">
-                <p class="days">12-05</p>
-                <p class="year">2012</p>
-              </div>
-              <div class="info">
-                <p class="title">厦门大学公共事务学院2021年党员组织关系转入须知</p>
-              </div>
-              <div class="icon">
-                <span class="iconfont icon-youjiantou"></span>
-              </div>
-              <a href="" class="link"></a>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="message-card">
-              <div class="date">
-                <p class="days">12-05</p>
-                <p class="year">2012</p>
-              </div>
-              <div class="info">
-                <p class="title">厦门大学公共事务学院2021年党员组织关系转入须知</p>
-              </div>
-              <div class="icon">
-                <span class="iconfont icon-youjiantou"></span>
-              </div>
-              <a href="" class="link"></a>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="message-card">
-              <div class="date">
-                <p class="days">12-05</p>
-                <p class="year">2012</p>
-              </div>
-              <div class="info">
-                <p class="title">厦门大学公共事务学院2021年党员组织关系转入须知</p>
-              </div>
-              <div class="icon">
-                <span class="iconfont icon-youjiantou"></span>
-              </div>
-              <a href="" class="link"></a>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="message-card">
-              <div class="date">
-                <p class="days">12-05</p>
-                <p class="year">2012</p>
-              </div>
-              <div class="info">
-                <p class="title">厦门大学公共事务学院2021年党员组织关系转入须知</p>
-              </div>
-              <div class="icon">
-                <span class="iconfont icon-youjiantou"></span>
-              </div>
-              <a href="" class="link"></a>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="message-card">
-              <div class="date">
-                <p class="days">12-05</p>
-                <p class="year">2012</p>
-              </div>
-              <div class="info">
-                <p class="title">厦门大学公共事务学院2021年党员组织关系转入须知</p>
-              </div>
-              <div class="icon">
-                <span class="iconfont icon-youjiantou"></span>
-              </div>
-              <a href="" class="link"></a>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="message-card">
-              <div class="date">
-                <p class="days">12-05</p>
-                <p class="year">2012</p>
-              </div>
-              <div class="info">
-                <p class="title">厦门大学公共事务学院2021年党员组织关系转入须知</p>
-              </div>
-              <div class="icon">
-                <span class="iconfont icon-youjiantou"></span>
-              </div>
-              <a href="" class="link"></a>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="message-card">
-              <div class="date">
-                <p class="days">12-05</p>
-                <p class="year">2012</p>
-              </div>
-              <div class="info">
-                <p class="title">厦门大学公共事务学院2021年党员组织关系转入须知</p>
-              </div>
-              <div class="icon">
-                <span class="iconfont icon-youjiantou"></span>
-              </div>
-              <a href="" class="link"></a>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="message-card">
-              <div class="date">
-                <p class="days">12-05</p>
-                <p class="year">2012</p>
-              </div>
-              <div class="info">
-                <p class="title">厦门大学公共事务学院2021年党员组织关系转入须知</p>
-              </div>
-              <div class="icon">
-                <span class="iconfont icon-youjiantou"></span>
-              </div>
-              <a href="" class="link"></a>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="message-card">
-              <div class="date">
-                <p class="days">12-05</p>
-                <p class="year">2012</p>
-              </div>
-              <div class="info">
-                <p class="title">厦门大学公共事务学院2021年党员组织关系转入须知</p>
-              </div>
-              <div class="icon">
-                <span class="iconfont icon-youjiantou"></span>
-              </div>
-              <a href="" class="link"></a>
-            </div>
+
+      <div class="row">
+        <div class="col-sm">
+          <div class="business-card">
+            <h5 class="business-card__title">刑事辩护</h5>
+            <p class="business-card__en">Criminal Defense</p>
+            <a href="" class="link"></a>
           </div>
         </div>
-        <div class="swiper-pagination" id="messageNoticePagination"></div>
+        <div class="col-sm">
+          <div class="business-card">
+            <h5 class="business-card__title">职务犯罪</h5>
+            <p class="business-card__en">Duty Crime</p>
+            <a href="" class="link"></a>
+          </div>
+        </div>
+        <div class="col-sm">
+          <div class="business-card">
+            <h5 class="business-card__title">经济犯罪</h5>
+            <p class="business-card__en">Economic Crime</p>
+            <a href="" class="link"></a>
+          </div>
+        </div>
+        <div class="col-sm">
+          <div class="business-card">
+            <h5 class="business-card__title">传统犯罪</h5>
+            <p class="business-card__en">Traditional Crime</p>
+            <a href="" class="link"></a>
+          </div>
+        </div>
+        <div class="col-sm">
+          <div class="business-card">
+            <h5 class="business-card__title">公司犯罪</h5>
+            <p class="business-card__en">Corporate Crime</p>
+            <a href="" class="link"></a>
+          </div>
+        </div>
+        <div class="col-sm">
+          <div class="business-card">
+            <h5 class="business-card__title">暴力犯罪</h5>
+            <p class="business-card__en">Violent crime</p>
+            <a href="" class="link"></a>
+          </div>
+        </div>
+        <div class="col-sm">
+          <div class="business-card">
+            <h5 class="business-card__title">毒品犯罪</h5>
+            <p class="business-card__en">Drug Crime</p>
+            <a href="" class="link"></a>
+          </div>
+        </div>
+        <div class="col-sm">
+          <div class="business-card">
+            <h5 class="business-card__title">民商事业务</h5>
+            <p class="business-card__en">Civil And Commercial Business</p>
+            <a href="" class="link"></a>
+          </div>
+        </div>
+        <div class="col-sm">
+          <div class="business-card">
+            <h5 class="business-card__title">法律顾问</h5>
+            <p class="business-card__en">Legal Counsel</p>
+            <a href="" class="link"></a>
+          </div>
+        </div>
+        <div class="col-sm">
+          <div class="business-card">
+            <h5 class="business-card__title">合同纠纷</h5>
+            <p class="business-card__en">Contractual dispute</p>
+            <a href="" class="link"></a>
+          </div>
+        </div>
+        <div class="col-sm">
+          <div class="business-card">
+            <h5 class="business-card__title">合同纠纷</h5>
+            <p class="business-card__en">Contractual dispute</p>
+            <a href="" class="link"></a>
+          </div>
+        </div>
+        <div class="col-sm">
+          <div class="business-card">
+            <h5 class="business-card__title">合同纠纷</h5>
+            <p class="business-card__en">Contractual dispute</p>
+            <a href="" class="link"></a>
+          </div>
+        </div>
+        <div class="col-sm">
+          <div class="business-card">
+            <h5 class="business-card__title">合同纠纷</h5>
+            <p class="business-card__en">Contractual dispute</p>
+            <a href="" class="link"></a>
+          </div>
+        </div>
+        <div class="col-sm">
+          <div class="business-card">
+            <h5 class="business-card__title">合同纠纷</h5>
+            <p class="business-card__en">Contractual dispute</p>
+            <a href="" class="link"></a>
+          </div>
+        </div>
+        <div class="col-sm">
+          <div class="business-card">
+            <h5 class="business-card__title">合同纠纷</h5>
+            <p class="business-card__en">Contractual dispute</p>
+            <a href="" class="link"></a>
+          </div>
+        </div>
       </div>
+
     </div>
   </section>
 
-  <!-- 学术活动 -->
-  <section class="study-activity section">
-    <div class="container">
-      <div class="plate-top">
-        <div class="plate-title bg2 wow fadeInLeft">
-          <span class="iconfont icon-huiyiguanli_1"></span>
-          学术<strong>活动</strong>
-        </div>
-        <a href="" class="more-link wow fadeInRight">查看更多+</a>
-      </div>
-      <div class="swiper" id="studyActivity">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <div class="activity-card">
-              <h2 class="title">习近平总书记关于应急管理重要论述</h2>
-              <ul class="info">
-                <li class="item">
-                  <div class="i-title">
-                    <span class="iconfont icon-w_xuesheng-"></span>
-                  </div>
-                  <p class="i-content">报告人：廖宏斌（公共管理学院院长）</p>
-                </li>
-                <li class="item">
-                  <div class="i-title">
-                    <span class="iconfont icon-rili"></span>
-                  </div>
-                  <p class="i-content">时间：2022年1月10日(周一) 09:00</p>
-                </li>
-                <li class="item">
-                  <div class="i-title">
-                    <span class="iconfont icon-dizhi1"></span>
-                  </div>
-                  <p class="i-content">地点：腾讯会议线上讲座</p>
-                </li>
-              </ul>
-              <a href="" class="link"></a>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="activity-card">
-              <h2 class="title">习近平总书记关于应急管理重要论述</h2>
-              <ul class="info">
-                <li class="item">
-                  <div class="i-title">
-                    <span class="iconfont icon-w_xuesheng-"></span>
-                  </div>
-                  <p class="i-content">报告人：廖宏斌（公共管理学院院长）</p>
-                </li>
-                <li class="item">
-                  <div class="i-title">
-                    <span class="iconfont icon-rili"></span>
-                  </div>
-                  <p class="i-content">时间：2022年1月10日(周一) 09:00</p>
-                </li>
-                <li class="item">
-                  <div class="i-title">
-                    <span class="iconfont icon-dizhi1"></span>
-                  </div>
-                  <p class="i-content">地点：腾讯会议线上讲座</p>
-                </li>
-              </ul>
-              <a href="" class="link"></a>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="activity-card">
-              <h2 class="title">习近平总书记关于应急管理重要论述</h2>
-              <ul class="info">
-                <li class="item">
-                  <div class="i-title">
-                    <span class="iconfont icon-w_xuesheng-"></span>
-                  </div>
-                  <p class="i-content">报告人：廖宏斌（公共管理学院院长）</p>
-                </li>
-                <li class="item">
-                  <div class="i-title">
-                    <span class="iconfont icon-rili"></span>
-                  </div>
-                  <p class="i-content">时间：2022年1月10日(周一) 09:00</p>
-                </li>
-                <li class="item">
-                  <div class="i-title">
-                    <span class="iconfont icon-dizhi1"></span>
-                  </div>
-                  <p class="i-content">地点：腾讯会议线上讲座</p>
-                </li>
-              </ul>
-              <a href="" class="link"></a>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="activity-card">
-              <h2 class="title">习近平总书记关于应急管理重要论述</h2>
-              <ul class="info">
-                <li class="item">
-                  <div class="i-title">
-                    <span class="iconfont icon-w_xuesheng-"></span>
-                  </div>
-                  <p class="i-content">报告人：廖宏斌（公共管理学院院长）</p>
-                </li>
-                <li class="item">
-                  <div class="i-title">
-                    <span class="iconfont icon-rili"></span>
-                  </div>
-                  <p class="i-content">时间：2022年1月10日(周一) 09:00</p>
-                </li>
-                <li class="item">
-                  <div class="i-title">
-                    <span class="iconfont icon-dizhi1"></span>
-                  </div>
-                  <p class="i-content">地点：腾讯会议线上讲座</p>
-                </li>
-              </ul>
-              <a href="" class="link"></a>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="activity-card">
-              <h2 class="title">习近平总书记关于应急管理重要论述</h2>
-              <ul class="info">
-                <li class="item">
-                  <div class="i-title">
-                    <span class="iconfont icon-w_xuesheng-"></span>
-                  </div>
-                  <p class="i-content">报告人：廖宏斌（公共管理学院院长）</p>
-                </li>
-                <li class="item">
-                  <div class="i-title">
-                    <span class="iconfont icon-rili"></span>
-                  </div>
-                  <p class="i-content">时间：2022年1月10日(周一) 09:00</p>
-                </li>
-                <li class="item">
-                  <div class="i-title">
-                    <span class="iconfont icon-dizhi1"></span>
-                  </div>
-                  <p class="i-content">地点：腾讯会议线上讲座</p>
-                </li>
-              </ul>
-              <a href="" class="link"></a>
-            </div>
-          </div>
-        </div>
-        <div class="swiper-pagination" id="studyActivityPagination"></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 研究动态 -->
-  <section class="research-condition section">
-    <div class="container">
-      <div class="plate-top">
-        <div class="plate-title bg3 wow fadeInLeft">
-          <span class="iconfont icon-xialingyingicon-56"></span>
-          研究<strong>动态</strong>
-        </div>
-        <a href="" class="more-link wow fadeInRight">查看更多+</a>
-      </div>
-      <ul class="condition-list">
-        <li class="item">
-          <div class="condition-card">
-            <div class="cover">
-              <img src="./images/banner.png" alt="" srcset="" />
-            </div>
-            <div class="info">
-              <p class="title">“后物质主义价值观”的现实观照与理论旨趣</p>
-              <p class="author">作者：朱仁显 邬家峰</p>
-              <p class="summary">
-                小区作为城市居民生活的基本空间，是国家城市社会治理的基本单元和神经末梢，是重塑社会关系、促进社会整合和实现社会团结的重要场域。
-              </p>
-            </div>
-            <a href="" class="link"></a>
-          </div>
-        </li>
-        <li class="item">
-          <div class="condition-card">
-            <div class="cover">
-              <img src="./images/banner.png" alt="" srcset="" />
-            </div>
-            <div class="info">
-              <p class="title">“后物质主义价值观”的现实观照与理论旨趣“后物质主义价值观”的现实观照与理论旨趣</p>
-              <p class="author">作者：朱仁显 邬家峰</p>
-              <p class="summary">
-                小区作为城市居民生活的基本空间，是国家城市社会治理的基本单元和神经末梢，是重塑社会关系、促进社会整合和实现社会团结的重要场域。
-              </p>
-            </div>
-            <a href="" class="link"></a>
-          </div>
-        </li>
-        <li class="item">
-          <div class="condition-card">
-            <div class="cover">
-              <img src="./images/banner.png" alt="" srcset="" />
-            </div>
-            <div class="info">
-              <p class="title">“后物质主义价值观”的现实观照与理论旨趣</p>
-              <p class="author">作者：朱仁显 邬家峰</p>
-              <p class="summary">
-                小区作为城市居民生活的基本空间，是国家城市社会治理的基本单元和神经末梢，是重塑社会关系、促进社会整合和实现社会团结的重要场域。
-              </p>
-            </div>
-            <a href="" class="link"></a>
-          </div>
-        </li>
-        <li class="item">
-          <div class="condition-card">
-            <div class="cover">
-              <img src="./images/banner.png" alt="" srcset="" />
-            </div>
-            <div class="info">
-              <p class="title">“后物质主义价值观”的现实观照与理论旨趣</p>
-              <p class="author">作者：朱仁显 邬家峰</p>
-              <p class="summary">
-                小区作为城市居民生活的基本空间，是国家城市社会治理的基本单元和神经末梢，是重塑社会关系、促进社会整合和实现社会团结的重要场域。
-              </p>
-            </div>
-            <a href="" class="link"></a>
-          </div>
-        </li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- 主题专栏 -->
-  <section class="theme-program section">
-    <div class="container">
-      <div class="plate-top">
-        <div class="plate-title bg4 wow fadeInLeft">
-          <span class="iconfont icon-zhuanti"></span>
-          主题<strong>专栏</strong>
-        </div>
-        <a href="" class="more-link wow fadeInRight">查看更多+</a>
-      </div>
-      <ul class="theme-list">
-        <li class="item">
-          <div class="theme-card">
-            <div class="cover">
-              <img src="./images/banner.png" alt="" srcset="" />
-            </div>
-            <div class="info">
-              <p class="title">厦门大学100周年校庆</p>
-            </div>
-            <a href="" class="link"></a>
-          </div>
-        </li>
-        <li class="item">
-          <div class="theme-card">
-            <div class="cover">
-              <img src="./images/banner.png" alt="" srcset="" />
-            </div>
-            <div class="info">
-              <p class="title">厦门大学100周年校庆</p>
-            </div>
-            <a href="" class="link"></a>
-          </div>
-        </li>
-        <li class="item">
-          <div class="theme-card">
-            <div class="cover">
-              <img src="./images/banner.png" alt="" srcset="" />
-            </div>
-            <div class="info">
-              <p class="title">厦门大学100周年校庆</p>
-            </div>
-            <a href="" class="link"></a>
-          </div>
-        </li>
-        <li class="item">
-          <div class="theme-card">
-            <div class="cover">
-              <img src="./images/banner.png" alt="" srcset="" />
-            </div>
-            <div class="info">
-              <p class="title">厦门大学100周年校庆</p>
-            </div>
-            <a href="" class="link"></a>
-          </div>
-        </li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- footer -->
-  <footer class="footer">
-    <div class="footer-top container">
-      <a href="/" class="fotter-logo">
-        <img src="./images/logo_white.png" alt="" srcset="" />
-        <img src="./images/logo_white_text.png" alt="" srcset="" />
-      </a>
-      <ul class="footer-selector">
-        <li class="item">
-          <div class="custom-selector">
-            <p class="placeholder">校内链接</p>
-            <nav class="options">
-              <a href="">链接1</a>
-              <a href="">链接2</a>
-              <a href="">链接3</a>
-              <a href="">链接4</a>
-            </nav>
-          </div>
-        </li>
-        <li class="item">
-          <div class="custom-selector">
-            <p class="placeholder">校外链接</p>
-            <nav class="options">
-              <a href="">链接1</a>
-              <a href="">链接2</a>
-              <a href="">链接3</a>
-              <a href="">链接4</a>
-            </nav>
-          </div>
-        </li>
-      </ul>
-      <div class="footer-info">
-        <p class="text">地址：厦门大学成智楼（建南楼群东侧第一栋）</p>
-        <p class="text">TEL:0592-2182783</p>
-        <p class="text">FAX:0592-2183191</p>
-        <p class="text">E-MAIL:ggsw@xmu.edu.cn</p>
-      </div>
-      <div class="qr-code">
-        <p class="text">【关注我们】</p>
-        <img src="./images/qr_code.png" alt="" srcset="" />
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p class="copyright">厦门大学公共事务学院 版权所有@2003-2008 备案号:D200020</p>
-    </div>
-  </footer>
-
-  <script src="./js/jquery.min.js"></script>
+  <script src="./js/lib/jquery.min.js"></script>
+  <script src="./js/lib/swiper-bundle.min.js"></script>
+  <script src="./js/lib/wow.js"></script>
   <script src="./js/jquery.extends.js"></script>
-  <script src="./js/three.min.js"></script>
-  <script src="./js/swiper-bundle.min.js"></script>
-  <script src="./js/wow.js"></script>
+  <script src="./js/common.js"></script>
   <script src="./js/theme.js"></script>
   <script>
-    $(function () {
-      new WOW().init();
-
-      const bannerSwiper = new Swiper('#banner', {
-        loop: true,
-        pagination: {
-          el: '#bannerPagination',
-          clickable: true,
-        },
-      });
-
-      const newsSwiper = new Swiper('#news', {
-        loop: true,
-        pagination: {
-          el: '#newsPagination',
-          clickable: true,
-        },
-      });
-
-      const messageNoticeSwiper = new Swiper('#messageNotice', {
-        spaceBetween: 40,
-        slidesPerView: 3,
-        breakpoints: {
-          320: {
-            //当屏幕宽度大于等于320
-            slidesPerView: 1,
-            spaceBetween: 10,
-          },
-          768: {
-            //当屏幕宽度大于等于768
-            slidesPerView: 2,
-            spaceBetween: 20,
-          },
-          1280: {
-            //当屏幕宽度大于等于1280
-            slidesPerView: 3,
-            spaceBetween: 40,
-          },
-        },
-        grid: {
-          fill: 'row',
-          rows: 2,
-        },
-        pagination: {
-          el: '#messageNoticePagination',
-          clickable: true,
-        },
-      });
-
-      const studyActivitySwiper = new Swiper('#studyActivity', {
-        loop: true,
-        slidesPerView: 4,
-        spaceBetween: 40,
-        breakpoints: {
-          320: {
-            //当屏幕宽度大于等于320
-            slidesPerView: 1,
-            spaceBetween: 10,
-          },
-          768: {
-            //当屏幕宽度大于等于768
-            slidesPerView: 2,
-            spaceBetween: 20,
-          },
-          1280: {
-            //当屏幕宽度大于等于1280
-            slidesPerView: 4,
-            spaceBetween: 30,
-          },
-        },
-        pagination: {
-          el: '#studyActivityPagination',
-          clickable: true,
-        },
-      });
+    const bannerSwiper = new Swiper('#banner', {
+      loop: true,
+      pagination: {
+        el: '#bannerPagination',
+        clickable: true,
+      },
+      // 如果需要前进后退按钮
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
     });
   </script>
 </body>

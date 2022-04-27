@@ -1,6 +1,78 @@
 @import './variables';
 @import './mixin';
 
+// 首页title
+div.plate-top {
+  @include flex-row-sb;
+
+  div.plate-title {
+    flex-grow: 1;
+    position: relative;
+    padding: 15px 0;
+    font-size: 26px;
+    color: $color-title;
+    background-repeat: no-repeat;
+    background-position: left top;
+
+    @include media-query($medium-down) {
+      padding: 5px 0;
+      background-size: auto 20px;
+      font-size: 20px;
+    }
+
+    &.bg0 {
+      background-image: url(../images/title_bg0.png);
+    }
+
+    &.bg1 {
+      background-image: url(../images/title_bg1.png);
+    }
+
+    &.bg2 {
+      background-image: url(../images/title_bg2.png);
+    }
+
+    &.bg3 {
+      background-image: url(../images/title_bg3.png);
+    }
+
+    &.bg4 {
+      background-image: url(../images/title_bg4.png);
+    }
+
+    span.iconfont {
+      font-size: 26px;
+      color: $color-theme;
+
+      @include media-query($medium-down) {
+        font-size: 20px;
+      }
+    }
+
+    strong {
+      font-weight: 900;
+      color: $color-theme;
+    }
+  }
+
+  a.more-link {
+    padding: 5px 10px;
+    border-radius: 2px;
+    font-size: $font-size-m;
+    color: $color-theme;
+    transition: 0.3s ease-in-out;
+
+    @include media-query($medium-down) {
+      font-size: $font-size-b;
+    }
+
+    &:hover {
+      background-color: $color-theme;
+      color: $color-white;
+    }
+  }
+}
+
 section.banner {
   padding-top: 27px;
 
@@ -1187,6 +1259,7 @@ div.teacher-details {
     display: flex;
     background: url(../images/teacher_bg.png) no-repeat center center / cover;
     margin-bottom: 30px;
+
     @include media-query($small) {
       display: block;
     }

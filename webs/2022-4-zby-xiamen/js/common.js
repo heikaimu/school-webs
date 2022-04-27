@@ -1,7 +1,7 @@
 /*
  * @Date: 2022-04-27 12:26:20
  * @LastEditors: Yaowen Liu
- * @LastEditTime: 2022-04-27 12:29:26
+ * @LastEditTime: 2022-04-27 14:50:47
  * @FilePath: /school-webs/webs/2022-4-zby-xiamen/js/common.js
  */
 // 弹窗
@@ -17,12 +17,34 @@ function layer(title, message, callbackFn) {
 
 // IE判断
 function isIE() {
-  if (!!window.ActiveXObject || "ActiveXObject" in window) {
-    layer('浏览器兼容提示', '请选择使用Edge浏览器、Chrome浏览器、360浏览器极速模式、QQ浏览器极速模式浏览网站，以获得最好的体验',
-      function () {
-        window.close();
-      }
-    )
+  var userAgent = navigator.userAgent;
+  // 是否是IE<11浏览器
+  var isIE = userAgent.indexOf("compatible") > -1 && userAgent.indexOf("MSIE") > -1;
+  // 是否是IE11
+  var isIE11 = userAgent.indexOf('Trident') > -1 && userAgent.indexOf("rv:11.0") > -1;
+  // 是否是兼容模式
+  var compatibilityMode = window.navigator.userAgent.indexOf('compatible') != -1;
+  // 是否是IE10
+  var isIE10 = false;
+  if (isIE) {
+    var reIE = new RegExp("MSIE (\\d+\\.\\d+);");
+    reIE.test(userAgent);
+    var fIEVersion = parseFloat(RegExp["$1"]);
+    isIE10 = fIEVersion === 10;
+  }
+
+  // 如果是IE但是不是10或者11，或者是兼容模式，则提示
+  var isErrorBrowser = (isIE && !isIE10 && !isIE11) || compatibilityMode;
+  if (isErrorBrowser) {
+    var str = "抱歉！您浏览的页面无法正常显示";
+    var str2 = "推荐使用Chrome，Firefox，Edge，IE10，IE11浏览器，如果您使用的是360、搜狗、QQ等双核浏览器，";
+    var str1 = "请切换到极速模式访问(如下图所示)";
+    var str3 = "./images/broswer.jpg";
+    var str4 = "./images/logo.png";
+    document.write("<div><img style='margin:20px 0 0 100px;' src='" + str4 + "'/><div style='width:900px;margin:0 auto;font-family:Microsoft YaHei'>" +
+      "<p style='padding-top:100px;margin:0;text-align:center;margin-bottom:40px;color:#999;font-size:30px;'>" + str + "<br/></p><p style='color:#999;font-size:20px;margin-left:50px;'>" + str2 + str1 + "</p>" +
+      "<div style='text-align:center;' ><img src='" + str3 + "'/></div>" + "</div></div>");
+    // document.execCommand("Stop");
   }
 }
 

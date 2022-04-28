@@ -1,6 +1,175 @@
 @import './variables';
 @import './mixin';
 
+// 公司介绍
 .law-office {
   background-color: #f2f2f2;
+
+  .describe {}
+
+  .law-honor {
+    .text {}
+  }
+}
+
+// 业务范围
+.business-range {
+  div.business-card {
+    h5.business-card__title {}
+
+    p.business-card__en {}
+
+    a.link {}
+  }
+}
+
+div.consult.text-center {
+  a.consult-button--phone {
+    span.iconfont.icon-fenzuguanli {}
+  }
+
+  a.consult-button--online {}
+}
+
+// 律师团队
+.law-team {
+  .more-lawyer {
+    border: 1px solid #f39c31;
+    color: #f39c31;
+  }
+}
+
+div.team-card {
+  width: 100%;
+  background-color: #f2f2f2;
+
+  div.cover {
+    width: 180px;
+    height: 180px;
+
+    img {}
+  }
+
+  div.info {
+    div.info-top {
+      p.name {
+        font-size: 16px;
+      }
+
+      p.role {
+        font-size: 16px;
+      }
+    }
+
+    div.info-medium {
+      p.tags {
+        font-size: 13px;
+      }
+    }
+
+    div.info-bottom {
+      p.desc {
+        font-size: 12px;
+      }
+    }
+  }
+
+  .consult-button {
+    border: 1px solid #f39c31;
+    color: #f39c31;
+    background-color: #ffffff;
+  }
+}
+
+
+// 案例
+.classic-case {}
+
+div.case-card {
+  background-color: #f2f2f2;
+
+  div.card-top {
+    background-color: #cccccc;
+
+    p.card-top__title {
+      font-size: 16px;
+      color: #333333;
+    }
+
+    a.card-top__more {
+      font-size: 13px;
+      color: #666666;
+    }
+  }
+
+  div.card-bottom {
+    ul.card-list {
+      li.card-item {
+        a.case-title {
+          font-size: 13px;
+          color: #666666;
+        }
+      }
+    }
+  }
+}
+
+
+// 服务流程
+.business-progress {}
+
+div.progress-card {
+  div.cover {
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+
+    .icon {}
+  }
+
+  div.info {
+    p.title {}
+
+    p.desc {}
+
+    p.step {}
+  }
+}
+
+// 热门问答
+.hot-problem {}
+
+.problem-nav {
+  .text {
+    &.active {
+      background-color: #f39c31;
+    }
+  }
+}
+
+.problem-list {
+  li.problem-card {
+    display: none;
+
+    div.problem-question {
+      p.question-title {}
+
+      p.question-context {}
+    }
+
+    div.problem-answer {
+      p.answer-title {}
+
+      p.answer-context {}
+    }
+  }
+}
+
+
+// 免费联系
+.free-consult {
+  .free-consult-form {
+    width: 100%;
+    max-width: 500px;
+  }
 }

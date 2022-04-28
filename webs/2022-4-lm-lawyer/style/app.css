@@ -266,3 +266,72 @@ a:hover {
 .law-office {
   background-color: #f2f2f2;
 }
+
+.law-team .more-lawyer {
+  border: 1px solid #f39c31;
+  color: #f39c31;
+}
+
+div.team-card {
+  width: 100%;
+  background-color: #f2f2f2;
+}
+div.team-card div.cover {
+  width: 180px;
+  height: 180px;
+}
+div.team-card div.info div.info-top p.name {
+  font-size: 16px;
+}
+div.team-card div.info div.info-top p.role {
+  font-size: 16px;
+}
+div.team-card div.info div.info-medium p.tags {
+  font-size: 13px;
+}
+div.team-card div.info div.info-bottom p.desc {
+  font-size: 12px;
+}
+div.team-card .consult-button {
+  border: 1px solid #f39c31;
+  color: #f39c31;
+  background-color: #ffffff;
+}
+
+div.case-card {
+  background-color: #f2f2f2;
+}
+div.case-card div.card-top {
+  background-color: #cccccc;
+}
+div.case-card div.card-top p.card-top__title {
+  font-size: 16px;
+  color: #333333;
+}
+div.case-card div.card-top a.card-top__more {
+  font-size: 13px;
+  color: #666666;
+}
+div.case-card div.card-bottom ul.card-list li.card-item a.case-title {
+  font-size: 13px;
+  color: #666666;
+}
+
+div.progress-card div.cover {
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+}
+
+.problem-nav .text.active {
+  background-color: #f39c31;
+}
+
+.problem-list li.problem-card {
+  display: none;
+}
+
+.free-consult .free-consult-form {
+  width: 100%;
+  max-width: 500px;
+}

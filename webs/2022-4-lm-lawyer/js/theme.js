@@ -1,15 +1,15 @@
 /*
  * @Date: 2022-04-08 17:12:42
  * @LastEditors: Yaowen Liu
- * @LastEditTime: 2022-04-27 12:31:04
- * @FilePath: /school-webs/webs/2022-4-zby-xiamen/js/theme.js
+ * @LastEditTime: 2022-04-28 14:46:16
+ * @FilePath: /school-webs/webs/2022-4-lm-lawyer/js/theme.js
  */
 
 $(function () {
   isIE();
   backTop();
   new WOW().init();
-
+  problemTab();
   customSelector();
   mobileNav();
   sideBarNav();
@@ -139,4 +139,22 @@ function mainNavToggle() {
       }
     })
   }
+}
+
+
+// 问答
+function problemTab() {
+  const nav = $("#problemNav").find(".text");
+  const content = $("#problemContent").find(".problem-card");
+
+  nav.eq(0).addClass("active");
+  content.eq(0).show();
+
+  nav.each(function () {
+    $(this).on("click", function () {
+      $(this).addClass("active").siblings().removeClass("active");
+      const navIndex = $(this).index();
+      content.eq(navIndex).show().siblings().hide();
+    })
+  })
 }

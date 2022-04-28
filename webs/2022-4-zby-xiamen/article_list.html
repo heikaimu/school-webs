@@ -6,46 +6,88 @@
 -->
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>首页</title>
-  <meta name="description" content="这是一个描述" />
-  <meta name="keywords" content="这是一些关键字" />
-  <meta name="author" content="LYW" />
-  <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
-  <link rel="stylesheet" href="./style/swiper.min.css" />
-  <link rel="stylesheet" href="./style/scroll-animation.css" />
-  <link rel="stylesheet" href="./fonts/iconfont.css" />
-  <!-- <link rel="stylesheet" href="./style/bootstrap.css"> -->
-  <link rel="stylesheet" href="./style/app.css" />
-  <!--[if lt IE 9]>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>首页</title>
+    <meta name="description" content="这是一个描述" />
+    <meta name="keywords" content="这是一些关键字" />
+    <meta name="author" content="LYW" />
+    <!-- 强制Chromium内核，作用于360浏览器、QQ浏览器等国产双核浏览器 -->
+    <meta name="renderer" content="webkit" />
+    <!-- 强制Chromium内核，作用于其他双核浏览器 -->
+    <meta name="force-rendering" content="webkit" />
+    <!-- 如果有安装 Google Chrome Frame 插件则强制为Chromium内核，否则强制本机支持的最高版本IE内核，作用于IE浏览器 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="./style/swiper.min.css" />
+    <link rel="stylesheet" href="./style/scroll-animation.css" />
+    <link rel="stylesheet" href="./fonts/iconfont.css" />
+    <!-- <link rel="stylesheet" href="./style/bootstrap.css"> -->
+    <link rel="stylesheet" href="./style/app.css" />
+    <!--[if lt IE 9]>
       <script src="./js/lib/html5shiv.js"></script>
       <script src="./js/lib/respond.src.js"></script>
     <![endif]-->
-</head>
+  </head>
 
-<body id="app">
-   <!-- header -->
-   <header>
-    <!-- top-bar -->
-    <section class="top-bar">
-      <div class="top-wrapper container">
-        <a href="/" class="logo">
-          <img src="./images/logo.png" alt="" srcset="" />
-          <img src="./images/logo_text.png" alt="" srcset="" />
-        </a>
+  <body id="app">
+    <!-- header -->
+    <header>
+      <!-- top-bar -->
+      <section class="top-bar">
+        <div class="top-wrapper container">
+          <a href="/" class="logo">
+            <img src="./images/logo.png" alt="" srcset="" />
+            <img src="./images/logo_text.png" alt="" srcset="" />
+          </a>
 
-        <div class="top-right-wrapper">
+          <div class="top-right-wrapper">
+            <div class="sm-buttons">
+              <p class="icon wx">
+                <span class="iconfont icon-weixin"></span>
+                <span class="text">微信</span>
+                <span class="wx-image">
+                  <img src="./images/qr_code.png" alt="" />
+                </span>
+              </p>
+              <span class="divider"></span>
+              <p class="icon">
+                <span class="iconfont icon-yingwen"></span>
+                <span class="text">English</span>
+              </p>
+            </div>
+            <div class="search-input-wrapper">
+              <div class="search-input">
+                <input type="text" placeholder="输入您想搜索的内容" />
+                <button>
+                  <span class="iconfont icon-sousuoxiao"></span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="media-nav-menu" id="mobileOpen">
+            <span class="iconfont icon-daohang"></span>
+          </div>
+        </div>
+      </section>
+
+      <!-- nav -->
+
+      <span class="mobile-wx-image" id="mobileWxImage">
+        <!-- 移动端微信二维码 -->
+        <img src="./images/qr_code.png" alt="" />
+      </span>
+
+      <section class="main-nav" id="mobileNav">
+        <!-- 移动端i18,微信按钮 -->
+        <div class="moblie-nav-top">
           <div class="sm-buttons">
-            <p class="icon wx">
+            <p class="icon wx" id="mobileWxMenu">
               <span class="iconfont icon-weixin"></span>
               <span class="text">微信</span>
-              <span class="wx-image">
-                <img src="./images/qr_code.png" alt="" />
-              </span>
             </p>
             <span class="divider"></span>
             <p class="icon">
@@ -53,362 +95,323 @@
               <span class="text">English</span>
             </p>
           </div>
-          <div class="search-input-wrapper">
-            <div class="search-input">
-              <input type="text" placeholder="输入您想搜索的内容" />
-              <button>
-                <span class="iconfont icon-sousuoxiao"></span>
-              </button>
-            </div>
-          </div>
+          <span class="close iconfont icon-shanchu" id="mobileClose"></span>
         </div>
-
-        <div class="media-nav-menu" id="mobileOpen">
-          <span class="iconfont icon-daohang"></span>
-        </div>
-      </div>
-    </section>
-
-    <!-- nav -->
-    
-    <span class="mobile-wx-image" id="mobileWxImage">
-      <!-- 移动端微信二维码 -->
-      <img src="./images/qr_code.png" alt="" />
-    </span>
-    
-    <section class="main-nav" id="mobileNav">
-      <!-- 移动端i18,微信按钮 -->
-      <div class="moblie-nav-top">
-        <div class="sm-buttons">
-          <p class="icon wx" id="mobileWxMenu">
-            <span class="iconfont icon-weixin"></span>
-            <span class="text">微信</span>
-          </p>
-          <span class="divider"></span>
-          <p class="icon">
-            <span class="iconfont icon-yingwen"></span>
-            <span class="text">English</span>
-          </p>
-        </div>
-        <span class="close iconfont icon-shanchu" id="mobileClose"></span>
-      </div>
-      <!-- 导航主体 -->
-      <div class="nav-wrapper">
-        <ul class="nav-one container" id="mainNav">
-          <li class="nav-one-item">
-            <a href="./" class="nav-one-text">首页</a>
-          </li>
-          <li class="nav-one-item">
-            <a href="./single_page.html" class="nav-one-text arrow">学院概括</a>
-            <span class="nav-two-open nav-open-icon iconfont icon-plus"></span>
-            <ul class="nav-two">
-              <li class="nav-two-item">
-                <a href="./article_list.html" class="nav-two-text arrow">学院介绍</a>
-                <span class="nav-three-open nav-open-icon iconfont icon-plus"></span>
-                <nav class="nav-three">
-                  <a href="/" class="nav-three-text">三级菜单</a>
-                  <a href="/" class="nav-three-text">三级菜单</a>
-                  <a href="/" class="nav-three-text">三级菜单</a>
-                  <a href="/" class="nav-three-text">三级菜单</a>
-                </nav>
-              </li>
-              <li class="nav-two-item">
-                <a href="./teacher_list.html" class="nav-two-text">院系领导</a>
-              </li>
-              <li class="nav-two-item">
-                <a href="./teacher_list.html" class="nav-two-text">教授委员会</a>
-              </li>
-              <li class="nav-two-item">
-                <a href="./article_list.html" class="nav-two-text">系所设置</a>
-              </li>
-              <li class="nav-two-item">
-                <a href="./article_list.html" class="nav-two-text">科研机构</a>
-              </li>
-              <li class="nav-two-item">
-                <a href="./article_list.html" class="nav-two-text">党政办公</a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-one-item">
-            <a href="./teacher_list.html" class="nav-one-text">师资力量</a>
-          </li>
-          <li class="nav-one-item">
-            <a href="./article_list.html" class="nav-one-text">党的建设</a>
-          </li>
-          <li class="nav-one-item">
-            <a href="./article_list.html" class="nav-one-text">教学管理</a>
-          </li>
-          <li class="nav-one-item">
-            <a href="./article_list.html" class="nav-one-text">学生工作</a>
-          </li>
-          <li class="nav-one-item">
-            <a href="./article_list.html" class="nav-one-text">合作交流</a>
-          </li>
-          <li class="nav-one-item">
-            <a href="./article_list.html" class="nav-one-text">院友工作</a>
-          </li>
-          <li class="nav-one-item">
-            <a href="./article_list.html" class="nav-one-text">社会服务</a>
-          </li>
-          <li class="nav-one-item">
-            <a href="./article_list.html" class="nav-one-text">下载中心</a>
-          </li>
-          <li class="nav-one-item">
-            <a href="./article_list.html" class="nav-one-text">学术科研</a>
-          </li>
-        </ul>
-      </div>
-    </section>
-  </header>
-
-  <!-- 内页静态banner -->
-  <div class="inner-static-banner">
-    <div class="container">
-      <img src="./images/banner.png" alt="" srcset="">
-    </div>
-  </div>
-
-  <!-- 主体 -->
-  <div class="container">
-    <div class="inner-side-page">
-
-
-      <!-- 侧边栏 -->
-      <div class="inner-nav">
-        <div class="side-bar">
-          <h2 class="side-bar-title">学院概况</h2>
-          <ul class="second-nav" id="sideBarNav">
-            <li class="second-nav-item active">
-              <p class="second-nav-item-text">二级菜单</p>
-              <nav class="third-nav">
-                <a href="" class="third-nav-text active">三级菜单</a>
-                <a href="" class="third-nav-text">三级菜单</a>
-                <a href="" class="third-nav-text">三级菜单</a>
-              </nav>
+        <!-- 导航主体 -->
+        <div class="nav-wrapper">
+          <ul class="nav-one container" id="mainNav">
+            <li class="nav-one-item">
+              <a href="./" class="nav-one-text">首页</a>
             </li>
-            <li class="second-nav-item">
-              <p class="second-nav-item-text">二级菜单</p>
-              <nav class="third-nav">
-                <a href="" class="third-nav-text">三级菜单</a>
-                <a href="" class="third-nav-text">三级菜单</a>
-                <a href="" class="third-nav-text">三级菜单</a>
-              </nav>
+            <li class="nav-one-item">
+              <a href="./single_page.html" class="nav-one-text arrow">学院概括</a>
+              <span class="nav-two-open nav-open-icon iconfont icon-plus"></span>
+              <ul class="nav-two">
+                <li class="nav-two-item">
+                  <a href="./article_list.html" class="nav-two-text arrow">学院介绍</a>
+                  <span class="nav-three-open nav-open-icon iconfont icon-plus"></span>
+                  <nav class="nav-three">
+                    <a href="/" class="nav-three-text">三级菜单</a>
+                    <a href="/" class="nav-three-text">三级菜单</a>
+                    <a href="/" class="nav-three-text">三级菜单</a>
+                    <a href="/" class="nav-three-text">三级菜单</a>
+                  </nav>
+                </li>
+                <li class="nav-two-item">
+                  <a href="./teacher_list.html" class="nav-two-text">院系领导</a>
+                </li>
+                <li class="nav-two-item">
+                  <a href="./teacher_list.html" class="nav-two-text">教授委员会</a>
+                </li>
+                <li class="nav-two-item">
+                  <a href="./article_list.html" class="nav-two-text">系所设置</a>
+                </li>
+                <li class="nav-two-item">
+                  <a href="./article_list.html" class="nav-two-text">科研机构</a>
+                </li>
+                <li class="nav-two-item">
+                  <a href="./article_list.html" class="nav-two-text">党政办公</a>
+                </li>
+              </ul>
             </li>
-            <li class="second-nav-item">
-              <p class="second-nav-item-text">二级菜单</p>
-              <nav class="third-nav">
-                <a href="" class="third-nav-text">三级菜单</a>
-                <a href="" class="third-nav-text">三级菜单</a>
-                <a href="" class="third-nav-text">三级菜单</a>
-              </nav>
+            <li class="nav-one-item">
+              <a href="./teacher_list.html" class="nav-one-text">师资力量</a>
+            </li>
+            <li class="nav-one-item">
+              <a href="./article_list.html" class="nav-one-text">党的建设</a>
+            </li>
+            <li class="nav-one-item">
+              <a href="./article_list.html" class="nav-one-text">教学管理</a>
+            </li>
+            <li class="nav-one-item">
+              <a href="./article_list.html" class="nav-one-text">学生工作</a>
+            </li>
+            <li class="nav-one-item">
+              <a href="./article_list.html" class="nav-one-text">合作交流</a>
+            </li>
+            <li class="nav-one-item">
+              <a href="./article_list.html" class="nav-one-text">院友工作</a>
+            </li>
+            <li class="nav-one-item">
+              <a href="./article_list.html" class="nav-one-text">社会服务</a>
+            </li>
+            <li class="nav-one-item">
+              <a href="./article_list.html" class="nav-one-text">下载中心</a>
+            </li>
+            <li class="nav-one-item">
+              <a href="./article_list.html" class="nav-one-text">学术科研</a>
             </li>
           </ul>
-          <img src="./images/nav_bg.png" alt="" srcset="">
         </div>
-      </div>
+      </section>
+    </header>
 
-      <!-- 主体内容 -->
-      <div class="inner-content-wrapper">
-        <div class="breadcrumb">
-          <h2 class="title">二级菜单</h2>
-          <div class="breadcrumb-navs">
-            <p class="pos">当前位置：</p>
-            <nav>
-              <a href="">首页</a>
-              <a href="">一级导航</a>
-              <a href="">二级导航</a>
-            </nav>
+    <!-- 内页静态banner -->
+    <div class="inner-static-banner">
+      <div class="container">
+        <img src="./images/banner.png" alt="" srcset="" />
+      </div>
+    </div>
+
+    <!-- 主体 -->
+    <div class="container">
+      <div class="inner-side-page">
+        <!-- 侧边栏 -->
+        <div class="inner-nav">
+          <div class="side-bar">
+            <h2 class="side-bar-title">学院概况</h2>
+            <ul class="second-nav" id="sideBarNav">
+              <li class="second-nav-item active">
+                <p class="second-nav-item-text">二级菜单</p>
+                <nav class="third-nav">
+                  <a href="" class="third-nav-text active">三级菜单</a>
+                  <a href="" class="third-nav-text">三级菜单</a>
+                  <a href="" class="third-nav-text">三级菜单</a>
+                </nav>
+              </li>
+              <li class="second-nav-item">
+                <p class="second-nav-item-text">二级菜单</p>
+                <nav class="third-nav">
+                  <a href="" class="third-nav-text">三级菜单</a>
+                  <a href="" class="third-nav-text">三级菜单</a>
+                  <a href="" class="third-nav-text">三级菜单</a>
+                </nav>
+              </li>
+              <li class="second-nav-item">
+                <p class="second-nav-item-text">二级菜单</p>
+                <nav class="third-nav">
+                  <a href="" class="third-nav-text">三级菜单</a>
+                  <a href="" class="third-nav-text">三级菜单</a>
+                  <a href="" class="third-nav-text">三级菜单</a>
+                </nav>
+              </li>
+            </ul>
+            <img src="./images/nav_bg.png" alt="" srcset="" />
           </div>
         </div>
 
-        <ul class="inner-news-list">
-          <li class="news-item">
-            <div class="inner-news-card">
-              <div class="date">
-                <p class="days">12-08</p>
-                <p class="year">2014</p>
+        <!-- 主体内容 -->
+        <div class="inner-content-wrapper">
+          <div class="breadcrumb">
+            <h2 class="title">二级菜单</h2>
+            <div class="breadcrumb-navs">
+              <p class="pos">当前位置：</p>
+              <nav>
+                <a href="">首页</a>
+                <a href="">一级导航</a>
+                <a href="">二级导航</a>
+              </nav>
+            </div>
+          </div>
+
+          <ul class="inner-news-list">
+            <li class="news-item">
+              <div class="inner-news-card">
+                <div class="date">
+                  <p class="days">12-08</p>
+                  <p class="year">2014</p>
+                </div>
+                <p class="title">
+                  漫步思源 绿植相伴”——公共事务学院“三八”妇女节活动圆满成功 会议征文 | 公共治理的学科建构与专业发展学
+                </p>
+                <a href="./article_details.html" class="link"></a>
               </div>
-              <p class="title">
-                漫步思源 绿植相伴”——公共事务学院“三八”妇女节活动圆满成功 会议征文 |
-                公共治理的学科建构与专业发展学
-              </p>
-              <a href="./article_details.html" class="link"></a>
+            </li>
+            <li class="news-item">
+              <div class="inner-news-card">
+                <div class="date">
+                  <p class="days">12-08</p>
+                  <p class="year">2014</p>
+                </div>
+                <p class="title">
+                  漫步思源 绿植相伴”——公共事务学院“三八”妇女节活动圆满成功 会议征文 | 公共治理的学科建构与专业发展学
+                </p>
+                <a href="./article_details.html" class="link"></a>
+              </div>
+            </li>
+            <li class="news-item">
+              <div class="inner-news-card">
+                <div class="date">
+                  <p class="days">12-08</p>
+                  <p class="year">2014</p>
+                </div>
+                <p class="title">
+                  漫步思源 绿植相伴”——公共事务学院“三八”妇女节活动圆满成功 会议征文 | 公共治理的学科建构与专业发展学
+                </p>
+                <a href="./article_details.html" class="link"></a>
+              </div>
+            </li>
+            <li class="news-item">
+              <div class="inner-news-card">
+                <div class="date">
+                  <p class="days">12-08</p>
+                  <p class="year">2014</p>
+                </div>
+                <p class="title">
+                  漫步思源 绿植相伴”——公共事务学院“三八”妇女节活动圆满成功 会议征文 | 公共治理的学科建构与专业发展学
+                </p>
+                <a href="./article_details.html" class="link"></a>
+              </div>
+            </li>
+            <li class="news-item">
+              <div class="inner-news-card">
+                <div class="date">
+                  <p class="days">12-08</p>
+                  <p class="year">2014</p>
+                </div>
+                <p class="title">
+                  漫步思源 绿植相伴”——公共事务学院“三八”妇女节活动圆满成功 会议征文 | 公共治理的学科建构与专业发展学
+                </p>
+                <a href="./article_details.html" class="link"></a>
+              </div>
+            </li>
+            <li class="news-item">
+              <div class="inner-news-card">
+                <div class="date">
+                  <p class="days">12-08</p>
+                  <p class="year">2014</p>
+                </div>
+                <p class="title">
+                  漫步思源 绿植相伴”——公共事务学院“三八”妇女节活动圆满成功 会议征文 | 公共治理的学科建构与专业发展学
+                </p>
+                <a href="./article_details.html" class="link"></a>
+              </div>
+            </li>
+            <li class="news-item">
+              <div class="inner-news-card">
+                <div class="date">
+                  <p class="days">12-08</p>
+                  <p class="year">2014</p>
+                </div>
+                <p class="title">
+                  漫步思源 绿植相伴”——公共事务学院“三八”妇女节活动圆满成功 会议征文 | 公共治理的学科建构与专业发展学
+                </p>
+                <a href="./article_details.html" class="link"></a>
+              </div>
+            </li>
+            <li class="news-item">
+              <div class="inner-news-card">
+                <div class="date">
+                  <p class="days">12-08</p>
+                  <p class="year">2014</p>
+                </div>
+                <p class="title">
+                  漫步思源 绿植相伴”——公共事务学院“三八”妇女节活动圆满成功 会议征文 | 公共治理的学科建构与专业发展学
+                </p>
+                <a href="./article_details.html" class="link"></a>
+              </div>
+            </li>
+          </ul>
+
+          <!-- 分页器 -->
+          <div class="pb_sys_common pb_sys_normal pb_sys_style1">
+            <span class="p_pages">
+              <span class="p_first_d p_fun_d">首页</span>
+              <span class="p_prev_d p_fun_d">上页</span>
+              <span class="p_no_d">1</span>
+              <span class="p_no"><a href="jdyw/87.htm">2</a></span>
+              <span class="p_no"><a href="jdyw/86.htm">3</a></span>
+              <span class="p_no"><a href="jdyw/85.htm">4</a></span>
+              <span class="p_no"><a href="jdyw/84.htm">5</a></span>
+              <span class="p_dot">...</span>
+              <span class="p_no"><a href="jdyw/1.htm">88</a></span>
+              <span class="p_next p_fun"><a href="jdyw/87.htm">下页</a></span>
+              <span class="p_last p_fun"><a href="jdyw/1.htm">尾页</a></span>
+            </span>
+            <span class="p_t">第</span>
+            <span class="p_goto">
+              <script language="javascript" src="/system/resource/js/gotopage.js"></script>
+              <input
+                type="text"
+                class="p_goto_input"
+                maxlength="10"
+                id="u6_goto"
+                value="1"
+                onkeydown='if(event.keyCode==13){_simple_list_gotopage_fun(88,"u6_goto",2)}'
+                spellcheck="false"
+              />
+            </span>
+            <span class="p_t">/88页</span>
+            <span class="p_goto"
+              ><a href="javascript:;" onclick='_simple_list_gotopage_fun(88,"u6_goto",2)'>跳转</a></span
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- footer -->
+    <footer class="footer">
+      <div class="footer-top container">
+        <a href="/" class="fotter-logo">
+          <img src="./images/logo_white.png" alt="" srcset="" />
+          <img src="./images/logo_white_text.png" alt="" srcset="" />
+        </a>
+        <ul class="footer-selector">
+          <li class="item">
+            <div class="custom-selector">
+              <p class="placeholder">校内链接</p>
+              <nav class="options">
+                <a href="">链接1</a>
+                <a href="">链接2</a>
+                <a href="">链接3</a>
+                <a href="">链接4</a>
+              </nav>
             </div>
           </li>
-          <li class="news-item">
-            <div class="inner-news-card">
-              <div class="date">
-                <p class="days">12-08</p>
-                <p class="year">2014</p>
-              </div>
-              <p class="title">
-                漫步思源 绿植相伴”——公共事务学院“三八”妇女节活动圆满成功 会议征文 |
-                公共治理的学科建构与专业发展学
-              </p>
-              <a href="./article_details.html" class="link"></a>
-            </div>
-          </li>
-          <li class="news-item">
-            <div class="inner-news-card">
-              <div class="date">
-                <p class="days">12-08</p>
-                <p class="year">2014</p>
-              </div>
-              <p class="title">
-                漫步思源 绿植相伴”——公共事务学院“三八”妇女节活动圆满成功 会议征文 |
-                公共治理的学科建构与专业发展学
-              </p>
-              <a href="./article_details.html" class="link"></a>
-            </div>
-          </li>
-          <li class="news-item">
-            <div class="inner-news-card">
-              <div class="date">
-                <p class="days">12-08</p>
-                <p class="year">2014</p>
-              </div>
-              <p class="title">
-                漫步思源 绿植相伴”——公共事务学院“三八”妇女节活动圆满成功 会议征文 |
-                公共治理的学科建构与专业发展学
-              </p>
-              <a href="./article_details.html" class="link"></a>
-            </div>
-          </li>
-          <li class="news-item">
-            <div class="inner-news-card">
-              <div class="date">
-                <p class="days">12-08</p>
-                <p class="year">2014</p>
-              </div>
-              <p class="title">
-                漫步思源 绿植相伴”——公共事务学院“三八”妇女节活动圆满成功 会议征文 |
-                公共治理的学科建构与专业发展学
-              </p>
-              <a href="./article_details.html" class="link"></a>
-            </div>
-          </li>
-          <li class="news-item">
-            <div class="inner-news-card">
-              <div class="date">
-                <p class="days">12-08</p>
-                <p class="year">2014</p>
-              </div>
-              <p class="title">
-                漫步思源 绿植相伴”——公共事务学院“三八”妇女节活动圆满成功 会议征文 |
-                公共治理的学科建构与专业发展学
-              </p>
-              <a href="./article_details.html" class="link"></a>
-            </div>
-          </li>
-          <li class="news-item">
-            <div class="inner-news-card">
-              <div class="date">
-                <p class="days">12-08</p>
-                <p class="year">2014</p>
-              </div>
-              <p class="title">
-                漫步思源 绿植相伴”——公共事务学院“三八”妇女节活动圆满成功 会议征文 |
-                公共治理的学科建构与专业发展学
-              </p>
-              <a href="./article_details.html" class="link"></a>
-            </div>
-          </li>
-          <li class="news-item">
-            <div class="inner-news-card">
-              <div class="date">
-                <p class="days">12-08</p>
-                <p class="year">2014</p>
-              </div>
-              <p class="title">
-                漫步思源 绿植相伴”——公共事务学院“三八”妇女节活动圆满成功 会议征文 |
-                公共治理的学科建构与专业发展学
-              </p>
-              <a href="./article_details.html" class="link"></a>
+          <li class="item">
+            <div class="custom-selector">
+              <p class="placeholder">校外链接</p>
+              <nav class="options">
+                <a href="">链接1</a>
+                <a href="">链接2</a>
+                <a href="">链接3</a>
+                <a href="">链接4</a>
+              </nav>
             </div>
           </li>
         </ul>
-
-
-        <!-- 分页器 -->
-        <div class="pb_sys_common pb_sys_normal pb_sys_style1">
-          <span class="p_pages">
-            <span class="p_first_d p_fun_d">首页</span>
-            <span class="p_prev_d p_fun_d">上页</span>
-            <span class="p_no_d">1</span>
-            <span class="p_no"><a href="jdyw/87.htm">2</a></span>
-            <span class="p_no"><a href="jdyw/86.htm">3</a></span>
-            <span class="p_no"><a href="jdyw/85.htm">4</a></span>
-            <span class="p_no"><a href="jdyw/84.htm">5</a></span>
-            <span class="p_dot">...</span>
-            <span class="p_no"><a href="jdyw/1.htm">88</a></span>
-            <span class="p_next p_fun"><a href="jdyw/87.htm">下页</a></span>
-            <span class="p_last p_fun"><a href="jdyw/1.htm">尾页</a></span>
-          </span>
-          <span class="p_t">第</span>
-          <span class="p_goto">
-            <script language="javascript" src="/system/resource/js/gotopage.js"></script>
-            <input type="text" class="p_goto_input" maxlength="10" id="u6_goto" value="1" onkeydown="if(event.keyCode==13){_simple_list_gotopage_fun(88,&quot;u6_goto&quot;,2)}" spellcheck="false">
-          </span>
-          <span class="p_t">/88页</span>
-          <span class="p_goto"><a href="javascript:;" onclick="_simple_list_gotopage_fun(88,&quot;u6_goto&quot;,2)">跳转</a></span>
+        <div class="footer-info">
+          <p class="text">地址：厦门大学成智楼（建南楼群东侧第一栋）</p>
+          <p class="text">TEL:0592-2182783</p>
+          <p class="text">FAX:0592-2183191</p>
+          <p class="text">E-MAIL:ggsw@xmu.edu.cn</p>
+        </div>
+        <div class="qr-code">
+          <p class="text">【关注我们】</p>
+          <img src="./images/qr_code.png" alt="" srcset="" />
         </div>
       </div>
-    </div>
-  </div>
-
-  <!-- footer -->
-  <footer class="footer">
-    <div class="footer-top container">
-      <a href="/" class="fotter-logo">
-        <img src="./images/logo_white.png" alt="" srcset="" />
-        <img src="./images/logo_white_text.png" alt="" srcset="" />
-      </a>
-      <ul class="footer-selector">
-        <li class="item">
-          <div class="custom-selector">
-            <p class="placeholder">校内链接</p>
-            <nav class="options">
-              <a href="">链接1</a>
-              <a href="">链接2</a>
-              <a href="">链接3</a>
-              <a href="">链接4</a>
-            </nav>
-          </div>
-        </li>
-        <li class="item">
-          <div class="custom-selector">
-            <p class="placeholder">校外链接</p>
-            <nav class="options">
-              <a href="">链接1</a>
-              <a href="">链接2</a>
-              <a href="">链接3</a>
-              <a href="">链接4</a>
-            </nav>
-          </div>
-        </li>
-      </ul>
-      <div class="footer-info">
-        <p class="text">地址：厦门大学成智楼（建南楼群东侧第一栋）</p>
-        <p class="text">TEL:0592-2182783</p>
-        <p class="text">FAX:0592-2183191</p>
-        <p class="text">E-MAIL:ggsw@xmu.edu.cn</p>
+      <div class="footer-bottom">
+        <p class="copyright">厦门大学公共事务学院 版权所有@2003-2008 备案号:D200020</p>
       </div>
-      <div class="qr-code">
-        <p class="text">【关注我们】</p>
-        <img src="./images/qr_code.png" alt="" srcset="" />
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p class="copyright">厦门大学公共事务学院 版权所有@2003-2008 备案号:D200020</p>
-    </div>
-  </footer>
+    </footer>
 
-  <script src="./js/lib/jquery.min.js"></script>
-  <script src="./js/lib/swiper-bundle.min.js"></script>
-  <script src="./js/lib/wow.js"></script>
-  <script src="./js/jquery.extends.js"></script>
-  <script src="./js/common.js"></script>
-  <script src="./js/theme.js"></script>
-</body>
-
+    <script src="./js/lib/jquery.min.js"></script>
+    <script src="./js/lib/swiper-bundle.min.js"></script>
+    <script src="./js/lib/wow.js"></script>
+    <script src="./js/jquery.extends.js"></script>
+    <script src="./js/common.js"></script>
+    <script src="./js/theme.js"></script>
+  </body>
 </html>

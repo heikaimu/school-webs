@@ -1,0 +1,51 @@
+// 色彩
+$color-theme: #193373;
+$color-theme-light: #2348a9;
+$color-theme-deep: #1a5093;
+$color-sub-theme: #eec88e;
+$color-sub-theme-deep: #cc9848;
+$color-title: #111111;
+$color-title-light: #333333;
+$color-content: #666666;
+$color-border: #e6e6e6;
+$color-border-deep: #e3e3e3;
+$color-border-light: #f1f1f1;
+
+$color-red: #ed2c25;
+$color-yellow: rgb(253, 207, 48);
+$color-gray: #f0efed;
+$color-gray-deep: #f3f3f3;
+$color-white: #ffffff;
+$color-black: #111111;
+$color-black-light: #333333;
+
+// 尺寸
+$font-size-s: 12px;
+$font-size-b: 14px;
+$font-size-m: 16px;
+$font-size-l: 18px;
+
+// 媒体查询相关
+$grid-medium: 768px;
+$grid-large: 992px;
+$grid-widescreen: 1300px;
+
+$small: 'small';
+$medium: 'medium';
+$medium-down: 'medium-down';
+$medium-up: 'medium-up';
+$large: 'large';
+$large-down: 'large-down';
+$large-up: 'large-up';
+$widescreen: 'widescreen';
+
+$grid-breakpoints: (
+  $small '(max-width: #{$grid-medium - 1})',
+  $medium '(min-width: #{$grid-medium}) and (max-width: #{$grid-large - 1})',
+  $medium-down '(max-width: #{$grid-large - 1})',
+  $medium-up '(min-width: #{$grid-medium})',
+  $large '(min-width: #{$grid-large}) and (max-width: #{$grid-widescreen - 1})',
+  $large-down '(max-width: #{$grid-widescreen - 1})',
+  $large-up '(min-width: #{$grid-large})',
+  $widescreen '(min-width: #{$grid-widescreen})'
+);

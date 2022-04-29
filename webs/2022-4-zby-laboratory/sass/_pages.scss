@@ -1,0 +1,271 @@
+@import './variables';
+@import './mixin';
+
+div.home-section-title {
+  padding-bottom: 35px;
+
+  h2.main-title {
+    font-size: 30px;
+    color: $color-theme;
+    font-weight: 900;
+    font-family: "MicrosoftYaHei-Bold";
+    position: relative;
+
+    &::after {
+      content: "";
+      display: block;
+      height: 14px;
+      background: $color-theme;
+      opacity: 0.18;
+      border-radius: 7px;
+      @include pos-absolute(23px, 0, auto, 0);
+    }
+  }
+
+  a.link {
+    display: block;
+    width: 70px;
+    height: 24px;
+    border: 1px solid $color-theme;
+    border-radius: 12px;
+    font-size: 14px;
+    font-family: Arial;
+    font-weight: 400;
+    text-align: center;
+    line-height: 24px;
+    color: $color-theme;
+    text-transform: uppercase;
+    position: relative;
+    top: -5px;
+    transition: .3s;
+    &:hover {
+      text-decoration: none;
+      background-color: $color-theme;
+      color: $color-white;
+    }
+  }
+}
+
+// banner
+.progress-bullet {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 5px;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.progress-bullet .percent {
+  display: block;
+  width: 100%;
+  height: 0;
+  background-color: #003d87;
+  font-size: 14px;
+  text-align: center;
+  line-height: 30px;
+  color: #003d87;
+}
+
+.progress-bullet-active {
+  border: 1px solid #003d87;
+}
+
+.progress-bullet-active .percent {
+  display: block;
+  width: 100%;
+  height: 100%;
+  animation: fill 3s 0s linear forwards;
+}
+
+@keyframes fill {
+  0% {
+    height: 0;
+    color: #003d87;
+  }
+
+  50% {
+    color: #ffffff;
+  }
+
+  100% {
+    height: 100%;
+    color: #ffffff;
+  }
+}
+
+.swiper-progress {
+  width: 30px;
+  height: 30px;
+  background-color: red;
+  position: absolute;
+  bottom: 10px;
+  z-index: 9;
+}
+
+.docs {
+  .docs-item {
+    margin-bottom: 30px;
+  }
+}
+
+#messagePlatform {
+  padding-bottom: 50px;
+}
+
+#messagePlatformPagination {
+  bottom: 0;
+  .swiper-pagination-bullet {
+    background-color: $color-white;
+  }
+}
+
+.message-platform {
+  background: url(../images/platform_bg.png) no-repeat center center / cover;
+
+  .message-platform-title {
+    font-size: 30px;
+    color: $color-white;
+    font-family: "MicrosoftYaHei-Bold";
+  }
+
+  div.message-platform-card {
+    @include flex-col-center;
+    width: 100%;
+    position: relative;
+
+    &:hover,
+    &:active {
+      .cover {
+        &::after {
+          transform: translate3d(-50%, -50%, 0) scale(1);
+          opacity: 1;
+        }
+        .iconfont {
+          color: $color-theme;
+        }
+      }
+    }
+
+    div.cover {
+      @include flex-row-center;
+      width: 138px;
+      height: 138px;
+      border: 2px dashed $color-white;
+      border-radius: 50%;
+      position: relative;
+
+      &::after {
+        content: "";
+        display: block;
+        width: 118px;
+        height: 118px;
+        border-radius: 50%;
+        background-color: $color-white;
+        @include pos-absolute(50%, auto, auto, 50%);
+        transform: translate3d(-50%, -50%, 0) scale(0);
+        opacity: 0;
+        transition: .3s ease-in-out;
+      }
+
+      .iconfont {
+        font-size: 60px;
+        position: relative;
+        z-index: 9;
+        color: $color-white;
+        transition: .3s;
+      }
+    }
+
+    h2.title {
+      padding-top: 20px;
+      font-size: 16px;
+      color: $color-white;
+      text-align: center;
+      font-weight: normal;
+      line-height: 1.6;
+    }
+
+    a.link {
+      @include pos-absolute(0, 0, 0, 0, 11);
+    }
+  }
+}
+
+.image-work-card {
+  width: 100%;
+  position: relative;
+  
+  &:hover {
+    .cover {
+      .img {
+        transform: scale(1.05);
+      }
+    }
+    .title {
+      color: $color-theme;
+      &::after {
+        width: 100%;
+      }
+    }
+  }
+
+  .cover {
+    width: 100%;
+    height: 0;
+    background-color: #f2f2f2;
+    padding-bottom: 60%;
+    overflow: hidden;
+    position: relative;
+    .img {
+      @include pos-absolute;
+      transition: .3s ease-in-out;
+      img {
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: cover;
+      }
+    }
+  }
+
+  .title {
+    @include omit;
+    height: 60px;
+    line-height: 60px;
+    font-size: 18px;
+    color: $color-title;
+    border-bottom: 1px solid $color-border;
+    position: relative;
+    &::after {
+      @include pos-absolute(auto, 0, 0, 0);
+      content: "";
+      display: block;
+      width: 0;
+      height: 1px;
+      background-color: $color-theme;
+      transition: .3s;
+    }
+  }
+
+  .date {
+    @include pos-absolute(24px, auto, auto, 0);
+    padding: 10px 20px;
+    background-color: $color-theme;
+    color: $color-white;
+    font-size: 16px;
+  }
+
+  .link {
+    @include pos-absolute;
+  }
+}
+
+
+.notice-list {
+  .notice-item {
+    margin-bottom: 22px;
+  }
+}

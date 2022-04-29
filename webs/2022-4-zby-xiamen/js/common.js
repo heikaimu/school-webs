@@ -1,7 +1,7 @@
 /*
  * @Date: 2022-04-27 12:26:20
  * @LastEditors: Yaowen Liu
- * @LastEditTime: 2022-04-27 14:50:47
+ * @LastEditTime: 2022-04-29 11:22:23
  * @FilePath: /school-webs/webs/2022-4-zby-xiamen/js/common.js
  */
 // 弹窗
@@ -23,7 +23,7 @@ function isIE() {
   // 是否是IE11
   var isIE11 = userAgent.indexOf('Trident') > -1 && userAgent.indexOf("rv:11.0") > -1;
   // 是否是兼容模式
-  var compatibilityMode = window.navigator.userAgent.indexOf('compatible') != -1;
+  var compatibilityMode = window.navigator.userAgent.indexOf('compatible') !== -1;
   // 是否是IE10
   var isIE10 = false;
   if (isIE) {

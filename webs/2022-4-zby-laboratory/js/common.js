@@ -1,8 +1,8 @@
 /*
  * @Date: 2022-04-27 12:26:20
  * @LastEditors: Yaowen Liu
- * @LastEditTime: 2022-04-29 11:22:07
- * @FilePath: /school-webs/webs/2022-4-lm-lawyer/js/common.js
+ * @LastEditTime: 2022-04-29 11:20:18
+ * @FilePath: /school-webs/webs/2022-4-zby-laboratory/js/common.js
  */
 // 弹窗
 function layer(title, message, callbackFn) {

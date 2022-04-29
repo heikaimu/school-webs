@@ -1,0 +1,36 @@
+.web-header {
+  padding: 10px 0;
+  background-color: $color-theme;
+  @include media-query($medium-down) {
+    padding: 0;
+  }
+
+  .header--top {
+    @include media-query($medium-down) {
+      @include pos-fixed(0, 0, auto, 0, 999);
+      height: 60px;
+      padding: 0 10px;
+      background-color: $color-theme;
+    }
+
+    .header-logo {
+      position: relative;
+
+      @include media-query($large-down) {
+        top: 20px;
+
+        img {
+          width: 298px;
+        }
+      }
+
+      @include media-query($medium-down) {
+        top: 0;
+      }
+
+      img {}
+    }
+  }
+
+  .header--bottom {}
+}

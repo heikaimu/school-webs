@@ -6,7 +6,6 @@
  */
 
 $(function () {
-  isIE();
   backTop();
   new WOW().init();
 

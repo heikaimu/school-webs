@@ -1,39 +1,53 @@
 footer.web-footer {
-  background: url(../images/footer_bg.png);
+  background: url(../images/footer_bg.png) no-repeat center center / cover;
+
   div.footer--top {
-    background-color: rgba($color: #1750AB, $alpha: 0.7);
+    background-color: rgba($color: #1750ab, $alpha: 0.7);
+
     div.container {
-      div.f-links.d-flex {
+      div.f-links {
         p.title {
           font-size: 16px;
           color: #ffffff;
           padding-right: 10px;
+
+          @include media-query($large) {
+            font-size: 14px;
+          }
         }
 
         ul.links.d-flex {
           li.link-item {
             padding: 0 20px;
             position: relative;
+
             &::before {
-              content: "";
+              content: '';
               display: block;
               height: 13px;
               width: 1px;
               border-left: 1px solid rgba($color: $color-white, $alpha: 0.7);
               position: absolute;
-              left: 0;
+              right: 0;
               top: 50%;
               transform: translate3d(0, -50%, 0);
             }
-            &:first-child {
+
+            &:last-child {
               &::before {
                 display: none;
               }
             }
+
             a.link {
               font-size: 16px;
               color: #ffffff;
-              transition: .3s;
+              transition: 0.3s;
+
+              @include media-query($large) {
+                font-size: 14px;
+              }
+
               &:hover {
                 text-decoration: none;
                 color: $color-sub-theme;

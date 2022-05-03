@@ -11,7 +11,7 @@ header {
       }
 
       @include media-query($medium-down) {
-        @include pos-fixed(0, 0, auto, 0, 999);
+        @include fixed(0, 0, auto, 0, 999);
         height: 60px;
         padding: 0 10px;
         background-color: $color-theme;
@@ -106,7 +106,7 @@ header {
 
             span.wx-image {
               display: none;
-              @include pos-absolute(40px, auto, auto, 0, 999);
+              @include absolute(40px, auto, auto, 0, 999);
               padding: 10px;
               background-color: $color-white;
               transition: 0.3s ease-in-out;
@@ -236,7 +236,7 @@ header {
 
     @include media-query($medium-down) {
       @include flex-row-center;
-      @include pos-fixed(0, 0, 0, 0, 88889);
+      @include fixed(0, 0, 0, 0, 88889);
       background-color: rgba($color: #000000, $alpha: 0.6);
       transform: translate3d(0, -100%, 0);
 
@@ -259,7 +259,7 @@ section.main-nav {
   position: relative;
 
   @include media-query($medium-down) {
-    @include pos-fixed(0, 0, 0, 0, 8888);
+    @include fixed(0, 0, 0, 0, 8888);
     display: flex;
     flex-direction: column;
     width: 100vw;
@@ -321,7 +321,7 @@ section.main-nav {
 
       .close {
         @include flex-row-center;
-        @include pos-absolute(0, 0, auto, auto);
+        @include absolute(0, 0, auto, auto);
         width: 50px;
         height: 50px;
         font-size: 30px;
@@ -351,7 +351,7 @@ section.main-nav {
         display: none;
 
         @include media-query($medium-down) {
-          @include pos-absolute(0, 0, auto, auto);
+          @include absolute(0, 0, auto, auto);
           display: block;
           width: 50px;
           height: 40px;

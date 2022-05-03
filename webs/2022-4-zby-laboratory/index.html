@@ -6,575 +6,612 @@
 -->
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- 强制Chromium内核，作用于360浏览器、QQ浏览器等国产双核浏览器 -->
-  <meta name="renderer" content="webkit" />
-  <!-- 强制Chromium内核，作用于其他双核浏览器 -->
-  <meta name="force-rendering" content="webkit" />
-  <!-- 如果有安装 Google Chrome Frame 插件则强制为Chromium内核，否则强制本机支持的最高版本IE内核，作用于IE浏览器 -->
-  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
-  <title>首页</title>
-  <meta name="description" content="这是一个描述" />
-  <meta name="keywords" content="这是一些关键字" />
-  <meta name="author" content="LYW" />
-  <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
-  <link rel="stylesheet" href="./style/bootstrap/bootstrap.css">
-  <link rel="stylesheet" href="./style/lib/swiper.min.css" />
-  <link rel="stylesheet" href="./style/lib/animation.css" />
-  <link rel="stylesheet" href="./fonts/iconfont.css" />
-  <link rel="stylesheet" href="./style/app.css" />
-  <!--[if lt IE 9]>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- 强制Chromium内核，作用于360浏览器、QQ浏览器等国产双核浏览器 -->
+    <meta name="renderer" content="webkit" />
+    <!-- 强制Chromium内核，作用于其他双核浏览器 -->
+    <meta name="force-rendering" content="webkit" />
+    <!-- 如果有安装 Google Chrome Frame 插件则强制为Chromium内核，否则强制本机支持的最高版本IE内核，作用于IE浏览器 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+    <title>首页</title>
+    <meta name="description" content="这是一个描述" />
+    <meta name="keywords" content="这是一些关键字" />
+    <meta name="author" content="LYW" />
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="./style/bootstrap/bootstrap.css" />
+    <link rel="stylesheet" href="./style/lib/swiper.min.css" />
+    <link rel="stylesheet" href="./style/lib/animation.css" />
+    <link rel="stylesheet" href="./fonts/iconfont.css" />
+    <link rel="stylesheet" href="./style/app.css" />
+    <!--[if lt IE 9]>
       <script src="./js/lib/html5shiv.js"></script>
       <script src="./js/lib/respond.src.js"></script>
     <![endif]-->
-</head>
+  </head>
 
-<body id="app">
-
-  <!-- 返回顶部按钮 -->
-  <div class="back-top-menu" id="backTopMenu">
-    <span class="iconfont icon-jiantouhong"></span>
-  </div>
-
-
-  <!-- header -->
-  <header class="web-header">
-    <div class="container">
-      <div class="header--top d-flex justify-content-between align-items-center">
-        <a href="" class="header-logo">
-          <img src="./images/logo.png" alt="" srcset="">
-        </a>
-
-        <div class="search-input">
-          <input type="text" placeholder="输入您想搜索的内容" />
-          <button>
-            <span class="iconfont icon-sousuoxiao"></span>
-          </button>
-        </div>
-      </div>
-
-      <div class="header--bottom d-flex justify-content-end">
-        <ul class="nav-one" id="mainNav">
-          <li class="nav-one-item">
-            <a href="./" class="nav-one-text">首页</a>
-          </li>
-          <li class="nav-one-item">
-            <a href="./single_page.html" class="nav-one-text arrow">机构设置</a>
-            <span class="nav-two-open nav-open-icon iconfont icon-plus"></span>
-            <ul class="nav-two">
-              <li class="nav-two-item">
-                <a href="./teacher_list.html" class="nav-two-text">机构简介</a>
-              </li>
-              <li class="nav-two-item">
-                <a href="./teacher_list.html" class="nav-two-text">工作职责</a>
-              </li>
-              <li class="nav-two-item">
-                <a href="./article_list.html" class="nav-two-text">联系方式</a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-one-item">
-            <a href="./teacher_list.html" class="nav-one-text">规章制度</a>
-          </li>
-          <li class="nav-one-item">
-            <a href="./article_list.html" class="nav-one-text">仪器管理</a>
-          </li>
-          <li class="nav-one-item">
-            <a href="./article_list.html" class="nav-one-text">安全管理</a>
-          </li>
-          <li class="nav-one-item">
-            <a href="./article_list.html" class="nav-one-text">资质认定</a>
-          </li>
-          <li class="nav-one-item">
-            <a href="./article_list.html" class="nav-one-text">办事流程</a>
-          </li>
-          <li class="nav-one-item">
-            <a href="./article_list.html" class="nav-one-text">党建专栏</a>
-          </li>
-          <li class="nav-one-item">
-            <a href="./article_list.html" class="nav-one-text">文档下载</a>
-          </li>
-        </ul>
-      </div>
+  <body id="app">
+    <!-- 返回顶部按钮 -->
+    <div class="back-top-menu" id="backTopMenu">
+      <span class="iconfont icon-jiantouhong"></span>
     </div>
-  </header>
 
-  <!-- banner -->
-  <section class="container pt-4">
-    <div class="swiper" id="banner">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide">
-          <img class="d-block w-100" src="./images/banner.png" alt="" />
-        </div>
-        <div class="swiper-slide">
-          <img class="d-block w-100" src="./images/banner.png" alt="" />
-        </div>
-      </div>
-      <div class="swiper-pagination" id="bannerPagination"></div>
-    </div>
-  </section>
-
-  <!-- 工作动态 -->
-  <div class="container py-5">
-    <div class="row">
-      <div class="col-12 col-xl-8 pb-5 pb-xl-0">
-        <div class="work pr-xl-4">
-          <div class="home-section-title d-flex justify-content-between align-items-end">
-            <h2 class="main-title">工作动态</h2>
-            <a href="" class="link">more+</a>
+    <!-- header -->
+    <header class="web-header">
+      <div class="container">
+        <div class="header--top d-flex justify-content-between align-items-center">
+          <div class="mobile-nav-open-menu d-block d-lg-none">
+            <span class="iconfont icon-daohang" data-nav-open></span>
           </div>
-          <div class="row pb-2">
-            <div class="col-6">
-              <div class="image-work-card">
-                <div class="cover">
-                  <div class="img">
-                    <img src="./images/img.jpg" alt="">
-                  </div>
-                </div>
-                <h2 class="title">厦门大学实验室管理信息化助力疫情防控工作</h2>
-                <p class="date">2022-03-07</p>
-                <a href="" class="link"></a>
+
+          <a href="" class="header-logo">
+            <img src="./images/logo.png" alt="" srcset="" />
+          </a>
+
+          <div class="search-wrapper">
+            <span class="search-open-menu iconfont icon-sousuoxiao d-block d-md-none" data-search-open></span>
+
+            <div class="search-input-wrapper" data-search>
+              <div class="search-input">
+                <input type="text" placeholder="输入您想搜索的内容" />
+                <button>
+                  <span class="iconfont icon-sousuoxiao"></span>
+                </button>
               </div>
-            </div>
-            <div class="col-6">
-              <div class="image-work-card">
-                <div class="cover">
-                  <div class="img">
-                    <img src="./images/img.jpg" alt="">
-                  </div>
-                </div>
-                <h2 class="title">厦门大学实验室管理信息化助力疫情防控工作</h2>
-                <p class="date">2022-03-07</p>
-                <a href="" class="link"></a>
-              </div>
+              <span
+                class="search-open-menu iconfont icon-shanchu d-block d-md-none text-center mt-3"
+                data-search-close
+              ></span>
             </div>
           </div>
-          <ul class="text-work">
-            <li class="text-work-item">
-              <div class="arrow-news">
-                <p class="title top">关于支持大型科研仪器设备等创新资源向创业团队企业开放共享的通知</p>
-                <span class="date">2022-04-23</span>
-                <a href="" class="link"></a>
-              </div>
+        </div>
+
+        <div class="header--bottom d-lg-flex justify-content-end" data-nav-wrapper>
+          <div class="mobile-nav-close shadow-lg d-block d-lg-none">
+            <span class="iconfont icon-shanchu" data-nav-close></span>
+          </div>
+          <ul class="nav-one" data-nav>
+            <li class="nav-one-item" data-nav-lv1>
+              <a href="./" class="nav-one-text" data-nav-lv1-text>首页</a>
             </li>
-            <li class="text-work-item">
-              <div class="arrow-news">
-                <p class="title">关于支持大型科研仪器设备等创新资源向创业团队企业开放共享的通知</p>
-                <span class="date">2022-04-23</span>
-                <a href="" class="link"></a>
-              </div>
+            <li class="nav-one-item" data-nav-lv1>
+              <a href="./single_page.html" class="nav-one-text arrow" data-nav-lv1-text>机构设置</a>
+              <span class="nav-two-open nav-open-icon iconfont icon-plus d-block d-lg-none" data-nav-lv2-open></span>
+              <ul class="nav-two" data-nav-lv2-wrapper>
+                <li class="nav-two-item" data-nav-lv2>
+                  <a href="./teacher_list.html" class="nav-two-text arrow">机构简介</a>
+                  <span
+                    class="nav-three-open nav-open-icon iconfont icon-plus d-block d-lg-none"
+                    data-nav-lv3-open
+                  ></span>
+                  <nav class="nav-three" data-nav-lv3-wrapper>
+                    <a href="/" class="nav-three-text">三级菜单</a>
+                    <a href="/" class="nav-three-text">三级菜单</a>
+                    <a href="/" class="nav-three-text">三级菜单</a>
+                    <a href="/" class="nav-three-text">三级菜单</a>
+                  </nav>
+                </li>
+                <li class="nav-two-item" data-nav-lv2>
+                  <a href="./teacher_list.html" class="nav-two-text">工作职责</a>
+                </li>
+                <li class="nav-two-item" data-nav-lv2>
+                  <a href="./article_list.html" class="nav-two-text">联系方式</a>
+                </li>
+              </ul>
             </li>
-            <li class="text-work-item">
-              <div class="arrow-news">
-                <p class="title">关于支持大型科研仪器设备等创新资源向创业团队企业开放共享的通知</p>
-                <span class="date">2022-04-23</span>
-                <a href="" class="link"></a>
-              </div>
+            <li class="nav-one-item" data-nav-lv1>
+              <a href="./teacher_list.html" class="nav-one-text" data-nav-lv1-text>规章制度</a>
             </li>
-            <li class="text-work-item">
-              <div class="arrow-news">
-                <p class="title">关于支持大型科研仪器设备等创新资源向创业团队企业开放共享的通知</p>
-                <span class="date">2022-04-23</span>
-                <a href="" class="link"></a>
-              </div>
+            <li class="nav-one-item" data-nav-lv1>
+              <a href="./article_list.html" class="nav-one-text" data-nav-lv1-text>仪器管理</a>
             </li>
-            <li class="text-work-item">
-              <div class="arrow-news">
-                <p class="title">关于支持大型科研仪器设备等创新资源向创业团队企业开放共享的通知</p>
-                <span class="date">2022-04-23</span>
-                <a href="" class="link"></a>
-              </div>
+            <li class="nav-one-item" data-nav-lv1>
+              <a href="./article_list.html" class="nav-one-text" data-nav-lv1-text>安全管理</a>
+            </li>
+            <li class="nav-one-item" data-nav-lv1>
+              <a href="./article_list.html" class="nav-one-text" data-nav-lv1-text>资质认定</a>
+            </li>
+            <li class="nav-one-item" data-nav-lv1>
+              <a href="./article_list.html" class="nav-one-text" data-nav-lv1-text>办事流程</a>
+            </li>
+            <li class="nav-one-item" data-nav-lv1>
+              <a href="./article_list.html" class="nav-one-text" data-nav-lv1-text>党建专栏</a>
+            </li>
+            <li class="nav-one-item" data-nav-lv1>
+              <a href="./article_list.html" class="nav-one-text" data-nav-lv1-text>文档下载</a>
             </li>
           </ul>
         </div>
       </div>
-      <div class="col-12 col-xl-4 pl-xl-4">
-        <!-- 通知公告 -->
-        <div class="notice">
-          <div class="home-section-title d-flex justify-content-between align-items-end">
-            <h2 class="main-title">通知公告</h2>
-            <a href="" class="link">more+</a>
-          </div>
-          <ul class="notice-list">
-            <li class="notice-item">
-              <div class="date-news">
-                <div class="date">
-                  <p class="day">01/07</p>
-                  <p class="year">2022</p>
-                </div>
-                <p class="title">关于做好2023-2025年中央高校改善基本办学条件专项资金实验室信息化建设项目申报工作的通知</p>
-                <a href="" class="link"></a>
-              </div>
-            </li>
-            <li class="notice-item">
-              <div class="date-news">
-                <div class="date">
-                  <p class="day">01/07</p>
-                  <p class="year">2022</p>
-                </div>
-                <p class="title">关于做好2023-2025年中央高校改善基本办学条件专项资金实验室信息化建设项目申报工作的通知</p>
-                <a href="" class="link"></a>
-              </div>
-            </li>
-            <li class="notice-item">
-              <div class="date-news">
-                <div class="date">
-                  <p class="day">01/07</p>
-                  <p class="year">2022</p>
-                </div>
-                <p class="title">关于做好2023-2025年中央高校改善基本办学条件专项资金实验室信息化建设项目申报工作的通知</p>
-                <a href="" class="link"></a>
-              </div>
-            </li>
-            <li class="notice-item">
-              <div class="date-news">
-                <div class="date">
-                  <p class="day">01/07</p>
-                  <p class="year">2022</p>
-                </div>
-                <p class="title">关于做好2023-2025年中央高校改善基本办学条件专项资金实验室信息化建设项目申报工作的通知</p>
-                <a href="" class="link"></a>
-              </div>
-            </li>
-            <li class="notice-item">
-              <div class="date-news">
-                <div class="date">
-                  <p class="day">01/07</p>
-                  <p class="year">2022</p>
-                </div>
-                <p class="title">关于做好2023-2025年中央高校改善基本办学条件专项资金实验室信息化建设项目申报工作的通知</p>
-                <a href="" class="link"></a>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
+    </header>
 
-
-  <!-- 信息管理平台 -->
-  <div class="message-platform py-5">
-    <div class="container">
-      <h2 class="message-platform-title text-center pb-3">信息管理平台</h2>
-      <div class="swiper" id="messagePlatform">
+    <!-- banner -->
+    <section class="banner container pt-lg-4">
+      <div class="swiper" id="banner">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
-            <div class="message-platform-card">
-              <div class="cover">
-                <span class="iconfont icon-fenzuguanli"></span>
-              </div>
-              <h2 class="title">贵重仪器设备查询</h2>
-              <a href="" class="link"></a>
-            </div>
+            <img class="d-block w-100" src="./images/banner.png" alt="" />
           </div>
           <div class="swiper-slide">
-            <div class="message-platform-card">
-              <div class="cover">
-                <span class="iconfont icon-fenzuguanli"></span>
-              </div>
-              <h2 class="title">贵重仪器设备 预约系统</h2>
-              <a href="" class="link"></a>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="message-platform-card">
-              <div class="cover">
-                <span class="iconfont icon-fenzuguanli"></span>
-              </div>
-              <h2 class="title">实验室安全 考试系统</h2>
-              <a href="" class="link"></a>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="message-platform-card">
-              <div class="cover">
-                <span class="iconfont icon-fenzuguanli"></span>
-              </div>
-              <h2 class="title">实验室资源管理 校级系统</h2>
-              <a href="" class="link"></a>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="message-platform-card">
-              <div class="cover">
-                <span class="iconfont icon-fenzuguanli"></span>
-              </div>
-              <h2 class="title">贵重仪器设备查询</h2>
-              <a href="" class="link"></a>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="message-platform-card">
-              <div class="cover">
-                <span class="iconfont icon-fenzuguanli"></span>
-              </div>
-              <h2 class="title">贵重仪器设备 预约系统</h2>
-              <a href="" class="link"></a>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="message-platform-card">
-              <div class="cover">
-                <span class="iconfont icon-fenzuguanli"></span>
-              </div>
-              <h2 class="title">实验室安全 考试系统</h2>
-              <a href="" class="link"></a>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="message-platform-card">
-              <div class="cover">
-                <span class="iconfont icon-fenzuguanli"></span>
-              </div>
-              <h2 class="title">实验室资源管理 校级系统</h2>
-              <a href="" class="link"></a>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="message-platform-card">
-              <div class="cover">
-                <span class="iconfont icon-fenzuguanli"></span>
-              </div>
-              <h2 class="title">实验室资源管理 校级系统</h2>
-              <a href="" class="link"></a>
-            </div>
+            <img class="d-block w-100" src="./images/banner.png" alt="" />
           </div>
         </div>
-        <!-- 如果需要分页器 -->
-        <div class="swiper-pagination" id="messagePlatformPagination"></div>
+        <div class="swiper-pagination" id="bannerPagination"></div>
       </div>
-    </div>
-  </div>
+    </section>
 
-
-  <div class="container py-5">
-    <div class="row">
-      <div class="col-12 col-lg-6">
-        <!-- 规章制度 -->
-        <div class="rule pr-xl-4 pb-5 pb-xl-0">
-          <div class="home-section-title d-flex justify-content-between align-items-end">
-            <h2 class="main-title">规章制度</h2>
-            <a href="" class="link">more+</a>
+    <!-- 工作动态 -->
+    <div class="container py-2 py-md-3 py-lg-5">
+      <div class="row">
+        <div class="col-12 col-xl-8 pb-5 pb-xl-0">
+          <div class="work pr-xl-4">
+            <div class="home-section-title pb-3 pb-lg-4 d-flex justify-content-between align-items-end">
+              <h2 class="main-title">工作动态</h2>
+              <a href="" class="link">more+</a>
+            </div>
+            <div class="row pb-2">
+              <div class="col-12 col-md-6">
+                <div class="image-work-card">
+                  <div class="cover">
+                    <div class="img">
+                      <img src="./images/img.jpg" alt="" />
+                    </div>
+                  </div>
+                  <h2 class="title">厦门大学实验室管理信息化助力疫情防控工作</h2>
+                  <p class="date">2022-03-07</p>
+                  <a href="" class="link"></a>
+                </div>
+              </div>
+              <div class="col-12 col-md-6">
+                <div class="image-work-card">
+                  <div class="cover">
+                    <div class="img">
+                      <img src="./images/img.jpg" alt="" />
+                    </div>
+                  </div>
+                  <h2 class="title">厦门大学实验室管理信息化助力疫情防控工作</h2>
+                  <p class="date">2022-03-07</p>
+                  <a href="" class="link"></a>
+                </div>
+              </div>
+            </div>
+            <ul class="text-work">
+              <li class="text-work-item">
+                <div class="arrow-news">
+                  <p class="title top">关于支持大型科研仪器设备等创新资源向创业团队企业开放共享的通知</p>
+                  <span class="date">2022-04-23</span>
+                  <a href="" class="link"></a>
+                </div>
+              </li>
+              <li class="text-work-item">
+                <div class="arrow-news">
+                  <p class="title">关于支持大型科研仪器设备等创新资源向创业团队企业开放共享的通知</p>
+                  <span class="date">2022-04-23</span>
+                  <a href="" class="link"></a>
+                </div>
+              </li>
+              <li class="text-work-item">
+                <div class="arrow-news">
+                  <p class="title">关于支持大型科研仪器设备等创新资源向创业团队企业开放共享的通知</p>
+                  <span class="date">2022-04-23</span>
+                  <a href="" class="link"></a>
+                </div>
+              </li>
+              <li class="text-work-item">
+                <div class="arrow-news">
+                  <p class="title">关于支持大型科研仪器设备等创新资源向创业团队企业开放共享的通知</p>
+                  <span class="date">2022-04-23</span>
+                  <a href="" class="link"></a>
+                </div>
+              </li>
+              <li class="text-work-item">
+                <div class="arrow-news">
+                  <p class="title">关于支持大型科研仪器设备等创新资源向创业团队企业开放共享的通知</p>
+                  <span class="date">2022-04-23</span>
+                  <a href="" class="link"></a>
+                </div>
+              </li>
+            </ul>
           </div>
-          <ul class="rule-list">
-            <li class="rule-item">
-              <div class="icon-news">
-                <span class="icon iconfont icon-fenzuguanli"></span>
-                <p class="title">关于支持大型科研仪器设备等创新资源向创业团队企业开放共享的通知</p>
-                <span class="date">2022-04-23</span>
-                <a href="" class="link"></a>
-              </div>
-            </li>
-            <li class="rule-item">
-              <div class="icon-news">
-                <span class="icon iconfont icon-fenzuguanli"></span>
-                <p class="title">关于支持大型科研仪器设备等创新资源向创业团队企业开放共享的通知</p>
-                <span class="date">2022-04-23</span>
-                <a href="" class="link"></a>
-              </div>
-            </li>
-            <li class="rule-item">
-              <div class="icon-news">
-                <span class="icon iconfont icon-fenzuguanli"></span>
-                <p class="title">关于支持大型科研仪器设备等创新资源向创业团队企业开放共享的通知</p>
-                <span class="date">2022-04-23</span>
-                <a href="" class="link"></a>
-              </div>
-            </li>
-            <li class="rule-item">
-              <div class="icon-news">
-                <span class="icon iconfont icon-fenzuguanli"></span>
-                <p class="title">关于支持大型科研仪器设备等创新资源向创业团队企业开放共享的通知</p>
-                <span class="date">2022-04-23</span>
-                <a href="" class="link"></a>
-              </div>
-            </li>
-            <li class="rule-item">
-              <div class="icon-news">
-                <span class="icon iconfont icon-fenzuguanli"></span>
-                <p class="title">关于支持大型科研仪器设备等创新资源向创业团队企业开放共享的通知</p>
-                <span class="date">2022-04-23</span>
-                <a href="" class="link"></a>
-              </div>
-            </li>
-            <li class="rule-item">
-              <div class="icon-news">
-                <span class="icon iconfont icon-fenzuguanli"></span>
-                <p class="title">关于支持大型科研仪器设备等创新资源向创业团队企业开放共享的通知</p>
-                <span class="date">2022-04-23</span>
-                <a href="" class="link"></a>
-              </div>
-            </li>
-            <li class="rule-item">
-              <div class="icon-news">
-                <span class="icon iconfont icon-fenzuguanli"></span>
-                <p class="title">关于支持大型科研仪器设备等创新资源向创业团队企业开放共享的通知</p>
-                <span class="date">2022-04-23</span>
-                <a href="" class="link"></a>
-              </div>
-            </li>
-          </ul>
         </div>
-      </div>
-      <div class="col-12 col-lg-6">
-        <!-- 文档下载 -->
-        <div class="rule pl-xl-4">
-          <div class="home-section-title d-flex justify-content-between align-items-end">
-            <h2 class="main-title">文档下载</h2>
-            <a href="" class="link">more+</a>
+        <div class="col-12 col-xl-4 pl-xl-4">
+          <!-- 通知公告 -->
+          <div class="notice">
+            <div class="home-section-title pb-3 pb-lg-4 d-flex justify-content-between align-items-end">
+              <h2 class="main-title">通知公告</h2>
+              <a href="" class="link">more+</a>
+            </div>
+            <ul class="notice-list">
+              <li class="notice-item">
+                <div class="date-news">
+                  <div class="date">
+                    <p class="day">01/07</p>
+                    <p class="year">2022</p>
+                  </div>
+                  <p class="title">
+                    关于做好2023-2025年中央高校改善基本办学条件专项资金实验室信息化建设项目申报工作的通知
+                  </p>
+                  <a href="" class="link"></a>
+                </div>
+              </li>
+              <li class="notice-item">
+                <div class="date-news">
+                  <div class="date">
+                    <p class="day">01/07</p>
+                    <p class="year">2022</p>
+                  </div>
+                  <p class="title">
+                    关于做好2023-2025年中央高校改善基本办学条件专项资金实验室信息化建设项目申报工作的通知
+                  </p>
+                  <a href="" class="link"></a>
+                </div>
+              </li>
+              <li class="notice-item">
+                <div class="date-news">
+                  <div class="date">
+                    <p class="day">01/07</p>
+                    <p class="year">2022</p>
+                  </div>
+                  <p class="title">
+                    关于做好2023-2025年中央高校改善基本办学条件专项资金实验室信息化建设项目申报工作的通知
+                  </p>
+                  <a href="" class="link"></a>
+                </div>
+              </li>
+              <li class="notice-item">
+                <div class="date-news">
+                  <div class="date">
+                    <p class="day">01/07</p>
+                    <p class="year">2022</p>
+                  </div>
+                  <p class="title">
+                    关于做好2023-2025年中央高校改善基本办学条件专项资金实验室信息化建设项目申报工作的通知
+                  </p>
+                  <a href="" class="link"></a>
+                </div>
+              </li>
+              <li class="notice-item">
+                <div class="date-news">
+                  <div class="date">
+                    <p class="day">01/07</p>
+                    <p class="year">2022</p>
+                  </div>
+                  <p class="title">
+                    关于做好2023-2025年中央高校改善基本办学条件专项资金实验室信息化建设项目申报工作的通知
+                  </p>
+                  <a href="" class="link"></a>
+                </div>
+              </li>
+            </ul>
           </div>
-          <ul class="docs">
-            <li class="docs-item">
-              <div class="docs-news">
-                <p class="date">2020-0202</p>
-                <p class="title">厦门大学采购100万元以上进口科研仪器设备专家论证意见表</p>
-                <a href="" class="link">【立即下载】</a>
-              </div>
-            </li>
-            <li class="docs-item">
-              <div class="docs-news">
-                <p class="date">2020-0202</p>
-                <p class="title">厦门大学采购100万元以上进口科研仪器设备专家论证意见表</p>
-                <a href="" class="link">【立即下载】</a>
-              </div>
-            </li>
-            <li class="docs-item">
-              <div class="docs-news">
-                <p class="date">2020-0202</p>
-                <p class="title">厦门大学采购100万元以上进口科研仪器设备专家论证意见表</p>
-                <a href="" class="link">【立即下载】</a>
-              </div>
-            </li>
-            <li class="docs-item">
-              <div class="docs-news">
-                <p class="date">2020-0202</p>
-                <p class="title">厦门大学采购100万元以上进口科研仪器设备专家论证意见表</p>
-                <a href="" class="link">【立即下载】</a>
-              </div>
-            </li>
-            <li class="docs-item">
-              <div class="docs-news">
-                <p class="date">2020-0202</p>
-                <p class="title">厦门大学采购100万元以上进口科研仪器设备专家论证意见表</p>
-                <a href="" class="link">【立即下载】</a>
-              </div>
-            </li>
-          </ul>
         </div>
       </div>
     </div>
-  </div>
 
-  <!-- footer -->
-  <footer class="web-footer">
-    <div class="footer--top py-3">
+    <!-- 信息管理平台 -->
+    <div class="message-platform py-4 py-lg-5">
       <div class="container">
-        <div class="f-links d-flex">
-          <p class="title">友情链接:</p>
-          <ul class="links d-flex flex-wrap">
-            <li class="link-item">
-              <a href="" class="link">友情链接1</a>
-            </li>
-            <li class="link-item">
-              <a href="" class="link">友情链接1</a>
-            </li>
-            <li class="link-item">
-              <a href="" class="link">友情链接1</a>
-            </li>
-            <li class="link-item">
-              <a href="" class="link">友情链接1</a>
-            </li>
-          </ul>
+        <h2 class="message-platform-title text-center pb-3">信息管理平台</h2>
+        <div class="swiper" id="messagePlatform">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="message-platform-card">
+                <div class="cover">
+                  <span class="iconfont icon-fenzuguanli"></span>
+                </div>
+                <h2 class="title">贵重仪器设备查询</h2>
+                <a href="" class="link"></a>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="message-platform-card">
+                <div class="cover">
+                  <span class="iconfont icon-fenzuguanli"></span>
+                </div>
+                <h2 class="title">贵重仪器设备 预约系统</h2>
+                <a href="" class="link"></a>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="message-platform-card">
+                <div class="cover">
+                  <span class="iconfont icon-fenzuguanli"></span>
+                </div>
+                <h2 class="title">实验室安全 考试系统</h2>
+                <a href="" class="link"></a>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="message-platform-card">
+                <div class="cover">
+                  <span class="iconfont icon-fenzuguanli"></span>
+                </div>
+                <h2 class="title">实验室资源管理 校级系统</h2>
+                <a href="" class="link"></a>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="message-platform-card">
+                <div class="cover">
+                  <span class="iconfont icon-fenzuguanli"></span>
+                </div>
+                <h2 class="title">贵重仪器设备查询</h2>
+                <a href="" class="link"></a>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="message-platform-card">
+                <div class="cover">
+                  <span class="iconfont icon-fenzuguanli"></span>
+                </div>
+                <h2 class="title">贵重仪器设备 预约系统</h2>
+                <a href="" class="link"></a>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="message-platform-card">
+                <div class="cover">
+                  <span class="iconfont icon-fenzuguanli"></span>
+                </div>
+                <h2 class="title">实验室安全 考试系统</h2>
+                <a href="" class="link"></a>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="message-platform-card">
+                <div class="cover">
+                  <span class="iconfont icon-fenzuguanli"></span>
+                </div>
+                <h2 class="title">实验室资源管理 校级系统</h2>
+                <a href="" class="link"></a>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="message-platform-card">
+                <div class="cover">
+                  <span class="iconfont icon-fenzuguanli"></span>
+                </div>
+                <h2 class="title">实验室资源管理 校级系统</h2>
+                <a href="" class="link"></a>
+              </div>
+            </div>
+          </div>
+          <!-- 如果需要分页器 -->
+          <div class="swiper-pagination" id="messagePlatformPagination"></div>
         </div>
       </div>
     </div>
-    <div class="footer--bottom py-3">
-      <div class="container text-center">
-        <div class="d-flex justify-content-center flex-wrap">
-          <p class="px-2">厦门大学颂恩楼1110室</p>
-          <p class="px-2">邮政编码：361005</p>
-          <p class="px-2">电话：0592-2184955</p>
+
+    <div class="container py-4 py-lg-5">
+      <div class="row">
+        <div class="col-12 col-lg-6">
+          <!-- 规章制度 -->
+          <div class="rule pr-xl-4 pb-3 pb-md-3 pb-xl-0">
+            <div class="home-section-title pb-3 pb-lg-4 d-flex justify-content-between align-items-end">
+              <h2 class="main-title">规章制度</h2>
+              <a href="" class="link">more+</a>
+            </div>
+            <ul class="rule-list">
+              <li class="rule-item">
+                <div class="icon-news">
+                  <span class="icon iconfont icon-fenzuguanli"></span>
+                  <p class="title">关于支持大型科研仪器设备等创新资源向创业团队企业开放共享的通知</p>
+                  <span class="date">2022-04-23</span>
+                  <a href="" class="link"></a>
+                </div>
+              </li>
+              <li class="rule-item">
+                <div class="icon-news">
+                  <span class="icon iconfont icon-fenzuguanli"></span>
+                  <p class="title">关于支持大型科研仪器设备等创新资源向创业团队企业开放共享的通知</p>
+                  <span class="date">2022-04-23</span>
+                  <a href="" class="link"></a>
+                </div>
+              </li>
+              <li class="rule-item">
+                <div class="icon-news">
+                  <span class="icon iconfont icon-fenzuguanli"></span>
+                  <p class="title">关于支持大型科研仪器设备等创新资源向创业团队企业开放共享的通知</p>
+                  <span class="date">2022-04-23</span>
+                  <a href="" class="link"></a>
+                </div>
+              </li>
+              <li class="rule-item">
+                <div class="icon-news">
+                  <span class="icon iconfont icon-fenzuguanli"></span>
+                  <p class="title">关于支持大型科研仪器设备等创新资源向创业团队企业开放共享的通知</p>
+                  <span class="date">2022-04-23</span>
+                  <a href="" class="link"></a>
+                </div>
+              </li>
+              <li class="rule-item">
+                <div class="icon-news">
+                  <span class="icon iconfont icon-fenzuguanli"></span>
+                  <p class="title">关于支持大型科研仪器设备等创新资源向创业团队企业开放共享的通知</p>
+                  <span class="date">2022-04-23</span>
+                  <a href="" class="link"></a>
+                </div>
+              </li>
+              <li class="rule-item">
+                <div class="icon-news">
+                  <span class="icon iconfont icon-fenzuguanli"></span>
+                  <p class="title">关于支持大型科研仪器设备等创新资源向创业团队企业开放共享的通知</p>
+                  <span class="date">2022-04-23</span>
+                  <a href="" class="link"></a>
+                </div>
+              </li>
+              <li class="rule-item">
+                <div class="icon-news">
+                  <span class="icon iconfont icon-fenzuguanli"></span>
+                  <p class="title">关于支持大型科研仪器设备等创新资源向创业团队企业开放共享的通知</p>
+                  <span class="date">2022-04-23</span>
+                  <a href="" class="link"></a>
+                </div>
+              </li>
+            </ul>
+          </div>
         </div>
-        <div class="d-flex justify-content-center flex-wrap">
-          <p class="px-2">传真：0592-2184977</p>
-          <p class="px-2">邮箱：xmusyb@xmu.edu.cn</p>
-        </div>
-        <div class="d-flex justify-content-center flex-wrap">
-          <p class="px-2">© Copyright 2016 厦门大学实验室与设备管理处</p>
+        <div class="col-12 col-lg-6">
+          <!-- 文档下载 -->
+          <div class="rule pl-xl-4">
+            <div class="home-section-title pb-3 pb-lg-4 d-flex justify-content-between align-items-end">
+              <h2 class="main-title">文档下载</h2>
+              <a href="" class="link">more+</a>
+            </div>
+            <ul class="docs">
+              <li class="docs-item">
+                <div class="docs-news">
+                  <p class="date">2020-0202</p>
+                  <p class="title">厦门大学采购100万元以上进口科研仪器设备专家论证意见表</p>
+                  <a href="" class="link">【立即下载】</a>
+                </div>
+              </li>
+              <li class="docs-item">
+                <div class="docs-news">
+                  <p class="date">2020-0202</p>
+                  <p class="title">厦门大学采购100万元以上进口科研仪器设备专家论证意见表</p>
+                  <a href="" class="link">【立即下载】</a>
+                </div>
+              </li>
+              <li class="docs-item">
+                <div class="docs-news">
+                  <p class="date">2020-0202</p>
+                  <p class="title">厦门大学采购100万元以上进口科研仪器设备专家论证意见表</p>
+                  <a href="" class="link">【立即下载】</a>
+                </div>
+              </li>
+              <li class="docs-item">
+                <div class="docs-news">
+                  <p class="date">2020-0202</p>
+                  <p class="title">厦门大学采购100万元以上进口科研仪器设备专家论证意见表</p>
+                  <a href="" class="link">【立即下载】</a>
+                </div>
+              </li>
+              <li class="docs-item">
+                <div class="docs-news">
+                  <p class="date">2020-0202</p>
+                  <p class="title">厦门大学采购100万元以上进口科研仪器设备专家论证意见表</p>
+                  <a href="" class="link">【立即下载】</a>
+                </div>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
-  </footer>
 
-  <script src="./js/lib/jquery.min.js"></script>
-  <script src="./js/lib/swiper-bundle.min.js"></script>
-  <script src="./js/lib/wow.js"></script>
-  <script src="./js/jquery.extends.js"></script>
-  <script src="./js/common.js"></script>
-  <script src="./js/theme.js"></script>
-  <script>
-    const bannerSwiper = new Swiper('#banner', {
-      loop: true,
-      speed: 1000,
-      autoplay: {
-        delay: 3000,
-        stopOnLastSlide: false,
-        disableOnInteraction: true,
-      },
-      pagination: {
-        el: '#bannerPagination',
-        bulletClass: 'progress-bullet',//需设置.my-bullet样式
-        bulletActiveClass: 'progress-bullet-active',
-        clickable: true,
-        renderBullet: function (index, className) {
-          return '<span class="' + className + '"><span class="percent">0' + (index + 1) + '</span></span>';
-        },
-      }
-    });
+    <!-- footer -->
+    <footer class="web-footer">
+      <div class="footer--top py-3">
+        <div class="container">
+          <div class="f-links d-md-flex">
+            <p class="title">友情链接:</p>
+            <ul class="links d-flex flex-wrap">
+              <li class="link-item">
+                <a href="" class="link">友情链接1</a>
+              </li>
+              <li class="link-item">
+                <a href="" class="link">友情链接1</a>
+              </li>
+              <li class="link-item">
+                <a href="" class="link">友情链接1</a>
+              </li>
+              <li class="link-item">
+                <a href="" class="link">友情链接1</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer--bottom py-3">
+        <div class="container text-center">
+          <div class="d-flex justify-content-center flex-wrap">
+            <p class="px-2">厦门大学颂恩楼1110室</p>
+            <p class="px-2">邮政编码：361005</p>
+            <p class="px-2">电话：0592-2184955</p>
+          </div>
+          <div class="d-flex justify-content-center flex-wrap">
+            <p class="px-2">传真：0592-2184977</p>
+            <p class="px-2">邮箱：xmusyb@xmu.edu.cn</p>
+          </div>
+          <div class="d-flex justify-content-center flex-wrap">
+            <p class="px-2">© Copyright 2016 厦门大学实验室与设备管理处</p>
+          </div>
+        </div>
+      </div>
+    </footer>
 
-    var messagePlatformSwiper = new Swiper('#messagePlatform', {
-      slidesPerView: 1,
-      spaceBetween: 40,
+    <script src="./js/lib/jquery.min.js"></script>
+    <script src="./js/lib/swiper-bundle.min.js"></script>
+    <script src="./js/lib/wow.js"></script>
+    <script src="./js/jquery.extends.js"></script>
+    <script src="./js/common.js"></script>
+    <script src="./js/theme.js"></script>
+    <script>
+      const bannerSwiper = new Swiper('#banner', {
+        loop: true,
+        speed: 1000,
+        autoplay: {
+          delay: 3000,
+          stopOnLastSlide: false,
+          disableOnInteraction: true,
+        },
+        pagination: {
+          el: '#bannerPagination',
+          bulletClass: 'progress-bullet', //需设置.my-bullet样式
+          bulletActiveClass: 'progress-bullet-active',
+          clickable: true,
+          renderBullet: function (index, className) {
+            return '<span class="' + className + '"><span class="percent">0' + (index + 1) + '</span></span>';
+          },
+        },
+      });
 
-      breakpoints: {
-        320: {  //当屏幕宽度大于等于320
-          slidesPerView: 2,
-          spaceBetween: 10
-        },
-        968: {  //当屏幕宽度大于等于768 
-          slidesPerView: 4,
-          spaceBetween: 20
-        },
-        1068: {  //当屏幕宽度大于等于768 
-          slidesPerView: 5,
-          spaceBetween: 20
-        },
-        1280: {  //当屏幕宽度大于等于1280
-          slidesPerView: 6,
-          spaceBetween: 20
-        },
-        1380: {  //当屏幕宽度大于等于1280
-          slidesPerView: 7,
-          spaceBetween: 20
-        },
-        1480: {  //当屏幕宽度大于等于1280
-          slidesPerView: 8,
-          spaceBetween: 20
-        }
-      },
+      var messagePlatformSwiper = new Swiper('#messagePlatform', {
+        slidesPerView: 1,
+        spaceBetween: 40,
 
-      // 如果需要分页器
-      pagination: {
-        el: '#messagePlatformPagination',
-        clickable: true,
-      }
-    })  
-  </script>
-</body>
+        breakpoints: {
+          320: {
+            //当屏幕宽度大于等于320
+            slidesPerView: 3,
+            spaceBetween: 10,
+          },
+          968: {
+            //当屏幕宽度大于等于768
+            slidesPerView: 4,
+            spaceBetween: 20,
+          },
+          1068: {
+            //当屏幕宽度大于等于768
+            slidesPerView: 5,
+            spaceBetween: 20,
+          },
+          1280: {
+            //当屏幕宽度大于等于1280
+            slidesPerView: 6,
+            spaceBetween: 20,
+          },
+          1380: {
+            //当屏幕宽度大于等于1280
+            slidesPerView: 7,
+            spaceBetween: 20,
+          },
+          1480: {
+            //当屏幕宽度大于等于1280
+            slidesPerView: 8,
+            spaceBetween: 20,
+          },
+        },
 
+        // 如果需要分页器
+        pagination: {
+          el: '#messagePlatformPagination',
+          clickable: true,
+        },
+      });
+    </script>
+  </body>
 </html>

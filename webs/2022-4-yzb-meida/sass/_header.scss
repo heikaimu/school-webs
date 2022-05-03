@@ -42,7 +42,7 @@
       display: none;
 
       @include media-query($sm) {
-        @include pos-fixed(0, 0, auto, auto, 99998);
+        @include fixed(0, 0, auto, auto, 99998);
         display: none;
         width: 100vw;
         height: 100vh;
@@ -56,7 +56,7 @@
       padding-right: 120px;
 
       @include media-query($sm) {
-        @include pos-fixed(0, 0, auto, auto, 99999);
+        @include fixed(0, 0, auto, auto, 99999);
         height: 100vh;
         background-color: #333333;
         padding-right: 0;
@@ -125,7 +125,7 @@
       display: none;
 
       @include media-query($sm) {
-        @include pos-absolute(14px, 4px, auto, auto, 999);
+        @include absolute(14px, 4px, auto, auto, 999);
         display: flex;
         flex-direction: column;
         justify-content: center;

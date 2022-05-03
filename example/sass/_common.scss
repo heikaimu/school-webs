@@ -9,7 +9,7 @@ body {
 
 // 返回按钮
 .back-top-menu {
-  @include pos-fixed(auto, 30px, 30px, auto, 9999);
+  @include fixed(auto, 30px, 30px, auto, 9999);
   @include flex-row-center;
   width: 40px;
   height: 40px;

@@ -1,24 +1,38 @@
 @import './variables';
 @import './mixin';
 
-div.home-section-title {
-  padding-bottom: 35px;
+.banner.container {
+  @include media-query($medium-down) {
+    padding: 0;
+    max-width: 100%;
+  }
+}
 
+div.home-section-title {
   h2.main-title {
     font-size: 30px;
     color: $color-theme;
     font-weight: 900;
-    font-family: "MicrosoftYaHei-Bold";
+    font-family: 'MicrosoftYaHei-Bold';
     position: relative;
 
+    @include media-query($medium-down) {
+      font-size: 24px;
+    }
+
     &::after {
-      content: "";
+      content: '';
       display: block;
       height: 14px;
       background: $color-theme;
       opacity: 0.18;
       border-radius: 7px;
-      @include pos-absolute(23px, 0, auto, 0);
+      @include absolute(23px, 0, auto, 0);
+
+      @include media-query($medium-down) {
+        height: 10px;
+        top: 20px;
+      }
     }
   }
 
@@ -37,7 +51,8 @@ div.home-section-title {
     text-transform: uppercase;
     position: relative;
     top: -5px;
-    transition: .3s;
+    transition: 0.3s;
+
     &:hover {
       text-decoration: none;
       background-color: $color-theme;
@@ -113,10 +128,15 @@ div.home-section-title {
 
 #messagePlatform {
   padding-bottom: 50px;
+
+  @include media-query($medium-down) {
+    padding-bottom: 30px;
+  }
 }
 
 #messagePlatformPagination {
   bottom: 0;
+
   .swiper-pagination-bullet {
     background-color: $color-white;
   }
@@ -128,7 +148,11 @@ div.home-section-title {
   .message-platform-title {
     font-size: 30px;
     color: $color-white;
-    font-family: "MicrosoftYaHei-Bold";
+    font-family: 'MicrosoftYaHei-Bold';
+
+    @include media-query($medium-down) {
+      font-size: 20px;
+    }
   }
 
   div.message-platform-card {
@@ -143,6 +167,7 @@ div.home-section-title {
           transform: translate3d(-50%, -50%, 0) scale(1);
           opacity: 1;
         }
+
         .iconfont {
           color: $color-theme;
         }
@@ -157,17 +182,27 @@ div.home-section-title {
       border-radius: 50%;
       position: relative;
 
+      @include media-query($medium-down) {
+        width: 100px;
+        height: 100px;
+      }
+
       &::after {
-        content: "";
+        content: '';
         display: block;
         width: 118px;
         height: 118px;
         border-radius: 50%;
         background-color: $color-white;
-        @include pos-absolute(50%, auto, auto, 50%);
+        @include absolute(50%, auto, auto, 50%);
         transform: translate3d(-50%, -50%, 0) scale(0);
         opacity: 0;
-        transition: .3s ease-in-out;
+        transition: 0.3s ease-in-out;
+
+        @include media-query($medium-down) {
+          width: 80px;
+          height: 80px;
+        }
       }
 
       .iconfont {
@@ -175,7 +210,11 @@ div.home-section-title {
         position: relative;
         z-index: 9;
         color: $color-white;
-        transition: .3s;
+        transition: 0.3s;
+
+        @include media-query($medium-down) {
+          font-size: 40px;
+        }
       }
     }
 
@@ -186,10 +225,14 @@ div.home-section-title {
       text-align: center;
       font-weight: normal;
       line-height: 1.6;
+
+      @include media-query($medium-down) {
+        font-size: 14px;
+      }
     }
 
     a.link {
-      @include pos-absolute(0, 0, 0, 0, 11);
+      @include absolute(0, 0, 0, 0, 11);
     }
   }
 }
@@ -197,15 +240,17 @@ div.home-section-title {
 .image-work-card {
   width: 100%;
   position: relative;
-  
+
   &:hover {
     .cover {
       .img {
         transform: scale(1.05);
       }
     }
+
     .title {
       color: $color-theme;
+
       &::after {
         width: 100%;
       }
@@ -219,9 +264,11 @@ div.home-section-title {
     padding-bottom: 60%;
     overflow: hidden;
     position: relative;
+
     .img {
-      @include pos-absolute;
-      transition: .3s ease-in-out;
+      @include absolute;
+      transition: 0.3s ease-in-out;
+
       img {
         width: 100%;
         height: 100%;
@@ -239,19 +286,20 @@ div.home-section-title {
     color: $color-title;
     border-bottom: 1px solid $color-border;
     position: relative;
+
     &::after {
-      @include pos-absolute(auto, 0, 0, 0);
-      content: "";
+      @include absolute(auto, 0, 0, 0);
+      content: '';
       display: block;
       width: 0;
       height: 1px;
       background-color: $color-theme;
-      transition: .3s;
+      transition: 0.3s;
     }
   }
 
   .date {
-    @include pos-absolute(24px, auto, auto, 0);
+    @include absolute(24px, auto, auto, 0);
     padding: 10px 20px;
     background-color: $color-theme;
     color: $color-white;
@@ -259,10 +307,9 @@ div.home-section-title {
   }
 
   .link {
-    @include pos-absolute;
+    @include absolute;
   }
 }
-
 
 .notice-list {
   .notice-item {

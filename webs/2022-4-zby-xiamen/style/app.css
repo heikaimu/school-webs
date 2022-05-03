@@ -1210,21 +1210,21 @@ section.main-nav .moblie-nav-top {
     overflow-y: auto;
   }
 }
-section.main-nav ul.nav-one.container {
+section.main-nav .nav-wrapper ul.nav-one.container {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 @media only screen and (max-width: 989px) {
-  section.main-nav ul.nav-one.container {
+  section.main-nav .nav-wrapper ul.nav-one.container {
     display: block;
   }
 }
-section.main-nav ul.nav-one.container .nav-open-icon {
+section.main-nav .nav-wrapper ul.nav-one.container .nav-open-icon {
   display: none;
 }
 @media only screen and (max-width: 989px) {
-  section.main-nav ul.nav-one.container .nav-open-icon {
+  section.main-nav .nav-wrapper ul.nav-one.container .nav-open-icon {
     position: absolute;
     top: 0;
     right: 0;
@@ -1245,10 +1245,10 @@ section.main-nav ul.nav-one.container .nav-open-icon {
     text-indent: 0;
   }
 }
-section.main-nav ul.nav-one.container li.nav-one-item {
+section.main-nav .nav-wrapper ul.nav-one.container li.nav-one-item {
   position: relative;
 }
-section.main-nav ul.nav-one.container li.nav-one-item a.nav-one-text {
+section.main-nav .nav-wrapper ul.nav-one.container li.nav-one-item a.nav-one-text {
   display: block;
   padding: 0 20px;
   height: 40px;
@@ -1258,31 +1258,31 @@ section.main-nav ul.nav-one.container li.nav-one-item a.nav-one-text {
   color: #111111;
   position: relative;
 }
-section.main-nav ul.nav-one.container li.nav-one-item a.nav-one-text.active {
+section.main-nav .nav-wrapper ul.nav-one.container li.nav-one-item a.nav-one-text.active {
   background-color: #f3f3f3;
 }
-section.main-nav ul.nav-one.container li.nav-one-item a.nav-one-text:hover {
+section.main-nav .nav-wrapper ul.nav-one.container li.nav-one-item a.nav-one-text:hover {
   background-color: #f3f3f3;
 }
 @media only screen and (max-width: 1299px) {
-  section.main-nav ul.nav-one.container li.nav-one-item a.nav-one-text {
+  section.main-nav .nav-wrapper ul.nav-one.container li.nav-one-item a.nav-one-text {
     font-size: 14px;
     padding: 0 10px;
   }
 }
 @media only screen and (max-width: 989px) {
-  section.main-nav ul.nav-one.container li.nav-one-item a.nav-one-text {
+  section.main-nav .nav-wrapper ul.nav-one.container li.nav-one-item a.nav-one-text {
     font-size: 16px;
     color: #ffffff;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   }
 }
 @media only screen and (max-width: 989px) {
-  section.main-nav ul.nav-one.container li.nav-one-item a.nav-one-text.arrow::after {
+  section.main-nav .nav-wrapper ul.nav-one.container li.nav-one-item a.nav-one-text.arrow::after {
     display: none;
   }
 }
-section.main-nav ul.nav-one.container li.nav-one-item a.nav-one-text.arrow::after {
+section.main-nav .nav-wrapper ul.nav-one.container li.nav-one-item a.nav-one-text.arrow::after {
   font-family: "iconfont";
   content: "\eb6d";
   position: relative;
@@ -1290,7 +1290,7 @@ section.main-nav ul.nav-one.container li.nav-one-item a.nav-one-text.arrow::afte
   left: 2px;
   font-size: 10px;
 }
-section.main-nav ul.nav-one.container li.nav-one-item .nav-two {
+section.main-nav .nav-wrapper ul.nav-one.container li.nav-one-item .nav-two {
   padding: 10px 0;
   border-radius: 4px;
   position: absolute;
@@ -1302,7 +1302,7 @@ section.main-nav ul.nav-one.container li.nav-one-item .nav-two {
   border-top: 1px solid #ffffff;
 }
 @media only screen and (max-width: 989px) {
-  section.main-nav ul.nav-one.container li.nav-one-item .nav-two {
+  section.main-nav .nav-wrapper ul.nav-one.container li.nav-one-item .nav-two {
     padding: 0 0;
     border-top: none;
     background-color: #003d87;
@@ -1313,11 +1313,11 @@ section.main-nav ul.nav-one.container li.nav-one-item .nav-two {
   }
 }
 @media only screen and (max-width: 989px) {
-  section.main-nav ul.nav-one.container li.nav-one-item .nav-two .nav-two-item {
+  section.main-nav .nav-wrapper ul.nav-one.container li.nav-one-item .nav-two .nav-two-item {
     position: relative;
   }
 }
-section.main-nav ul.nav-one.container li.nav-one-item .nav-two .nav-two-item a.nav-two-text {
+section.main-nav .nav-wrapper ul.nav-one.container li.nav-one-item .nav-two .nav-two-item a.nav-two-text {
   display: block;
   padding: 0 20px;
   height: 40px;
@@ -1327,37 +1327,37 @@ section.main-nav ul.nav-one.container li.nav-one-item .nav-two .nav-two-item a.n
   color: #111111;
   position: relative;
 }
-section.main-nav ul.nav-one.container li.nav-one-item .nav-two .nav-two-item a.nav-two-text.active {
+section.main-nav .nav-wrapper ul.nav-one.container li.nav-one-item .nav-two .nav-two-item a.nav-two-text.active {
   background-color: #eec88e;
 }
-section.main-nav ul.nav-one.container li.nav-one-item .nav-two .nav-two-item a.nav-two-text:hover {
+section.main-nav .nav-wrapper ul.nav-one.container li.nav-one-item .nav-two .nav-two-item a.nav-two-text:hover {
   background-color: #eec88e;
 }
 @media only screen and (max-width: 1299px) {
-  section.main-nav ul.nav-one.container li.nav-one-item .nav-two .nav-two-item a.nav-two-text {
+  section.main-nav .nav-wrapper ul.nav-one.container li.nav-one-item .nav-two .nav-two-item a.nav-two-text {
     font-size: 14px;
     padding: 0 10px;
   }
 }
 @media only screen and (max-width: 989px) {
-  section.main-nav ul.nav-one.container li.nav-one-item .nav-two .nav-two-item a.nav-two-text {
+  section.main-nav .nav-wrapper ul.nav-one.container li.nav-one-item .nav-two .nav-two-item a.nav-two-text {
     font-size: 16px;
     color: #ffffff;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   }
 }
 @media only screen and (max-width: 989px) {
-  section.main-nav ul.nav-one.container li.nav-one-item .nav-two .nav-two-item a.nav-two-text.arrow::after {
+  section.main-nav .nav-wrapper ul.nav-one.container li.nav-one-item .nav-two .nav-two-item a.nav-two-text.arrow::after {
     display: none;
   }
 }
-section.main-nav ul.nav-one.container li.nav-one-item .nav-two .nav-two-item a.nav-two-text.arrow::after {
+section.main-nav .nav-wrapper ul.nav-one.container li.nav-one-item .nav-two .nav-two-item a.nav-two-text.arrow::after {
   font-family: "iconfont";
   content: "\e63d";
   position: relative;
   top: 1px;
 }
-section.main-nav ul.nav-one.container li.nav-one-item .nav-two .nav-two-item .nav-three {
+section.main-nav .nav-wrapper ul.nav-one.container li.nav-one-item .nav-two .nav-two-item .nav-three {
   padding: 10px 0;
   border-radius: 4px;
   display: block;
@@ -1369,7 +1369,7 @@ section.main-nav ul.nav-one.container li.nav-one-item .nav-two .nav-two-item .na
   display: none;
 }
 @media only screen and (max-width: 989px) {
-  section.main-nav ul.nav-one.container li.nav-one-item .nav-two .nav-two-item .nav-three {
+  section.main-nav .nav-wrapper ul.nav-one.container li.nav-one-item .nav-two .nav-two-item .nav-three {
     padding: 0 0;
     border-left: none;
     background-color: #003d87;
@@ -1379,7 +1379,7 @@ section.main-nav ul.nav-one.container li.nav-one-item .nav-two .nav-two-item .na
     text-indent: 80px;
   }
 }
-section.main-nav ul.nav-one.container li.nav-one-item .nav-two .nav-two-item .nav-three a.nav-three-text {
+section.main-nav .nav-wrapper ul.nav-one.container li.nav-one-item .nav-two .nav-two-item .nav-three a.nav-three-text {
   display: block;
   padding: 0 20px;
   height: 40px;
@@ -1389,20 +1389,20 @@ section.main-nav ul.nav-one.container li.nav-one-item .nav-two .nav-two-item .na
   color: #111111;
   position: relative;
 }
-section.main-nav ul.nav-one.container li.nav-one-item .nav-two .nav-two-item .nav-three a.nav-three-text.active {
+section.main-nav .nav-wrapper ul.nav-one.container li.nav-one-item .nav-two .nav-two-item .nav-three a.nav-three-text.active {
   background-color: #eec88e;
 }
-section.main-nav ul.nav-one.container li.nav-one-item .nav-two .nav-two-item .nav-three a.nav-three-text:hover {
+section.main-nav .nav-wrapper ul.nav-one.container li.nav-one-item .nav-two .nav-two-item .nav-three a.nav-three-text:hover {
   background-color: #eec88e;
 }
 @media only screen and (max-width: 1299px) {
-  section.main-nav ul.nav-one.container li.nav-one-item .nav-two .nav-two-item .nav-three a.nav-three-text {
+  section.main-nav .nav-wrapper ul.nav-one.container li.nav-one-item .nav-two .nav-two-item .nav-three a.nav-three-text {
     font-size: 14px;
     padding: 0 10px;
   }
 }
 @media only screen and (max-width: 989px) {
-  section.main-nav ul.nav-one.container li.nav-one-item .nav-two .nav-two-item .nav-three a.nav-three-text {
+  section.main-nav .nav-wrapper ul.nav-one.container li.nav-one-item .nav-two .nav-two-item .nav-three a.nav-three-text {
     font-size: 16px;
     color: #ffffff;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);

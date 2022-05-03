@@ -1,29 +1,54 @@
+@mixin nav-text($bg: #1750ab, $pl: 30px) {
+  display: block;
+  padding: 0 20px;
+  white-space: nowrap;
+  font-size: 16px;
+  line-height: 40px;
+  color: $color-white;
+  position: relative;
+
+  &.active {
+    background-color: $bg;
+  }
+
+  &:hover {
+    background-color: $bg;
+    text-decoration: none;
+  }
+
+  @include media-query($large-down) {
+    font-size: 14px;
+    padding: 0 10px;
+  }
+
+  @include media-query($medium-down) {
+    padding-left: $pl;
+    font-size: 16px;
+    line-height: 50px;
+    color: $color-white;
+    border-bottom: 1px solid rgba($color: #ffffff, $alpha: 0.1);
+  }
+}
+
 ul.nav-one {
   @include flex-row-sb;
 
   @include media-query($medium-down) {
-    display: block
+    display: block;
+    height: 100%;
+    width: 300px;
+    padding-top: 60px;
+    background-color: $color-theme;
+    overflow-y: auto;
   }
 
   .nav-open-icon {
-    display: none;
-
-    @include media-query($medium-down) {
-      @include pos-absolute(0, 0, auto, auto);
-      display: block;
-      width: 50px;
-      height: 40px;
-      box-sizing: border-box;
-      border: 4px solid $color-theme;
-      border-radius: 10px;
-      background-color: $color-theme-deep;
-      line-height: 32px;
-      text-align: center;
-      font-size: 16px;
-      color: $color-white;
-      text-indent: 0;
-    }
-
+    @include absolute(0, 0, auto, auto);
+    width: 50px;
+    line-height: 48px;
+    text-align: center;
+    font-size: 16px;
+    color: $color-white;
   }
 
   li.nav-one-item {
@@ -32,47 +57,28 @@ ul.nav-one {
     a.nav-one-text {
       @include nav-text;
 
-      @include media-query($medium-down) {
+      &.arrow {
+        &::after {
+          @include relative(0, auto, auto, 2px);
+          @include iconfont('\eb6d');
+          font-size: 10px;
 
-        &.arrow {
-          &::after {
+          @include media-query($medium-down) {
             display: none;
           }
         }
       }
-
-      &.arrow {
-        &::after {
-          font-family: "iconfont";
-          content: "\eb6d";
-          position: relative;
-          top: 0px;
-          left: 2px;
-          font-size: 10px;
-        }
-      }
-
     }
 
     .nav-two {
-      padding: 0 0;
-      border-radius: 0;
-      position: absolute;
-      left: 0;
-      right: 0;
-      z-index: 9999;
-      background-color: #1750AB;
-      top: calc(100%);
+      @include absolute(calc(100%), 0, auto, 0, 9999);
+      background-color: #1750ab;
       display: none;
 
       @include media-query($medium-down) {
-        padding: 0 0;
+        @include relative;
         border-top: none;
-        background-color: $color-theme;
-        position: relative;
-        top: auto;
-        left: auto;
-        text-indent: 40px;
+        background-color: transparent;
       }
 
       .nav-two-item {
@@ -81,50 +87,32 @@ ul.nav-one {
         }
 
         a.nav-two-text {
-          @include nav-text($color-theme);
-
-          @include media-query($medium-down) {
-
-            &.arrow {
-              &::after {
-                display: none;
-              }
-            }
-          }
+          @include nav-text($color-theme, 60px);
 
           &.arrow {
             &::after {
-              font-family: "iconfont";
-              content: "\e63d";
-              position: relative;
-              top: 1px;
+              @include relative(1px, auto, auto, auto);
+              @include iconfont('\e63d');
+
+              @include media-query($medium-down) {
+                display: none;
+              }
             }
           }
         }
 
         .nav-three {
-          padding: 10px 0;
-          border-radius: 4px;
-          display: block;
-          position: absolute;
-          top: 0;
-          left: calc(100%);
-          border-left: 1px solid #ffffff;
-          background-color: #f3f3f3;
+          @include absolute(0, auto, auto, calc(100%), 9999);
+          background-color: #1750ab;
           display: none;
 
           @include media-query($medium-down) {
-            padding: 0 0;
-            border-left: none;
-            background-color: $color-theme;
-            position: relative;
-            top: auto;
-            left: auto;
-            text-indent: 80px;
+            @include relative;
+            background-color: transparent;
           }
 
           a.nav-three-text {
-            @include nav-text($color-sub-theme);
+            @include nav-text($color-theme, 90px);
           }
         }
       }

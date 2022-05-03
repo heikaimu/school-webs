@@ -42,7 +42,7 @@
   }
 
   .link {
-    @include pos-absolute;
+    @include absolute;
   }
 }
 
@@ -56,7 +56,7 @@
   cursor: pointer;
 
   &::before {
-    @include pos-absolute(17px, auto, auto, 10px);
+    @include absolute(17px, auto, auto, 10px);
     content: '';
     display: block;
     width: 0;
@@ -71,7 +71,7 @@
 
   &:hover {
     padding-left: 30px;
-    background-color: #E8F1FF;
+    background-color: #e8f1ff;
 
     &::before {
       opacity: 1;
@@ -102,7 +102,7 @@
   }
 
   .date {
-    font-family: "AbhayaLibre";
+    font-family: 'AbhayaLibre';
     font-size: 14px;
     color: $color-content;
     flex: none;
@@ -111,7 +111,7 @@
   }
 
   .link {
-    @include pos-absolute;
+    @include absolute;
   }
 }
 
@@ -119,19 +119,19 @@
 .date-news {
   @include flex-row-sb;
   height: 98px;
-  background: #F1F1F1;
-  border: 1px solid #DDDDDD;
+  background: #f1f1f1;
+  border: 1px solid #dddddd;
   position: relative;
   overflow: hidden;
 
   &::after {
-    @include pos-absolute(-16px, -10px, auto, auto, 9);
-    content: "";
+    @include absolute(-16px, -10px, auto, auto, 9);
+    content: '';
     display: block;
     width: 133px;
     height: 133px;
     background: url(../images/news_logo.png);
-    transition: .3s;
+    transition: 0.3s;
     opacity: 0;
     transform: translate3d(20px, 0, 0);
   }
@@ -163,8 +163,8 @@
   .date {
     padding: 0 20px;
     flex: none;
-    border-right: 1px solid #C9C9C9;
-    font-family: "AbhayaLibre";
+    border-right: 1px solid #c9c9c9;
+    font-family: 'AbhayaLibre';
 
     .day {
       font-size: 24px;
@@ -188,7 +188,7 @@
   }
 
   .link {
-    @include pos-absolute;
+    @include absolute;
   }
 }
 
@@ -202,7 +202,7 @@
 
   &:hover,
   &:active {
-    background-color: #E8F1FF;
+    background-color: #e8f1ff;
     border: 1px solid transparent;
 
     .date {
@@ -218,10 +218,10 @@
   }
 
   .date {
-    @include pos-absolute(-13px, auto, auto, 20px);
+    @include absolute(-13px, auto, auto, 20px);
     padding: 0 10px;
     height: 26px;
-    background: #E8F1FF;
+    background: #e8f1ff;
     border-radius: 13px;
     font-size: $font-size-m;
     color: $color-theme;
@@ -230,11 +230,14 @@
   }
 
   .title {
+    @include omit;
     font-size: $font-size-m;
     color: $color-title;
+    padding-right: 20px;
   }
 
   .link {
+    flex: none;
     font-size: $font-size-m;
     color: $color-content;
   }

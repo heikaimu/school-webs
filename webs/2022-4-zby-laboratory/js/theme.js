@@ -1,12 +1,11 @@
 /*
  * @Date: 2022-04-08 17:12:42
  * @LastEditors: Yaowen Liu
- * @LastEditTime: 2022-04-29 15:58:27
+ * @LastEditTime: 2022-05-05 16:20:34
  * @FilePath: /school-webs/webs/2022-4-zby-laboratory/js/theme.js
  */
 
 $(function () {
-  isIE();
   backTop();
   new WOW().init();
 
@@ -68,19 +67,19 @@ function mobileSearch() {
 
 // 侧边导航
 function sideBarNav() {
-  $('#sideBarNav')
-    .find('li')
+  $('[data-sidebar]')
+    .find('[data-sidebar-item]')
     .each(function () {
       if ($(this).hasClass('active')) {
-        $(this).find('.third-nav').show();
+        $(this).find('[data-sidebar-sub]').show();
       }
 
       $(this).on('click', function () {
         if ($(this).hasClass('active')) {
-          $(this).removeClass('active').find('.third-nav').slideUp();
+          $(this).removeClass('active').find('[data-sidebar-sub]').slideUp();
         } else {
-          $(this).addClass('active').find('.third-nav').slideDown();
-          $(this).siblings('li').removeClass('active').find('.third-nav').slideUp();
+          $(this).addClass('active').find('[data-sidebar-sub]').slideDown();
+          $(this).siblings().removeClass('active').find('[data-sidebar-sub]').slideUp();
         }
       });
     });
@@ -164,3 +163,22 @@ function mainNavToggle() {
       });
   }
 }
+
+const bannerSwiper = new Swiper('#banner', {
+  loop: true,
+  speed: 1000,
+  autoplay: {
+    delay: 3000,
+    stopOnLastSlide: false,
+    disableOnInteraction: true,
+  },
+  pagination: {
+    el: '#bannerPagination',
+    bulletClass: 'progress-bullet', //需设置.my-bullet样式
+    bulletActiveClass: 'progress-bullet-active',
+    clickable: true,
+    renderBullet: function (index, className) {
+      return '<span class="' + className + '"><span class="percent">0' + (index + 1) + '</span></span>';
+    },
+  },
+});

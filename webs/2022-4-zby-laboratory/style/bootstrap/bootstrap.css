@@ -560,7 +560,7 @@ pre code {
 }
 @media (min-width: 1300px) {
   .container, .container-sm, .container-md, .container-lg, .container-xl {
-    max-width: 80%;
+    max-width: 83%;
   }
 }
 .row {

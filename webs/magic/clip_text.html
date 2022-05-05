@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>蒙版文字</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap">
+  <style>
+    :root {
+      --color1: #01579B;
+      --color2: #00838F;
+      --color3: #FFD600;
+      --color4: #FF4081;
+      --color5: #F44336;
+    }
+
+    body {
+      height: 100vh;
+      overflow: hidden;
+      background-color: #151515;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .left,
+    .right {
+      width: 50%;
+      height: 100%;
+      display: grid;
+      place-items: center;
+    }
+
+    .left {
+      border-right: 1px solid #ffffff;
+    }
+
+    h1 {
+      width: min-content;
+      text-transform: uppercase;
+      background: linear-gradient(225deg,
+          var(--color1) 0%, var(--color1) 9%,
+          transparent 9%, transparent 10%,
+          var(--color2) 10%, var(--color2) 19%,
+          transparent 19%, transparent 20%,
+          var(--color3) 20%, var(--color3) 29%,
+          transparent 29%, transparent 30%,
+          var(--color4) 30%, var(--color4) 39%,
+          transparent 39%, transparent 40%,
+          var(--color5) 40%, var(--color5) 49%,
+          transparent 49%, transparent 50%,
+          var(--color1) 50%, var(--color1) 59%,
+          transparent 59%, transparent 60%,
+          var(--color2) 60%, var(--color2) 69%,
+          transparent 69%, transparent 70%,
+          var(--color3) 70%, var(--color3) 79%,
+          transparent 79%, transparent 80%,
+          var(--color4) 80%, var(--color4) 89%,
+          transparent 89%, transparent 90%,
+          var(--color5) 90%, var(--color5) 99%,
+          transparent 99%);
+      background-size: 200% 200%;
+      background-clip: text;
+      -webkit-background-clip: text;
+
+      font-family: "Luckiest Guy", cursive;
+      font-size: 20vh;
+      color: transparent;
+      text-align: center;
+      line-height: 1.2;
+
+      animation: move 3s linear infinite;
+    }
+
+    @keyframes move {
+      0% {
+        background-position: 0px 100%;
+      }
+
+      100% {
+        background-position: 100% 0px;
+      }
+    }
+
+    h2 {
+      width: min-content;
+      text-transform: uppercase;
+      background-image: url(./images/mhw.jpeg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-clip: text;
+      -webkit-background-clip: text;
+      font-family: "Luckiest Guy", cursive;
+      font-size: 20vh;
+      color: rgba(0, 0, 0, 0.3);
+      text-align: center;
+      line-height: 1.2;
+      stroke: 1px #ffffff;
+      -webkit-text-stroke: 1px #ffffff;
+      animation: shake 3s linear infinite;
+    }
+
+    @keyframes shake {
+      0%,
+      100% {
+        color: rgba(0, 0, 0, 0.2);
+      }
+
+      50% {
+        color: rgba(0, 0, 0, 0.6);
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="left">
+    <h1>monster hunter world</h1>
+  </div>
+
+  <div class="right">
+    <h2>monster hunter world</h2>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>视觉差滚动</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .shell {
+      height: 100vh;
+      perspective: 3px;
+      overflow-x: hidden;
+    }
+
+    .heading {
+      height: 50vh;
+      background-color: #ffffff;
+    }
+
+    h1 {
+      font-size: 30px;
+      text-align: center;
+      line-height: 50vh;
+    }
+
+    .image {
+      width: 100vw;
+      height: 100vh;
+      background-size: cover;
+      transform: translate3d(0, 0, -1px) scale(1.6);
+      position: relative;
+      z-index: -1;
+    }
+
+
+  </style>
+</head>
+
+<body>
+  <div class="shell">
+
+    <div class="image" style="background-image: url(./images/banner1.jpg)"></div>
+    <div class="heading">
+      <h1>Banner1</h1>
+    </div>
+
+    <div class="image" style="background-image: url(./images/banner2.jpg)"></div>
+    <div class="heading">
+      <h1>Banner2</h1>
+    </div>
+
+    <div class="image" style="background-image: url(./images/banner3.jpg)"></div>
+    <div class="heading">
+      <h1>Banner3</h1>
+    </div>
+
+    <div class="image" style="background-image: url(./images/banner4.jpg)"></div>
+    <div class="heading">
+      <h1>Banner4</h1>
+    </div>
+
+    <div class="image" style="background-image: url(./images/banner5.jpg)"></div>
+    <div class="heading">
+      <h1>Banner5</h1>
+    </div>
+
+  </div>
+</body>
+
+</html>

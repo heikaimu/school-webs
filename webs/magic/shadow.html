@@ -1,14 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      width: 100vw;
+      height: 100vh;
+      background-color: #f2f2f2;
+      display: grid;
+      place-items: center;
+    }
+
+    .keyboard-key {
+      width: 80px;
+      height: 80px;
+      border-radius: 10px;
+      background-image: linear-gradient(180deg, #2f2f2f, #3f3f3f);
+      box-shadow: inset -8px 0 8px rgba(0, 0, 0, 0.15),
+      inset 0 -8px 8px rgba(0, 0, 0, 0.25),
+      0 0 0 2px rgba(0, 0, 0, 0.75),
+      10px 20px 25px rgba(0, 0, 0, 0.4);
+      user-select: none;
+      position: relative;
+    }
+
+    .keyboard-key::before {
+      content: "";
+      position: absolute;
+      top: 3px;
+      right: 12px;
+      bottom: 14px;
+      left: 4px;
+      border-radius: 10px;
+      background-image: linear-gradient(90deg, #2d2d2d, #4d4d4d);
+      box-shadow: -5px -5px 15px rgba(0, 0, 0, 0.1)
+      10px 5px 10px rgba(0, 0, 0, 0.15);
+      border-left: 1px solid #000400;
+      border-bottom: 1px solid #000400;
+      border-top: 1px solid #000900;
+    }
+
+    .keyboard-key:active {
+      filter: brightness(1.5);
+    }
+
+    .keyboard-key span {
+      position: absolute;
+      top: 3px;
+      right: 12px;
+      bottom: 14px;
+      left: 4px;
+      z-index: 9;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 18px;
+      color: #ffffff;
+    }
+
+    .keyboard {
+      padding: 20px;
+      border-radius: 10px;
+      background-color: #333;
+      box-shadow: 25px 25px 75px rgba(0, 0, 0, 0.25),
+      10px 10px 70px rgba(0, 0, 0, 0.25);
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-row-gap: 20px;
+      grid-column-gap: 20px;
+    }
+  </style>
+
 </head>
+
 <body>
-  
-  <div class="button">按钮</div>
+
+  <div class="keyboard">
+    <div class="keyboard-key">
+      <span>7</span>
+    </div>
+    <div class="keyboard-key">
+      <span>8</span>
+    </div>
+    <div class="keyboard-key">
+      <span>9</span>
+    </div>
+    <div class="keyboard-key">
+      <span>4</span>
+    </div>
+    <div class="keyboard-key">
+      <span>5</span>
+    </div>
+    <div class="keyboard-key">
+      <span>6</span>
+    </div>
+    <div class="keyboard-key">
+      <span>1</span>
+    </div>
+    <div class="keyboard-key">
+      <span>2</span>
+    </div>
+    <div class="keyboard-key">
+      <span>3</span>
+    </div>
+  </div>
 
 </body>
+
 </html>

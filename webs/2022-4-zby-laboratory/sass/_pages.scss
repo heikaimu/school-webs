@@ -317,7 +317,6 @@ div.home-section-title {
   }
 }
 
-
 // -------
 .article-details {
   padding: 40px;
@@ -328,11 +327,12 @@ div.home-section-title {
 
   .article-title {
     font-size: 24px;
-    font-family: "MicrosoftYaHei-Bold";
+    font-family: 'MicrosoftYaHei-Bold';
     color: $color-theme;
     text-align: center;
     margin-bottom: 30px;
     line-height: 1.4;
+    font-weight: 900;
 
     @include media-query($medium-down) {
       font-size: 20px;
@@ -347,7 +347,8 @@ div.home-section-title {
   .article-basic-info {
     @include flex-row-center;
     padding: 10px;
-    background-color: rgba($color: #CFCFCF, $alpha: .3);
+    border-top: 1px solid rgba($color: #cfcfcf, $alpha: 0.5);
+    border-bottom: 1px solid rgba($color: #cfcfcf, $alpha: 0.5);
     margin-bottom: 30px;
 
     @include media-query($small) {
@@ -388,6 +389,87 @@ div.home-section-title {
       display: block;
       max-width: 100%;
       margin: 20px 0;
+    }
+  }
+}
+
+.article-prev-next {
+  padding: 0 40px 40px 40px;
+  .button {
+    display: block;
+    font-size: 15px;
+    color: #454545;
+    margin: 5px 0;
+    transition: 0.3s ease-in-out;
+    &:hover {
+      color: #123875;
+    }
+    strong {
+      color: #123875;
+    }
+    &.prev {
+    }
+    &.next {
+    }
+  }
+}
+
+.single-page {
+  @include media-query($medium-down) {
+    max-width: 100%;
+    padding: 0;
+  }
+}
+
+ul.inner-news-list {
+  padding: 0 40px;
+  @include media-query($medium-down) {
+    padding: 0 10px;
+  }
+  li.news-item {
+    div.inner-news-card {
+      @include flex-row-sb;
+      height: 50px;
+      border-bottom: 1px solid $color-border;
+      position: relative;
+      &:hover {
+        .title {
+          color: $color-theme;
+          font-weight: 600;
+        }
+        .date {
+          color: $color-theme;
+          font-weight: 600;
+        }
+      }
+
+      p.title {
+        @include omit;
+        font-size: 15px;
+        color: #333333;
+        padding-left: 20px;
+        position: relative;
+        &::before {
+          @include absolute(10px, auto, auto, 0);
+          content: "";
+          display: block;
+          width: 4px;
+          height: 4px;
+          border-radius: 50%;
+          background-color: $color-theme;
+        }
+      }
+
+      p.date {
+        padding-left: 40px;
+        flex: none;
+        font-size: 15px;
+        color: #666666;
+      }
+
+      a.link {
+        @include absolute;
+      }
     }
   }
 }

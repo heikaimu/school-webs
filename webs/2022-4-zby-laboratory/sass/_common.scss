@@ -28,6 +28,10 @@ a:hover {
   text-decoration: none;
 }
 
+.bg-gray {
+  background-color: #f2f2f2;
+}
+
 // 返回按钮
 .back-top-menu {
   @include fixed(auto, 30px, 30px, auto, 9999);
@@ -66,8 +70,8 @@ a:hover {
   padding-bottom: 50px;
   padding-top: 46px;
 
-  @include media-query($small) {
-    padding-bottom: 20px;
+  @include media-query($medium-down) {
+    padding: 0;
   }
 
   .inner-nav {
@@ -117,7 +121,7 @@ a:hover {
   }
 
   &::before {
-    @include absolute(0, auto, auto, -80px, 99);
+    @include absolute(0, auto, auto, -80px, 9);
     content: "";
     display: block;
     width: 185px;
@@ -159,6 +163,8 @@ a:hover {
 
   ul.second-nav {
     border-left: 5px solid #B7B7B7;
+    position: relative;
+    z-index: 999;
 
     li.second-nav-item {
       border-bottom: 1px solid #E0E0E0;
@@ -253,6 +259,7 @@ div.custom-breadcrumb {
   h2.title {
     font-size: 24px;
     color: $color-theme;
+    font-weight: 900;
 
     @include media-query($small) {
       display: none;

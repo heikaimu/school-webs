@@ -1,0 +1,125 @@
+@mixin pagination() {
+  display: block;
+  height: 30px;
+  padding: 0 10px;
+  line-height: 30px;
+  border-radius: 4px;
+  font-size: 12px;
+  background-color: #f4f4f5;
+  color: #606266;
+  transition: 0.3s;
+  cursor: pointer;
+
+  &:hover {
+    color: $color-theme;
+  }
+
+  @include media-query($small) {
+    height: 40px;
+    padding: 0 20px;
+    line-height: 40px;
+    font-size: 14px;
+  }
+}
+
+@mixin paginationActive() {
+  display: block;
+  height: 30px;
+  padding: 0 10px;
+  line-height: 30px;
+  border-radius: 4px;
+  font-size: 12px;
+  color: $color-title;
+  transition: 0.3s;
+  background-color: $color-theme;
+  color: $color-white;
+}
+
+// 分页器
+div.pb_sys_common.pb_sys_normal.pb_sys_style1 {
+  @include flex-row-center;
+  padding: 40px 0;
+
+  span.p_pages {
+    @include flex-row-center;
+    column-gap: 5px;
+
+    span.p_first_d.p_fun_d {
+      @include pagination;
+    }
+
+    span.p_prev_d.p_fun_d {
+      @include pagination;
+    }
+
+    span.p_no_d {
+      @include paginationActive;
+
+      @include media-query($small) {
+        display: none;
+      }
+    }
+
+    span.p_no {
+      @include media-query($small) {
+        display: none;
+      }
+
+      a {
+        @include pagination;
+      }
+    }
+
+    span.p_dot {
+      @include pagination;
+
+      @include media-query($small) {
+        display: none;
+      }
+    }
+
+    span.p_next.p_fun {
+      a {
+        @include pagination;
+      }
+    }
+
+    span.p_last.p_fun {
+      a {
+        @include pagination;
+      }
+    }
+  }
+
+  span.p_t {
+    font-size: 12px;
+    color: $color-content;
+    line-height: 26px;
+    padding: 0 10px;
+
+    @include media-query($small) {
+      display: none;
+    }
+  }
+
+  span.p_goto {
+    @include media-query($small) {
+      display: none;
+    }
+
+    input#u6_goto.p_goto_input {
+      width: 40px;
+      height: 30px;
+      box-sizing: border-box;
+      border-radius: 4px;
+      border: 1px solid #dcdfe6;
+      text-align: center;
+      font-size: 12px;
+      color: $color-content;
+    }
+
+    a {
+      @include paginationActive;
+    }
+  }
+}

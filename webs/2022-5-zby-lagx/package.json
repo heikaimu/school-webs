@@ -1,0 +1,13 @@
+{
+  "name": "example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "sass --watch sass:style --sourcemap=none --no-cache --style expanded",
+    "move": "mv style/bootstrap/bootstrap.css style && rm style/bootstrap"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

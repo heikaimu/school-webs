@@ -1,0 +1,113 @@
+.web-header {
+  .header--top {
+    height: 125px;
+    background: $color-theme url(../images/header_bg.png) no-repeat top center;
+    @include media-query($medium-down) {
+      @include fixed(0, 0, auto, 0, 999);
+      height: 60px;
+      padding: 0 10px;
+      background-color: $color-theme;
+    }
+
+    .container {
+      height: 100%;
+      @include media-query($medium-down) {
+        padding: 0;
+        max-width: 100%;
+      }
+    }
+
+    .mobile-nav-open-menu {
+      .iconfont {
+        padding: 5px;
+        font-size: 30px;
+        color: $color-white;
+      }
+    }
+
+    .header-logo {
+      position: relative;
+
+      @include media-query($large-down) {
+        img {
+          width: 298px;
+        }
+      }
+
+      @include media-query($medium-down) {
+        padding-left: 20px;
+      }
+
+      @include media-query($small) {
+        img {
+          width: 228px;
+        }
+      }
+    }
+
+
+  }
+
+  .header--bottom {
+    position: relative;
+    background-color: #e4e4e4;
+    @include media-query($medium-down) {
+      @include fixed(0, 0, 0, 0, 999);
+      background-color: rgba($color: #000000, $alpha: 0.8);
+      transition: 0.3s ease-in-out;
+      transform: translate3d(-100%, 0, 0);
+      opacity: 0;
+
+      &.active {
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
+      }
+    }
+
+    .container {
+      @include media-query($medium-down) {
+        @include fixed(0, 0, 0, 0, 999);
+        padding: 0;
+        max-width: 100%;
+      }
+    }
+
+    .mobile-nav-close {
+      @include absolute(0, auto, auto, 0, 99999);
+      width: 320px;
+      height: 60px;
+      background-color: $color-theme;
+
+      .iconfont {
+        @include flex-row-center;
+        width: 60px;
+        height: 60px;
+        font-size: 30px;
+        color: $color-white;
+      }
+    }
+  }
+}
+
+
+// 顶部小按钮，比如语言
+.header--top__menus {
+  display: flex;
+  align-items: center;
+
+  .menu {
+    font-size: 16px;
+    color: #ffffff;
+    opacity: .8;
+    margin: 0 14px;
+    &:hover {
+      filter: brightness(0.9)
+    }
+  }
+
+  .divider {
+    height: 14px;
+    width: 1px;
+    background-color: rgba($color: #ffffff, $alpha: 0.8);
+  }
+}

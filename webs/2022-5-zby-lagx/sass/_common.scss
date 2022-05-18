@@ -1,0 +1,351 @@
+@import "./variables";
+@import "./mixin";
+
+body {
+  @include media-query($medium-down) {
+    padding-top: 60px;
+  }
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  list-style: none;
+}
+
+p {
+  margin-bottom: 0;
+}
+
+h1,
+h2,
+h3 {
+  margin-bottom: 0;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.bg-gray {
+  background-color: #f2f2f2;
+}
+
+// 返回按钮
+.back-top-menu {
+  @include fixed(auto, 30px, 30px, auto, 9999);
+  @include flex-row-center;
+  width: 40px;
+  height: 40px;
+  border: 3px solid $color-theme-light;
+  border-radius: 50%;
+  background-color: $color-theme;
+  color: $color-white;
+  transition: 0.3s cubic-bezier(0.53, -0.31, 0.56, 2.18);
+  transform: translate3d(50px, 0, 0);
+  opacity: 0;
+  cursor: pointer;
+
+  .iconfont {
+    font-size: 20px;
+    color: $color-sub-theme;
+  }
+
+  &.show {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+
+  &:hover {
+    background-color: $color-theme-light;
+    border: 3px solid $color-theme;
+  }
+}
+
+// 内页容器
+.inner-side-page {
+  display: flex;
+  overflow: hidden;
+  padding-bottom: 50px;
+  padding-top: 46px;
+
+  @include media-query($medium-down) {
+    padding: 0;
+  }
+
+  .inner-nav {
+    flex: none;
+
+    @include media-query($medium-down) {
+      display: none;
+    }
+  }
+
+  .inner-content-wrapper {
+    flex: 1;
+    box-sizing: border-box;
+    margin-left: 38px;
+    overflow: hidden;
+    background-color: #f2f2f2;
+    border: 1px solid #e0e0e0;
+
+    @include media-query($medium-down) {
+      margin-left: 0;
+    }
+  }
+}
+
+// 侧边栏
+.side-bar {
+  flex: none;
+  width: 300px;
+  background-color: #f2f2f2;
+  position: relative;
+  overflow: hidden;
+  border-right: 1px solid #e0e0e0;
+  border-bottom: 1px solid #e0e0e0;
+
+  @include media-query($large) {
+    width: 240px;
+  }
+
+  &::after {
+    @include absolute(-100px, -80px, auto, auto, 9);
+    content: "";
+    display: block;
+    width: 185px;
+    height: 172px;
+    background: url(../images/nav_logo.png);
+  }
+
+  &::before {
+    @include absolute(0, auto, auto, -80px, 9);
+    content: "";
+    display: block;
+    width: 185px;
+    height: 172px;
+    background: url(../images/nav_logo.png);
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    border-left: 5px solid #b7b7b7;
+  }
+
+  h2.side-bar-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90px;
+    font-size: 24px;
+    line-height: 1;
+    color: $color-white;
+    position: relative;
+    margin-bottom: 0;
+    background-color: #123875;
+
+    @include media-query($large) {
+      font-size: 20px;
+    }
+
+    // &::before {
+    //   @include absolute(23px, auto, auto, 20px);
+    //   display: block;
+    //   content: "";
+    //   width: 4px;
+    //   height: 24px;
+    //   background-image: linear-gradient($color-sub-theme 50%, $color-white 50%);
+    // }
+  }
+
+  ul.second-nav {
+    border-left: 5px solid #b7b7b7;
+    position: relative;
+    z-index: 999;
+
+    li.second-nav-item {
+      border-bottom: 1px solid #e0e0e0;
+      &.active {
+        .second-nav-item-text {
+          background-color: #e5f0ff;
+          color: #123875;
+        }
+      }
+
+      .second-nav-item-text {
+        display: block;
+        height: 72px;
+        background-color: #f2f2f2;
+        line-height: 72px;
+        font-size: 18px;
+        color: $color-title;
+        padding-left: 20px;
+        position: relative;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+
+        @include media-query($large) {
+          font-size: 16px;
+        }
+
+        &::before {
+          content: "";
+          display: block;
+          width: 15px;
+          height: 15px;
+          background: url(../images/icon_round.png);
+          margin-right: 10px;
+        }
+      }
+
+      nav.third-nav {
+        background-color: $color-white;
+        padding: 10px 0 10px 47px;
+        margin-top: 1px;
+        display: none;
+        border-left: 5px solid #123875;
+        margin-left: -5px;
+
+        a.third-nav-text {
+          padding: 6px 0;
+          display: flex;
+          align-items: center;
+          font-size: 16px;
+          color: #333333;
+
+          @include media-query($large) {
+            font-size: 14px;
+          }
+
+          &:hover,
+          &.active {
+            color: $color-theme;
+            text-decoration: none;
+
+            &::before {
+              opacity: 1;
+            }
+          }
+
+          &::before {
+            content: "";
+            display: block;
+            width: 11px;
+            height: 11px;
+            background: url(../images/icon_arrow.png);
+            margin-right: 10px;
+            opacity: 0;
+            transition: 0.3s ease-in-out;
+          }
+        }
+      }
+    }
+  }
+}
+
+// 面包屑
+div.custom-breadcrumb {
+  @include flex-row-sb;
+  padding: 20px 40px;
+  border-bottom: 2px solid $color-theme;
+
+  @include media-query($small) {
+    padding: 10px 0;
+  }
+
+  h2.title {
+    font-size: 24px;
+    color: $color-theme;
+    font-weight: 900;
+
+    @include media-query($small) {
+      display: none;
+    }
+  }
+
+  div.breadcrumb-navs {
+    display: flex;
+    align-items: center;
+
+    @include media-query($small) {
+      padding-left: 20px;
+    }
+
+    p.pos {
+      font-size: $font-size-b;
+      color: #888888;
+      margin-right: 10px;
+      display: flex;
+      align-items: center;
+
+      &::before {
+        content: "";
+        display: block;
+        width: 17px;
+        height: 17px;
+        background: url(../images/icon_home.png);
+        margin-right: 6px;
+      }
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+
+      a {
+        font-size: $font-size-b;
+        color: #888888;
+        transition: 0.3s;
+
+        &::before {
+          font-family: "iconfont";
+          content: "\e63d";
+          margin-right: 8px;
+          margin-left: 5px;
+
+          @include media-query($small) {
+            margin-right: 5px;
+            font-size: 14px;
+          }
+        }
+
+        &:first-child {
+          &::before {
+            display: none;
+          }
+        }
+
+        &:hover {
+          color: $color-theme;
+
+          &::before {
+            color: #888888;
+          }
+        }
+      }
+    }
+  }
+}
+
+// 内页banner
+div.inner-static-banner {
+  padding-top: 30px;
+  @include media-query($large-down) {
+    padding-top: 0;
+  }
+  div.container {
+    @include media-query($large-down) {
+      max-width: 100%;
+      padding: 0;
+    }
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+}

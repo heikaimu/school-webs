@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>菱形图片布局</title>
+
+    <style>
+      :root {
+        --width: 300px;
+        --height: 300px;
+        --gap: 10px;
+      }
+      .rect-wrapper {
+        padding-left: calc(var(--width) * 0.5);
+        padding-top: calc(var(--height) * 0.5);
+      }
+      .rhombus {
+        width: var(--width);
+        height: var(--height);
+        clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+        background: #00c9b7;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+      }
+      .rhombus img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: 0.3s ease-in-out;
+      }
+      .rhombus .text {
+        text-shadow: 2px 3px 0px rgb(150 150 150);
+        font-size: 30px;
+        font-weight: 900;
+        color: #ffffff;
+      }
+      .rhombus:hover img {
+        transform: scale(1.1);
+      }
+      .rows {
+        display: flex;
+        gap: var(--gap);
+        margin-top: calc(var(--height) * -0.5 + var(--gap) * 0.5);
+      }
+      .rows:nth-child(even) {
+        margin-left: calc(var(--width) * -0.5 - var(--gap) * 0.5);
+      }
+      .team {
+        padding: 40px;
+        background-image: linear-gradient(to right top, #6d327c, #485da6, #00a1ba, #00bf98, #36c486);
+        display: flex;
+        justify-content: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="team">
+      <div class="rect-wrapper">
+        <div class="rows">
+          <div class="rhombus">
+            <img src="../images/butterfly.jpg" alt="" srcset="" />
+          </div>
+          <div class="rhombus">
+            <p class="text">React</p>
+          </div>
+          <div class="rhombus">
+            <img src="../images/image-scale-sample-imgscalr.jpg" alt="" srcset="" />
+          </div>
+        </div>
+        <div class="rows">
+          <div class="rhombus">
+            <p class="text">JavaScript</p>
+          </div>
+          <div class="rhombus">
+            <img src="../images/image-scale-sample-imgscalr.jpg" alt="" srcset="" />
+          </div>
+          <div class="rhombus">
+            <img src="../images/sunflower.jpg" alt="" srcset="" />
+          </div>
+          <div class="rhombus">
+            <p class="text">HTML</p>
+          </div>
+        </div>
+        <div class="rows">
+          <div class="rhombus">
+            <img src="../images/orange-flower-the-highest-quality.jpg" alt="" srcset="" />
+          </div>
+          <div class="rhombus">
+            <p class="text">Vue</p>
+          </div>
+          <div class="rhombus">
+            <img src="../images/minion.jpg" alt="" srcset="" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

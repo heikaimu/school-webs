@@ -1,0 +1,107 @@
+footer.web-footer {
+  // background: url(../images/footer_bg.png) no-repeat center center / cover;
+  background-color: $color-theme;
+
+  div.footer--top {
+    background-color: rgba($color: #1750ab, $alpha: 0.7);
+
+    div.container {
+      div.f-links {
+        p.title {
+          font-size: 16px;
+          color: #ffffff;
+          padding-right: 10px;
+
+          @include media-query($large) {
+            font-size: 14px;
+          }
+        }
+
+        ul.links.d-flex {
+          li.link-item {
+            padding: 0 20px;
+            position: relative;
+
+            &::before {
+              content: '';
+              display: block;
+              height: 13px;
+              width: 1px;
+              border-left: 1px solid rgba($color: $color-white, $alpha: 0.7);
+              position: absolute;
+              right: 0;
+              top: 50%;
+              transform: translate3d(0, -50%, 0);
+            }
+
+            &:last-child {
+              &::before {
+                display: none;
+              }
+            }
+
+            a.link {
+              font-size: 16px;
+              color: #ffffff;
+              transition: 0.3s;
+
+              @include media-query($large) {
+                font-size: 14px;
+              }
+
+              &:hover {
+                text-decoration: none;
+                color: $color-sub-theme;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  div.footer--bottom {
+    .container {
+      .footer-logo {
+        display: flex;
+        padding: 10px 30px 10px 0;
+        @include media-query($medium-down) {
+          justify-content: center;
+        }
+        img {
+          display: block;
+          max-width: 100%;
+        }
+      }
+      .info-list {
+        max-width: 500px;
+        padding-left: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        border-left: 1px solid rgba($color: #ffffff, $alpha: 0.2);
+        @include media-query($medium-down) {
+          padding: 20px 0;
+          max-width: 100%;
+          border-left: none;
+        }
+        p {
+          font-size: 14px;
+          color: #ffffff;
+          line-height: 1.8;
+          margin: 0 10px;
+        }
+      }
+      .qr-code {
+        display: flex;
+        align-items: center;
+        @include media-query($medium-down) {
+          justify-content: center;
+        }
+        img {
+          max-height: 88px;
+          margin: 0 5px;
+        }
+      }
+    }
+  }
+}

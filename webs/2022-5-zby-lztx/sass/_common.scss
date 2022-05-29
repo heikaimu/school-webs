@@ -1,5 +1,5 @@
-@import "./variables";
-@import "./mixin";
+@import './variables';
+@import './mixin';
 
 body {
   @include media-query($medium-down) {
@@ -114,7 +114,7 @@ a:hover {
 
   &::after {
     @include absolute(-100px, -80px, auto, auto, 9);
-    content: "";
+    content: '';
     display: block;
     width: 185px;
     height: 172px;
@@ -123,7 +123,7 @@ a:hover {
 
   &::before {
     @include absolute(0, auto, auto, -80px, 9);
-    content: "";
+    content: '';
     display: block;
     width: 185px;
     height: 172px;
@@ -194,7 +194,7 @@ a:hover {
         }
 
         &::before {
-          content: "";
+          content: '';
           display: block;
           width: 15px;
           height: 15px;
@@ -233,7 +233,7 @@ a:hover {
           }
 
           &::before {
-            content: "";
+            content: '';
             display: block;
             width: 11px;
             height: 11px;
@@ -284,7 +284,7 @@ div.custom-breadcrumb {
       align-items: center;
 
       &::before {
-        content: "";
+        content: '';
         display: block;
         width: 17px;
         height: 17px;
@@ -303,8 +303,8 @@ div.custom-breadcrumb {
         transition: 0.3s;
 
         &::before {
-          font-family: "iconfont";
-          content: "\e63d";
+          font-family: 'iconfont';
+          content: '\e63d';
           margin-right: 8px;
           margin-left: 5px;
 
@@ -349,8 +349,6 @@ div.inner-static-banner {
     }
   }
 }
-
-
 
 .science-pagination {
   .swiper-pagination-bullet {

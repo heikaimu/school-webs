@@ -1,0 +1,149 @@
+// 侧边栏
+.side-bar {
+  flex: none;
+  width: 300px;
+  background-color: #f2f2f2;
+  position: relative;
+  overflow: hidden;
+  border-right: 1px solid #e0e0e0;
+  border-bottom: 1px solid #e0e0e0;
+
+  @include media-query($large) {
+    width: 240px;
+  }
+
+  &::after {
+    @include absolute(-100px, -80px, auto, auto, 9);
+    content: '';
+    display: block;
+    width: 185px;
+    height: 172px;
+    background: url(../images/nav_logo.png);
+  }
+
+  &::before {
+    @include absolute(0, auto, auto, -80px, 9);
+    content: '';
+    display: block;
+    width: 185px;
+    height: 172px;
+    background: url(../images/nav_logo.png);
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    border-left: 5px solid #b7b7b7;
+  }
+
+  h2.side-bar-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90px;
+    font-size: 24px;
+    line-height: 1;
+    color: $color-white;
+    position: relative;
+    margin-bottom: 0;
+    background-color: #123875;
+
+    @include media-query($large) {
+      font-size: 20px;
+    }
+
+    // &::before {
+    //   @include absolute(23px, auto, auto, 20px);
+    //   display: block;
+    //   content: "";
+    //   width: 4px;
+    //   height: 24px;
+    //   background-image: linear-gradient($color-sub-theme 50%, $color-white 50%);
+    // }
+  }
+
+  ul.second-nav {
+    border-left: 5px solid #b7b7b7;
+    position: relative;
+    z-index: 999;
+
+    li.second-nav-item {
+      border-bottom: 1px solid #e0e0e0;
+      &.active {
+        .second-nav-item-text {
+          background-color: #e5f0ff;
+          color: #123875;
+        }
+      }
+
+      .second-nav-item-text {
+        display: block;
+        height: 72px;
+        background-color: #f2f2f2;
+        line-height: 72px;
+        font-size: 18px;
+        color: $color-title;
+        padding-left: 20px;
+        position: relative;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+
+        @include media-query($large) {
+          font-size: 16px;
+        }
+
+        &::before {
+          content: '';
+          display: block;
+          width: 15px;
+          height: 15px;
+          background: url(../images/icon_round.png);
+          margin-right: 10px;
+        }
+      }
+
+      nav.third-nav {
+        background-color: $color-white;
+        padding: 10px 0 10px 47px;
+        margin-top: 1px;
+        display: none;
+        border-left: 5px solid #123875;
+        margin-left: -5px;
+
+        a.third-nav-text {
+          padding: 6px 0;
+          display: flex;
+          align-items: center;
+          font-size: 16px;
+          color: #333333;
+
+          @include media-query($large) {
+            font-size: 14px;
+          }
+
+          &:hover,
+          &.active {
+            color: $color-theme;
+            text-decoration: none;
+
+            &::before {
+              opacity: 1;
+            }
+          }
+
+          &::before {
+            content: '';
+            display: block;
+            width: 11px;
+            height: 11px;
+            background: url(../images/icon_arrow.png);
+            margin-right: 10px;
+            opacity: 0;
+            transition: 0.3s ease-in-out;
+          }
+        }
+      }
+    }
+  }
+}

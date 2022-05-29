@@ -1,0 +1,83 @@
+// 面包屑
+.custom-breadcrumb {
+  @include flex-row-sb;
+  padding: 20px 40px;
+  border-bottom: 2px solid $color-theme;
+
+  @include media-query($small) {
+    padding: 10px 0;
+  }
+
+  .title {
+    font-size: 24px;
+    color: $color-theme;
+    font-weight: 900;
+
+    @include media-query($small) {
+      display: none;
+    }
+  }
+
+  .breadcrumb-navs {
+    display: flex;
+    align-items: center;
+
+    @include media-query($small) {
+      padding-left: 20px;
+    }
+
+    .pos {
+      font-size: $font-size-b;
+      color: #888888;
+      margin-right: 10px;
+      display: flex;
+      align-items: center;
+
+      &::before {
+        content: '';
+        display: block;
+        width: 17px;
+        height: 17px;
+        background: url(../images/icon_home.png);
+        margin-right: 6px;
+      }
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+
+      a {
+        font-size: $font-size-b;
+        color: #888888;
+        transition: 0.3s;
+
+        &::before {
+          font-family: 'iconfont';
+          content: '\e63d';
+          margin-right: 8px;
+          margin-left: 5px;
+
+          @include media-query($small) {
+            margin-right: 5px;
+            font-size: 14px;
+          }
+        }
+
+        &:first-child {
+          &::before {
+            display: none;
+          }
+        }
+
+        &:hover {
+          color: $color-theme;
+
+          &::before {
+            color: #888888;
+          }
+        }
+      }
+    }
+  }
+}

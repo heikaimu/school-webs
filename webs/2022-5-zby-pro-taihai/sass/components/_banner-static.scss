@@ -1,0 +1,17 @@
+// 内页banner
+.inner-static-banner {
+  padding-top: 30px;
+  @include media-query($large-down) {
+    padding-top: 0;
+  }
+  .container {
+    @include media-query($large-down) {
+      max-width: 100%;
+      padding: 0;
+    }
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+}

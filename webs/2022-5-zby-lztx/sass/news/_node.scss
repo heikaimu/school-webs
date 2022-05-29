@@ -1,0 +1,60 @@
+$active-color: #c72424;
+
+
+// <div class="node-news">
+// <p class="title top">关于支持大型科研仪器设备等创新资源向创业团队企业开放共享的通知关于支持大型科研仪器设备等创新资源向创业团队企业开放共享的通知关于支持大型科研仪器设备等创新资源向创业团队企业开放共享的通知</p>
+// <span class="date">2022-04-23</span>
+// <a href="" class="link"></a>
+// </div>
+
+.node-news {
+  @include flex-row-sb;
+  height: 56px;
+  position: relative;
+  padding-left: 15px;
+  border-bottom: 1px solid rgba($color: #000000, $alpha: 0.15);
+
+  &:hover {
+    &::before {
+      background-color: $active-color;
+    }
+    .title {
+      color: $active-color;
+    }
+    .date {
+      color: $active-color;
+    }
+  }
+
+  &::before {
+    @include absolute(50%, auto, auto, 0);
+    transform: translate3d(0, -50%, 0);
+    content: '';
+    display: block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #999999;
+    transition: 0.3s;
+  }
+
+  .title {
+    @include omit;
+    @include news-type;
+    font-size: $font-size-m;
+    color: $color-title;
+    padding-right: 10%;
+    transition: 0.3s;
+  }
+
+  .date {
+    font-size: $font-size-b;
+    color: $color-content;
+    flex: none;
+    transition: 0.3s;
+  }
+
+  .link {
+    @include absolute;
+  }
+}

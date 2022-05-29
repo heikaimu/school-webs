@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>首页</title>
+    <meta name="description" content="实验室与设备管理处" />
+    <meta name="keywords" content="实验室与设备管理处" />
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="./style/bootstrap.css" />
+    <link rel="stylesheet" href="./style/swiper.min.css" />
+    <link rel="stylesheet" href="./style/animation.css" />
+    <link rel="stylesheet" href="./fonts/iconfont.css" />
+    <link rel="stylesheet" href="./style/app.css" />
+    <script src="./js/browser.js"></script>
+  </head>
+
+  <body id="app">
+    <!-- 返回顶部按钮 -->
+    <div class="back-top-menu" id="backTopMenu">
+      <span class="iconfont icon-jiantouhong"></span>
+    </div>
+
+    <!-- header -->
+    <header class="web-header">
+      <div class="header--top">
+        <div class="container d-flex justify-content-between align-items-center">
+          <div class="mobile-nav-open-menu d-block d-lg-none">
+            <span class="iconfont icon-daohang" data-nav-open></span>
+          </div>
+
+          <a href="" class="header-logo">
+            <img src="./images/logo.png" alt="" srcset="" />
+          </a>
+
+          <div>
+            <div class="d-none d-lg-flex justify-content-end pb-3">
+              <div class="header--top__menus">
+                <a class="menu" href="">返回主站</a>
+                <span class="divider"></span>
+                <a class="menu" href="">电子地图</a>
+              </div>
+            </div>
+            <div class="search-wrapper">
+              <span class="search-open-menu iconfont icon-sousuoxiao d-block d-md-none" data-search-open></span>
+              <div class="search-input-wrapper" data-search>
+                <div class="search-input">
+                  <input type="text" placeholder="输入您想搜索的内容" />
+                  <button>
+                    <span class="iconfont icon-sousuoxiao"></span>
+                  </button>
+                </div>
+                <span
+                  class="search-open-menu iconfont icon-shanchu d-block d-md-none text-center mt-3"
+                  data-search-close
+                ></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="header--bottom d-lg-flex justify-content-end" data-nav-wrapper>
+        <div class="container">
+          <div class="mobile-nav-close shadow-lg d-flex justify-content-between align-items-center d-lg-none">
+            <span class="iconfont icon-shanchu" data-nav-close></span>
+
+            <div class="header--top__menus">
+              <a class="menu" href="">返回主站</a>
+              <span class="divider"></span>
+              <a class="menu" href="">电子地图</a>
+            </div>
+          </div>
+          <ul class="nav-one" data-nav>
+            <li class="nav-one-item" data-nav-lv1>
+              <a href="./" class="nav-one-text" data-nav-lv1-text>首页</a>
+            </li>
+            <li class="nav-one-item" data-nav-lv1>
+              <a href="./single_page.html" class="nav-one-text arrow" data-nav-lv1-text>中心概括</a>
+              <span class="nav-two-open nav-open-icon iconfont icon-plus d-block d-lg-none" data-nav-lv2-open></span>
+              <ul class="nav-two" data-nav-lv2-wrapper>
+                <li class="nav-two-item" data-nav-lv2>
+                  <a href="./teacher_list.html" class="nav-two-text arrow">三级菜单三级菜单三级菜单</a>
+                  <span
+                    class="nav-three-open nav-open-icon iconfont icon-plus d-block d-lg-none"
+                    data-nav-lv3-open
+                  ></span>
+                  <nav class="nav-three" data-nav-lv3-wrapper>
+                    <a href="/" class="nav-three-text">三级菜单三级菜单三级菜单</a>
+                    <a href="/" class="nav-three-text">三级菜单三级菜单三级菜单</a>
+                    <a href="/" class="nav-three-text">三级菜单</a>
+                    <a href="/" class="nav-three-text">三级菜单</a>
+                  </nav>
+                </li>
+                <li class="nav-two-item" data-nav-lv2>
+                  <a href="./teacher_list.html" class="nav-two-text">工作职责工作职责工作职责</a>
+                </li>
+                <li class="nav-two-item" data-nav-lv2>
+                  <a href="./article_list.html" class="nav-two-text">联系方式联系方式联系方式</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-one-item" data-nav-lv1>
+              <a href="./teacher_list.html" class="nav-one-text" data-nav-lv1-text>专家学者</a>
+            </li>
+            <li class="nav-one-item" data-nav-lv1>
+              <a href="./article_list.html" class="nav-one-text" data-nav-lv1-text>科学研究</a>
+            </li>
+            <li class="nav-one-item" data-nav-lv1>
+              <a href="./article_list.html" class="nav-one-text" data-nav-lv1-text>学科建设</a>
+            </li>
+            <li class="nav-one-item" data-nav-lv1>
+              <a href="./article_list.html" class="nav-one-text" data-nav-lv1-text>人才培养</a>
+            </li>
+            <li class="nav-one-item" data-nav-lv1>
+              <a href="./article_list.html" class="nav-one-text" data-nav-lv1-text>学术交流</a>
+            </li>
+            <li class="nav-one-item" data-nav-lv1>
+              <a href="./article_list.html" class="nav-one-text" data-nav-lv1-text>社会服务</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <!-- banner -->
+    <section class="banner container pt-lg-4">
+      <div class="swiper" id="banner">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <a href="">
+              <img class="d-block w-100" src="./images/banner.png" alt="" />
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="">
+              <img class="d-block w-100" src="./images/banner.png" alt="" />
+            </a>
+          </div>
+        </div>
+        <div class="swiper-pagination" id="bannerPagination"></div>
+      </div>
+    </section>
+
+    <!-- 快捷导航 -->
+    <div class="container pt-4">
+      <!-- <a href="" class="fast-nav color-1">
+        <div class="cover">
+          <span class="iconfont icon-dangjian"></span>
+        </div>
+        <p class="title">共产党员网</p>
+      </a>
+      <a href="" class="fast-nav color-2">
+        <div class="cover">
+          <img src="./images/fast_nav_icon_2.png" alt="" />
+        </div>
+        <p class="title">厦门大学</p>
+      </a>
+      <a href="" class="fast-nav color-3">
+        <div class="cover">
+          <img src="./images/fast_nav_icon_3.png" alt="" />
+        </div>
+        <p class="title">厦门大学关工委</p>
+      </a>
+      <a href="" class="fast-nav color-4">
+        <div class="cover">
+          <span class="iconfont icon-mimadenglu"></span>
+        </div>
+        <p class="title">信息系统</p>
+      </a>
+      <a href="" class="fast-nav color-5">
+        <div class="cover">
+          <span class="iconfont icon-24gf-school"></span>
+        </div>
+        <p class="title">厦门大学老年大学</p>
+      </a>
+      <a href="" class="fast-nav color-6">
+        <div class="cover">
+          <span class="iconfont icon-huaban"></span>
+        </div>
+        <p class="title">学院报名</p>
+      </a> -->
+
+      <div class="row">
+        <div class="col-6 col-md-4 col-xl-2 py-2">
+          <a href="" class="fast-nav color-1">
+            <div class="cover">
+              <span class="iconfont icon-dangjian"></span>
+            </div>
+            <p class="title">共产党员网</p>
+          </a>
+        </div>
+        <div class="col-6 col-md-4 col-xl-2 py-2">
+          <a href="" class="fast-nav color-2">
+            <div class="cover">
+              <img src="./images/fast_nav_icon_2.png" alt="" />
+            </div>
+            <p class="title">厦门大学</p>
+          </a>
+        </div>
+        <div class="col-6 col-md-4 col-xl-2 py-2">
+          <a href="" class="fast-nav color-3">
+            <div class="cover">
+              <img src="./images/fast_nav_icon_3.png" alt="" />
+            </div>
+            <p class="title">厦门大学关工委</p>
+          </a>
+        </div>
+        <div class="col-6 col-md-4 col-xl-2 py-2">
+          <a href="" class="fast-nav color-4">
+            <div class="cover">
+              <span class="iconfont icon-mimadenglu"></span>
+            </div>
+            <p class="title">信息系统</p>
+          </a>
+        </div>
+        <div class="col-6 col-md-4 col-xl-2 py-2">
+          <a href="" class="fast-nav color-5">
+            <div class="cover">
+              <span class="iconfont icon-24gf-school"></span>
+            </div>
+            <p class="title">厦门大学老年大学</p>
+          </a>
+        </div>
+        <div class="col-6 col-md-4 col-xl-2 py-2">
+          <a href="" class="fast-nav color-6">
+            <div class="cover">
+              <span class="iconfont icon-huaban"></span>
+            </div>
+            <p class="title">学院报名</p>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- 新闻简讯 -->
+    <div class="news-message">
+      <div class="container py-5">
+        <div class="home-section-title pb-3 pb-lg-4 d-flex justify-content-between align-items-center">
+          <h2 class="main-title"><span class="iconfont icon-xinwen"></span> 新闻简讯</h2>
+          <a href="" class="link">查看更多+</a>
+        </div>
+
+        <!-- 带图片新闻 -->
+        <div class="row py-4">
+          <div class="col-12 col-md-4 pb-4">
+            <div class="image-news--normal--outer--vertical date--bottom hover--top hover--shadow">
+              <div class="cover">
+                <div class="img">
+                  <img
+                    src="https://www.xmu.edu.cn/__local/1/A0/D8/F02EB88AC9E9E493B3613F7324E_619F7AA8_9A8DA.jpg"
+                    alt=""
+                  />
+                </div>
+              </div>
+
+              <div class="info">
+                <h2 class="title omit2">
+                  厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作
+                </h2>
+              </div>
+
+              <p class="date">2022-03-07</p>
+              <a href="" class="link"></a>
+            </div>
+          </div>
+          <div class="col-12 col-md-4 pb-4">
+            <div class="image-news--normal--outer--vertical date--bottom hover--top hover--shadow">
+              <div class="cover">
+                <div class="img">
+                  <img
+                    src="https://www.xmu.edu.cn/__local/1/A0/D8/F02EB88AC9E9E493B3613F7324E_619F7AA8_9A8DA.jpg"
+                    alt=""
+                  />
+                </div>
+              </div>
+
+              <div class="info">
+                <h2 class="title omit2">
+                  厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作
+                </h2>
+              </div>
+
+              <p class="date">2022-03-07</p>
+              <a href="" class="link"></a>
+            </div>
+          </div>
+          <div class="col-12 col-md-4 pb-4">
+            <div class="image-news--normal--outer--vertical date--bottom hover--top hover--shadow">
+              <div class="cover">
+                <div class="img">
+                  <img
+                    src="https://www.xmu.edu.cn/__local/1/A0/D8/F02EB88AC9E9E493B3613F7324E_619F7AA8_9A8DA.jpg"
+                    alt=""
+                  />
+                </div>
+              </div>
+
+              <div class="info">
+                <h2 class="title omit2">
+                  厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作
+                </h2>
+              </div>
+
+              <p class="date">2022-03-07</p>
+              <a href="" class="link"></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 不带图片新闻 -->
+        <div class="row">
+          <div class="col-12 col-md-6">
+            <div class="node-news">
+              <p class="title top">
+                关于支持大型科研仪器设备等创新资源向创业团队企业开放共享的通知关于支持大型科研仪器设备等创新资源向创业团队企业开放共享的通知关于支持大型科研仪器设备等创新资源向创业团队企业开放共享的通知
+              </p>
+              <span class="date">2022-04-23</span>
+              <a href="" class="link"></a>
+            </div>
+          </div>
+          <div class="col-12 col-md-6">
+            <div class="node-news">
+              <p class="title top">
+                关于支持大型科研仪器设备等创新资源向创业团队企业开放共享的通知关于支持大型科研仪器设备等创新资源向创业团队企业开放共享的通知关于支持大型科研仪器设备等创新资源向创业团队企业开放共享的通知
+              </p>
+              <span class="date">2022-04-23</span>
+              <a href="" class="link"></a>
+            </div>
+          </div>
+          <div class="col-12 col-md-6">
+            <div class="node-news">
+              <p class="title">
+                关于支持大型科研仪器设备等创新资源向创业团队企业开放共享的通知关于支持大型科研仪器设备等创新资源向创业团队企业开放共享的通知关于支持大型科研仪器设备等创新资源向创业团队企业开放共享的通知
+              </p>
+              <span class="date">2022-04-23</span>
+              <a href="" class="link"></a>
+            </div>
+          </div>
+          <div class="col-12 col-md-6">
+            <div class="node-news">
+              <p class="title">关于支持大型科研仪器设备等创新资源向创业团队企业开放共享的通知</p>
+              <span class="date">2022-04-23</span>
+              <a href="" class="link"></a>
+            </div>
+          </div>
+          <div class="col-12 col-md-6">
+            <div class="node-news">
+              <p class="title">关于支持大型科研仪器设备等创新资源向创业团队企业开放共享的通知</p>
+              <span class="date">2022-04-23</span>
+              <a href="" class="link"></a>
+            </div>
+          </div>
+          <div class="col-12 col-md-6">
+            <div class="node-news">
+              <p class="title">关于支持大型科研仪器设备等创新资源向创业团队企业开放共享的通知</p>
+              <span class="date">2022-04-23</span>
+              <a href="" class="link"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="jdzl-message py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-lg-8">
+            <!-- 党建专栏 -->
+            <div class="home-section-title red pb-3 pb-lg-4 d-flex justify-content-between align-items-center">
+              <h2 class="main-title"><span class="iconfont icon-dangjian"></span> 党建专栏</h2>
+              <a href="" class="link">查看更多+</a>
+            </div>
+            <div class="row">
+              <div class="col-12 col-md-6">
+                <div class="swiper" id="news">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <div class="image-news--normal--outer--vertical">
+                        <div class="cover">
+                          <div class="img">
+                            <img
+                              src="https://www.xmu.edu.cn/__local/1/A0/D8/F02EB88AC9E9E493B3613F7324E_619F7AA8_9A8DA.jpg"
+                              alt=""
+                            />
+                          </div>
+                        </div>
+
+                        <div class="info blank__bottom">
+                          <h2 class="title omit1">
+                            厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作
+                          </h2>
+                          <p class="desc omit2">
+                            3月9日下午，厦门大学离休干部、台湾研究院资深教授陈孔立老师在厦大南强二作《学长忆往：我们一家与厦门大学》讲座，厦门大学档案馆馆长石慧霞主持讲座。讲座吸引了来自不同院系近90余名同学参加。
+                          </p>
+                        </div>
+
+                        <div class="date--special">
+                          <p class="day">01/07</p>
+                          <p class="year">2022</p>
+                        </div>
+
+                        <a href="" class="link"></a>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="image-news--normal--outer--vertical">
+                        <div class="cover">
+                          <div class="img">
+                            <img
+                              src="https://www.xmu.edu.cn/__local/1/A0/D8/F02EB88AC9E9E493B3613F7324E_619F7AA8_9A8DA.jpg"
+                              alt=""
+                            />
+                          </div>
+                        </div>
+
+                        <div class="info blank__bottom">
+                          <h2 class="title omit1">
+                            厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作
+                          </h2>
+                          <p class="desc omit2">
+                            3月9日下午，厦门大学离休干部、台湾研究院资深教授陈孔立老师在厦大南强二作《学长忆往：我们一家与厦门大学》讲座，厦门大学档案馆馆长石慧霞主持讲座。讲座吸引了来自不同院系近90余名同学参加。
+                          </p>
+                        </div>
+
+                        <div class="date--special">
+                          <p class="day">01/07</p>
+                          <p class="year">2022</p>
+                        </div>
+
+                        <a href="" class="link"></a>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="image-news--normal--outer--vertical">
+                        <div class="cover">
+                          <div class="img">
+                            <img
+                              src="https://www.xmu.edu.cn/__local/1/A0/D8/F02EB88AC9E9E493B3613F7324E_619F7AA8_9A8DA.jpg"
+                              alt=""
+                            />
+                          </div>
+                        </div>
+
+                        <div class="info blank__bottom">
+                          <h2 class="title omit1">
+                            厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作
+                          </h2>
+                          <p class="desc omit2">
+                            3月9日下午，厦门大学离休干部、台湾研究院资深教授陈孔立老师在厦大南强二作《学长忆往：我们一家与厦门大学》讲座，厦门大学档案馆馆长石慧霞主持讲座。讲座吸引了来自不同院系近90余名同学参加。
+                          </p>
+                        </div>
+
+                        <div class="date--special">
+                          <p class="day">01/07</p>
+                          <p class="year">2022</p>
+                        </div>
+
+                        <a href="" class="link"></a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-pagination" id="newsPagination"></div>
+                </div>
+              </div>
+              <div class="col-12 col-md-6">
+                <ul>
+                  <li>
+                    <div class="line-news">
+                      <p class="date">05-21</p>
+                      <p class="title">
+                        厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作
+                      </p>
+                      <a href="" class="link"></a>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="line-news">
+                      <p class="date">05-21</p>
+                      <p class="title">
+                        厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作
+                      </p>
+                      <a href="" class="link"></a>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="line-news">
+                      <p class="date">05-21</p>
+                      <p class="title">
+                        厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作
+                      </p>
+                      <a href="" class="link"></a>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="line-news">
+                      <p class="date">05-21</p>
+                      <p class="title">
+                        厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作
+                      </p>
+                      <a href="" class="link"></a>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="line-news">
+                      <p class="date">05-21</p>
+                      <p class="title">
+                        厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作
+                      </p>
+                      <a href="" class="link"></a>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="line-news">
+                      <p class="date">05-21</p>
+                      <p class="title">
+                        厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作
+                      </p>
+                      <a href="" class="link"></a>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="line-news">
+                      <p class="date">05-21</p>
+                      <p class="title">
+                        厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作
+                      </p>
+                      <a href="" class="link"></a>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="line-news">
+                      <p class="date">05-21</p>
+                      <p class="title">
+                        厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作
+                      </p>
+                      <a href="" class="link"></a>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-4 pt-4 pt-lg-0">
+            <!-- 通知公告 -->
+            <div class="home-section-title pb-3 pb-lg-4 d-flex justify-content-between align-items-center">
+              <h2 class="main-title"><span class="iconfont icon-daigonggao"></span> 通知公告</h2>
+              <a href="" class="link">查看更多+</a>
+            </div>
+
+            <ul class="message-notice">
+              <li class="pb-3">
+                <div class="date-news">
+                  <div class="date">
+                    <p class="day">01/07</p>
+                    <p class="year">2022</p>
+                  </div>
+                  <p class="title">
+                    关于做好2023-2025年中央高校改善基本办学条件专项资金实验室信息化建设项目申报工作的通知
+                  </p>
+                  <a href="" class="link"></a>
+                </div>
+              </li>
+              <li class="pb-3">
+                <div class="date-news">
+                  <div class="date">
+                    <p class="day">01/07</p>
+                    <p class="year">2022</p>
+                  </div>
+                  <p class="title">
+                    关于做好2023-2025年中央高校改善基本办学条件专项资金实验室信息化建设项目申报工作的通知
+                  </p>
+                  <a href="" class="link"></a>
+                </div>
+              </li>
+              <li class="pb-3">
+                <div class="date-news">
+                  <div class="date">
+                    <p class="day">01/07</p>
+                    <p class="year">2022</p>
+                  </div>
+                  <p class="title">
+                    关于做好2023-2025年中央高校改善基本办学条件专项资金实验室信息化建设项目申报工作的通知
+                  </p>
+                  <a href="" class="link"></a>
+                </div>
+              </li>
+              <li class="pb-3">
+                <div class="date-news">
+                  <div class="date">
+                    <p class="day">01/07</p>
+                    <p class="year">2022</p>
+                  </div>
+                  <p class="title">
+                    关于做好2023-2025年中央高校改善基本办学条件专项资金实验室信息化建设项目申报工作的通知
+                  </p>
+                  <a href="" class="link"></a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 银龄时光 -->
+    <div class="container py-5">
+      <div class="home-section-title pb-3 pb-lg-4 d-flex justify-content-between align-items-center">
+        <h2 class="main-title"><span class="iconfont icon-tupian"></span> 银龄时光</h2>
+        <a href="" class="link">查看更多+</a>
+      </div>
+
+      <div class="row">
+        <div class="col-12 col-md-6 col-xl-3 pb-4">
+          <div class="image-news--simple--inner">
+            <div class="cover">
+              <div class="img">
+                <img
+                  src="https://www.xmu.edu.cn/__local/1/A0/D8/F02EB88AC9E9E493B3613F7324E_619F7AA8_9A8DA.jpg"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div class="info">
+              <p class="title">厦大老年大学时装班模特队</p>
+            </div>
+            <a href="" class="link"></a>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-xl-3 pb-4">
+          <div class="image-news--simple--inner">
+            <div class="cover">
+              <div class="img">
+                <img
+                  src="https://www.xmu.edu.cn/__local/1/A0/D8/F02EB88AC9E9E493B3613F7324E_619F7AA8_9A8DA.jpg"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div class="info">
+              <p class="title">厦大老年大学时装班模特队</p>
+            </div>
+            <a href="" class="link"></a>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-xl-3 pb-4">
+          <div class="image-news--simple--inner">
+            <div class="cover">
+              <div class="img">
+                <img
+                  src="https://www.xmu.edu.cn/__local/1/A0/D8/F02EB88AC9E9E493B3613F7324E_619F7AA8_9A8DA.jpg"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div class="info">
+              <p class="title">厦大老年大学时装班模特队</p>
+            </div>
+            <a href="" class="link"></a>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-xl-3 pb-4">
+          <div class="image-news--simple--inner">
+            <div class="cover">
+              <div class="img">
+                <img
+                  src="https://www.xmu.edu.cn/__local/1/A0/D8/F02EB88AC9E9E493B3613F7324E_619F7AA8_9A8DA.jpg"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div class="info">
+              <p class="title">厦大老年大学时装班模特队</p>
+            </div>
+            <a href="" class="link"></a>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-xl-3 pb-4">
+          <div class="image-news--simple--inner">
+            <div class="cover">
+              <div class="img">
+                <img
+                  src="https://www.xmu.edu.cn/__local/1/A0/D8/F02EB88AC9E9E493B3613F7324E_619F7AA8_9A8DA.jpg"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div class="info">
+              <p class="title">厦大老年大学时装班模特队</p>
+            </div>
+            <a href="" class="link"></a>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-xl-3 pb-4">
+          <div class="image-news--simple--inner">
+            <div class="cover">
+              <div class="img">
+                <img
+                  src="https://www.xmu.edu.cn/__local/1/A0/D8/F02EB88AC9E9E493B3613F7324E_619F7AA8_9A8DA.jpg"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div class="info">
+              <p class="title">厦大老年大学时装班模特队</p>
+            </div>
+            <a href="" class="link"></a>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-xl-3 pb-4">
+          <div class="image-news--simple--inner">
+            <div class="cover">
+              <div class="img">
+                <img
+                  src="https://www.xmu.edu.cn/__local/1/A0/D8/F02EB88AC9E9E493B3613F7324E_619F7AA8_9A8DA.jpg"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div class="info">
+              <p class="title">厦大老年大学时装班模特队</p>
+            </div>
+            <a href="" class="link"></a>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-xl-3 pb-4">
+          <div class="image-news--simple--inner">
+            <div class="cover">
+              <div class="img">
+                <img
+                  src="https://www.xmu.edu.cn/__local/1/A0/D8/F02EB88AC9E9E493B3613F7324E_619F7AA8_9A8DA.jpg"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div class="info">
+              <p class="title">厦大老年大学时装班模特队</p>
+            </div>
+            <a href="" class="link"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- footer -->
+    <footer class="web-footer">
+      <div class="footer--bottom py-3">
+        <div class="container d-block d-lg-flex align-items-center justify-content-between">
+          <div class="d-block d-lg-flex align-items-center justify-content-between">
+            <a href="" class="footer-logo">
+              <img src="./images/logo.png" alt="" srcset="" />
+            </a>
+
+            <div class="info-list">
+              <p>厦门大学颂恩楼1110室</p>
+              <p>邮政编码：361005</p>
+              <p>电话：0592-2184955</p>
+              <p>传真：0592-2184977</p>
+              <p>邮箱：xmusyb@xmu.edu.cn</p>
+              <p>© Copyright 2016 厦门大学实验室与设备管理处</p>
+            </div>
+          </div>
+
+          <div class="qr-code">
+            <img src="./images/qr_title.png" alt="" srcset="" />
+            <img src="./images/qr_code.png" alt="" srcset="" />
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/swiper-bundle.min.js"></script>
+    <script src="./js/wow.js"></script>
+    <script src="./js/jquery.extends.js"></script>
+    <script src="./js/common.js"></script>
+    <script src="./js/theme.js"></script>
+    <script>
+      const bannerSwiper = new Swiper('#banner', {
+        loop: true,
+        speed: 1000,
+        autoplay: {
+          delay: 3000,
+          stopOnLastSlide: false,
+          disableOnInteraction: true,
+        },
+        pagination: {
+          el: '#bannerPagination',
+          bulletClass: 'progress-bullet', //需设置.my-bullet样式
+          bulletActiveClass: 'progress-bullet-active',
+          clickable: true,
+          renderBullet: function (index, className) {
+            return '<span class="' + className + '"><span class="percent">0' + (index + 1) + '</span></span>';
+          },
+        },
+      });
+
+      const newsSwiper = new Swiper('#news', {
+        loop: true,
+        speed: 1000,
+        spaceBetween: 40,
+        autoplay: {
+          delay: 3000,
+          stopOnLastSlide: false,
+          disableOnInteraction: true,
+        },
+        pagination: {
+          el: '#newsPagination',
+          clickable: true,
+        },
+      });
+    </script>
+  </body>
+</html>

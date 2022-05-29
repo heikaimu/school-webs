@@ -1,0 +1,332 @@
+// 带图片和标题的新闻
+
+// <div class="image-news--normal--outer--vertical">
+// <div class="cover">
+//   <div class="img">
+//     <img
+//       src="https://www.xmu.edu.cn/__local/1/A0/D8/F02EB88AC9E9E493B3613F7324E_619F7AA8_9A8DA.jpg"
+//       alt=""
+//     />
+//   </div>
+// </div>
+// <h2 class="title">
+//   厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作厦门大学实验室管理信息化助力疫情防控工作
+// </h2>
+// <p class="date">2022-03-07</p>
+// <a href="" class="link"></a>
+// </div>
+
+$active-color: #c72424;
+
+.image-news--normal--outer--vertical {
+  width: 100%;
+  border: 1px solid #e4e4e4;
+  position: relative;
+  transition: 0.3s;
+  top: 0;
+
+  .cover {
+    width: 100%;
+    height: 274px;
+    overflow: hidden;
+    position: relative;
+
+    .img {
+      @include absolute;
+      transition: 0.3s ease-in-out;
+
+      img {
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: cover;
+      }
+    }
+  }
+
+  .info {
+    padding: 20px;
+    background-color: #ffffff;
+
+    &.blank__bottom {
+      padding-bottom: 50px;
+    }
+
+    .title {
+      line-height: 1.8;
+      font-size: 18px;
+      color: $color-title;
+      position: relative;
+      transition: 0.3s;
+
+      &.omit1 {
+        @include omit;
+      }
+
+      &.omit2 {
+        @include omits(2);
+      }
+      // &::after {
+      //   @include absolute(auto, 0, 0, 0);
+      //   content: '';
+      //   display: block;
+      //   width: 0;
+      //   height: 1px;
+      //   background-color: $color-theme;
+      //   transition: 0.3s;
+      // }
+    }
+
+    .desc {
+      line-height: 1.8;
+      font-size: 14px;
+      color: $color-content;
+      position: relative;
+      transition: 0.3s;
+      margin-top: 10px;
+
+      &.omit1 {
+        @include omit;
+      }
+
+      &.omit2 {
+        @include omits(2);
+      }
+
+      &.omit3 {
+        @include omits(3);
+      }
+    }
+  }
+
+  .date {
+    @include absolute(24px, auto, auto, 0);
+    padding: 10px 20px;
+    background: linear-gradient(90deg, #006dcc, #019fe5);
+    box-shadow: 0px 0px 7px 1px rgba(0, 61, 135, 0.4);
+    color: $color-white;
+    font-size: 16px;
+    transition: 0.3s ease-in-out;
+    &.bg--red {
+      background: #c72424;
+    }
+  }
+
+  .date--special {
+    @include absolute(14px, auto, auto, 14px);
+    padding: 10px;
+    background: #c72424;
+    box-shadow: 0px 0px 7px 1px rgba(0, 61, 135, 0.4);
+    color: $color-white;
+    .day {
+      font-size: 20px;
+    }
+    .year {
+      font-size: 16px;
+    }
+  }
+
+  .link {
+    @include absolute;
+  }
+
+  &.date--bottom {
+    .info {
+      padding-top: 40px;
+    }
+    .date {
+      @include absolute(250px, auto, auto, 20px);
+    }
+  }
+
+  &:hover {
+    border: 1px solid #e5e5e5;
+
+    &.hover--shadow {
+      box-shadow: 0px 2px 18px 0px rgba(199, 36, 36, 0.49);
+    }
+
+    &.hover--top {
+      top: -30px;
+    }
+
+    .cover {
+      .img {
+        transform: scale(1.05);
+      }
+    }
+
+    .info {
+      .title {
+        color: $active-color;
+        font-weight: 600;
+      }
+    }
+
+    .date {
+      background: linear-gradient(90deg, $active-color, $active-color);
+      color: $color-white;
+    }
+  }
+}
+
+// 完整的横向图片新闻
+
+// <div class="image-news--complete--outer">
+// <div class="cover">
+//   <div class="img">
+//     <img
+//       src="https://www.xmu.edu.cn/__local/1/A0/D8/F02EB88AC9E9E493B3613F7324E_619F7AA8_9A8DA.jpg"
+//       alt=""
+//       srcset=""
+//     />
+//   </div>
+// </div>
+// <div class="info">
+//   <div class="info__top">
+//     <h2 class="title">校党委常委会传达学习习近平总书记在中国人民大学考察时的重要讲话精神</h2>
+//   </div>
+//   <div class="info__medium">
+//     <p class="desc">
+//       4月29日上午，校党委常委会召开会议，传达学习习近平总书记在中国人民大学考察时的重要讲话精神。校党委书记张荣主持会议。
+//     </p>
+//   </div>
+//   <div class="info__bottom">
+//     <p class="date">2022-05-05</p>
+//     <p class="check">查看全文...</p>
+//   </div>
+// </div>
+// <a href="" class="link"></a>
+// </div>
+
+.image-news--complete--outer {
+  display: flex;
+  overflow: hidden;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #dddddd;
+
+  &:hover {
+    .cover {
+      .img {
+        transform: scale(1.05);
+      }
+    }
+
+    .info {
+      color: $color-theme;
+      .info__top {
+        .title {
+          color: currentColor;
+        }
+      }
+
+      .info__medium {
+        .desc {
+          color: currentColor;
+        }
+      }
+    }
+  }
+
+  .cover {
+    flex: 1;
+    height: 160px;
+    position: relative;
+    overflow: hidden;
+    .img {
+      @include absolute;
+      transition: 0.3s ease-in-out;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+
+  .info {
+    padding-left: 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: $color-content;
+
+    .info__top {
+      .title {
+        @include omits(2);
+        font-weight: 600;
+        font-size: 16px;
+        color: $color-title;
+        line-height: 1.8;
+      }
+    }
+
+    .info__medium {
+      .desc {
+        @include omits(2);
+        font-size: 14px;
+        color: $color-content;
+        line-height: 1.8;
+      }
+    }
+
+    .info__bottom {
+      @include flex-row-sb;
+      .date {
+        font-size: 14px;
+      }
+
+      .check {
+        font-size: 14px;
+      }
+    }
+  }
+
+  .link {
+    @include absolute;
+  }
+}
+
+// 超简单的图片卡片新闻
+.image-news--simple--inner {
+  position: relative;
+  .cover {
+    height: 0;
+    padding-bottom: 55%;
+    position: relative;
+    overflow: hidden;
+    .img {
+      @include absolute;
+      transition: 0.3s ease-in-out;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+  .info {
+    @include absolute(50%, 0, 0, 0);
+    background: linear-gradient(transparent, #006DCC);
+    display: flex;
+    align-items: flex-end;
+    .title {
+      @include omit;
+      padding: 10px 20px;
+      font-size: 16px;
+      color: $color-white;
+    }
+  }
+  .link {
+    @include absolute;
+  }
+
+  &:hover {
+    .cover {
+      .img {
+        transform: scale(1.05);
+      }
+    }
+  }
+}

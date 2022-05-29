@@ -1,0 +1,57 @@
+// 文档下载
+
+// <div class="docs-news">
+// <p class="date">2020-0202</p>
+// <p class="title">厦门大学采购100万元以上进口科研仪器设备专家论证意见表</p>
+// <a href="" class="link">【立即下载】</a>
+// </div>
+
+.docs-news {
+  @include flex-row-sb;
+  height: 60px;
+  padding: 0 10px;
+  position: relative;
+  border: 1px solid $color-border;
+
+  &:hover,
+  &:active {
+    background-color: #e8f1ff;
+    border: 1px solid transparent;
+
+    .date {
+      background-color: $color-theme;
+      color: $color-white;
+    }
+
+    .title,
+    .link {
+      color: $color-theme;
+      text-decoration: none;
+    }
+  }
+
+  .date {
+    @include absolute(-13px, auto, auto, 20px);
+    padding: 0 10px;
+    height: 26px;
+    background: #e8f1ff;
+    border-radius: 13px;
+    font-size: $font-size-m;
+    color: $color-theme;
+    text-align: center;
+    line-height: 26px;
+  }
+
+  .title {
+    @include omit;
+    font-size: $font-size-m;
+    color: $color-title;
+    padding-right: 20px;
+  }
+
+  .link {
+    flex: none;
+    font-size: $font-size-m;
+    color: $color-content;
+  }
+}

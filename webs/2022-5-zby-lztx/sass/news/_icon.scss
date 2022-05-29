@@ -1,0 +1,55 @@
+// 带图标的新闻
+
+// <div class="icon-news">
+// <span class="icon iconfont icon-fenzuguanli"></span>
+// <p class="title">关于支持大型科研仪器设备等创新资源向创业团队企业开放共享的通知</p>
+// <span class="date">2022-04-23</span>
+// <a href="" class="link"></a>
+// </div>
+
+.icon-news {
+  @include flex-row-sb;
+  height: 60px;
+  padding: 0 10px;
+  position: relative;
+  border-bottom: 1px solid $color-border;
+  cursor: pointer;
+
+  &:hover,
+  &:active {
+    background: linear-gradient(90deg, $color-theme, $color-theme-light);
+    border-bottom: 1px solid transparent;
+    box-shadow: 0px 3px 16px 0px rgba(18, 56, 118, 0.47);
+
+    .icon,
+    .title,
+    .date {
+      color: $color-white;
+    }
+  }
+
+  .icon {
+    flex: none;
+    font-size: $font-size-m;
+    color: $color-theme;
+  }
+
+  .title {
+    @include omit;
+    flex: 1;
+    font-size: $font-size-m;
+    color: $color-title;
+    padding-left: 10px;
+    padding-right: 20px;
+  }
+
+  .date {
+    flex: none;
+    font-size: 14px;
+    color: $color-content;
+  }
+
+  .link {
+    @include absolute;
+  }
+}

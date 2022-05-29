@@ -1,0 +1,170 @@
+// hover后有箭头的新闻
+
+// <div class="arrow-news">
+// <p class="title top">关于支持大型科研仪器设备等创新资源向创业团队企业开放共享的通知</p>
+// <span class="date">2022-04-23</span>
+// <a href="" class="link"></a>
+// </div>
+
+.arrow-news {
+  @include flex-row-sb;
+  height: 46px;
+  padding-right: 10px;
+  transition: 0.3s ease-in-out;
+  position: relative;
+  cursor: pointer;
+
+  &::before {
+    @include absolute(17px, auto, auto, 10px);
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    border-left: 10px solid $color-theme;
+    border-top: 6px solid transparent;
+    border-bottom: 6px solid transparent;
+    opacity: 0;
+    transform: translate3d(-20px, 0, 0);
+    transition: 0.3s ease-in-out;
+  }
+
+  &:hover {
+    padding-left: 30px;
+    background-color: #e8f1ff;
+
+    &::before {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+
+    .title {
+      color: $color-theme;
+    }
+
+    span.date {
+      color: $color-theme;
+    }
+  }
+
+  .title {
+    @include omit;
+    display: block;
+    padding-right: 20px;
+    font-size: $font-size-m;
+    color: $color-title-light;
+    transition: 0.3s ease-in-out;
+  }
+
+  .date {
+    font-family: 'AbhayaLibre';
+    font-size: 14px;
+    color: $color-content;
+    flex: none;
+    position: relative;
+    top: 3px;
+  }
+
+  .link {
+    @include absolute;
+  }
+}
+
+// 箭头竖排
+
+// <div class="arrow-news-vertical">
+// <p class="title top">关于支持大型科研仪器设备等创新资源向创业团队企业开放共享的通知</p>
+// <span class="date">2022-04-23</span>
+// <a href="" class="link"></a>
+// </div>
+
+.arrow-news-vertical {
+  padding-top: 15px;
+  padding-left: 20px;
+  background: #ffffff;
+  border: 1px solid #e4e4e4;
+  position: relative;
+  cursor: pointer;
+
+  &::after {
+    @include absolute(auto, 20px, 7px, auto, 99);
+    @include iconfont;
+    content: '\eb94';
+    font-size: 24px;
+    color: #cccccc;
+    transition: 0.3s;
+  }
+
+  &::before {
+    @include absolute(auto, 28px, 15px, auto, 98);
+    content: '';
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid #ffffff;
+    opacity: 0;
+  }
+
+  .title {
+    @include omits(2);
+    padding-right: 20px;
+    padding-left: 0;
+    font-size: 16px;
+    font-family: Microsoft YaHei;
+    font-weight: 600;
+    color: #111111;
+    line-height: 28px;
+
+    &.top::before {
+      content: '【置顶】';
+      color: $color-red;
+    }
+
+    &.new::before {
+      content: '【新】';
+      color: $color-red;
+    }
+  }
+
+  .date {
+    display: block;
+    margin-top: 15px;
+    font-size: 14px;
+    font-family: Abel;
+    font-weight: 400;
+    color: #9b9b9b;
+    padding: 15px 20px;
+    padding-left: 0;
+    position: relative;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+  }
+
+  &:hover {
+    border: 1px solid $color-theme;
+
+    &::after {
+      transform: rotate(180deg);
+      color: #ffffff;
+    }
+
+    &::before {
+      opacity: 1;
+    }
+
+    .title {
+      color: $color-theme;
+    }
+    .date {
+      color: $color-white;
+      border-top: 1px solid $color-theme;
+      background: linear-gradient(-90deg, #003d87, #387aca);
+      padding-left: 20px;
+      border-top: none;
+    }
+  }
+
+  a.link {
+    @include absolute;
+  }
+}
